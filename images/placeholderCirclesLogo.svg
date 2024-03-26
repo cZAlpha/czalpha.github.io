@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="323"
+   height="57"
+   viewBox="0 0 85.460416 15.081254"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   sodipodi:docname="placeholderCirclesLogo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     inkscape:zoom="2.1636783"
+     inkscape:cx="120.62791"
+     inkscape:cy="130.10252"
+     inkscape:window-width="1440"
+     inkscape:window-height="900"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2"
+       transform="matrix(0.54347412,0,0,0.50011153,0.75705521,0.95536881)">
+      <ellipse
+         style="fill:#ff8906;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.04169;stroke-linecap:round;stroke-miterlimit:2.1;stroke-dasharray:none;stroke-opacity:1"
+         id="path1-8-1"
+         cx="9.0476074"
+         cy="17.940413"
+         rx="8.4248409"
+         ry="7.9328556" />
+      <ellipse
+         style="fill:#f25f4c;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.04169;stroke-linecap:round;stroke-miterlimit:2.1;stroke-dasharray:none;stroke-opacity:1"
+         id="path1-8-1-7"
+         cx="14.671543"
+         cy="8.5781841"
+         rx="8.4248409"
+         ry="7.9328556" />
+      <ellipse
+         style="fill:#e53170;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.04169;stroke-linecap:round;stroke-miterlimit:2.1;stroke-dasharray:none;stroke-opacity:1"
+         id="path1-8-1-9"
+         cx="20.284767"
+         cy="17.951693"
+         rx="8.4248409"
+         ry="7.9328556" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:9.87778px;fill:#e53170;fill-opacity:0.325301;fill-rule:nonzero;stroke:#000000;stroke-width:1.14776;stroke-linecap:round;stroke-miterlimit:2.1;stroke-dasharray:none;stroke-opacity:1"
+       x="25.454254"
+       y="10.427091"
+       id="text2"
+       transform="scale(0.98252944,1.0177812)"><tspan
+         id="tspan2"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.87778px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#fffffe;fill-opacity:1;stroke:none;stroke-width:1.14776;stroke-dasharray:none;stroke-opacity:1"
+         x="25.454254"
+         y="10.427091"
+         sodipodi:role="line">Your Logo</tspan></text>
+  </g>
+</svg>
