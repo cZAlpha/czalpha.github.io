@@ -20,7 +20,11 @@
     }
 
     .orange {
-        color: #f59e0b; /* Orange color */
+        color: #ff8906; /* Orange color */
+    }
+
+    .orangeBackground {
+        background-color: #ff8906;
     }
 
     .title {
@@ -54,13 +58,13 @@
     }
 </style>
 
-<body class="bg-gray-300 poppinsFont">
+<body class="orangeBackground poppinsFont">
     <!-- Navbar -->
     <nav class="bg-black text-white sticky">
         <div class="container mx-auto px-4 md:flex items-center gap-6">
           <!-- Logo -->
           <div class="flex items-center justify-between md:w-auto w-full">
-            <a href="#" class="text-white hover:text-yellow-600 transition-colors flex flex-1 items-center py-5 px-2">
+            <a href="https://www.github.com/czalpha" class="text-white hover:text-yellow-600 transition-colors flex flex-1 items-center py-5 px-2">
               <span class="font-bold">Noah Klaus</span>
             </a>
             <!-- Mobile Menu Button -->
@@ -75,31 +79,14 @@
               </button>
             </div>
           </div>
-          <!-- Primary Navigation -->
+          <!-- START - Primary Navigation -->
           <div class="hidden md:flex md:flex-row flex-col items-center justify-start md:space-x-1 navigation-menu pb-3 md:pb-0 navigation-menu">
-            <a href="#home" class="hover:bg-gray-300 hover:text-yellow-600 transition-colors rounded py-2 px-3 block">Home</a>
-            <a href="#" class="hover:bg-gray-300 hover:text-yellow-600 transition-colors rounded py-2 px-3 block">About</a>
-            <a href="#" class="hover:bg-gray-300 hover:text-yellow-600 transition-colors rounded py-2 px-3 block">Contact</a>
-            <!-- Personal Projects Dropdown Menu -->
+            <a href="#home" class="hover:bg-white hover:text-yellow-600 transition-colors rounded py-2 px-3 block">Home</a>
+            <a href="#about" class="hover:bg-white hover:text-yellow-600 transition-colors rounded py-2 px-3 block">About</a>
+            <a href="#contact" class="hover:bg-white hover:text-yellow-600 transition-colors rounded py-2 px-3 block">Contact</a>
+            <!-- START - Business Projects Dropdown Menu -->
             <div class="relative">
-              <button class="dropdown-toggle hover:bg-gray-300 hover:text-yellow-600 py-2 px-3 flex items-center gap-2 rounded">
-                <span class="pointer-events-none">Personal Projects</span>
-                <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <title>chevron-down</title>
-                  <g fill="none">
-                    <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </g>
-                </svg>
-              </button>
-              <div class="dropdown-menu absolute hidden bg-black text-white rounded-b-lg pb-2 w-48">
-                <a href="https://github.com/cZAlpha/ipCountryFinder" class="hover:bg-gray-300 hover:text-yellow-600 transition-colors block px-6 py-2">IP Country Finder</a>
-                <a href="https://github.com/cZAlpha/HillClimbingCPlusPlus" class="hover:bg-gray-300 hover:text-yellow-600 transition-colors block px-6 py-2">Hill Climbing Algorithms</a>
-                <a href="https://github.com/cZAlpha/PythonPlaylistManager/blob/main/main.py" class="hover:bg-gray-300 hover:text-yellow-600 transition-colors block px-6 py-2">Console Playlist Manager</a>
-              </div>
-            </div>
-            <!-- Business Projects Dropdown Menu -->
-            <div class="relative">
-                <button class="dropdown-toggle hover:bg-gray-300 hover:text-yellow-600 py-2 px-3 flex items-center gap-2 rounded">
+                <button class="dropdown-toggle hover:bg-white hover:text-yellow-600 py-2 px-3 flex items-center gap-2 rounded">
                   <span class="pointer-events-none">Business Projects</span>
                   <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <title>chevron-down</title>
@@ -109,50 +96,87 @@
                   </svg>
                 </button>
                 <div class="dropdown-menu absolute hidden bg-black text-white rounded-b-lg pb-2 w-60">
-                    <a href="https://www.ewabusinessconsultation.com" class="hover:bg-gray-300 hover:text-yellow-600 block px-6 py-2">EWA Business Consultation</a>
-                    <a href="https://www.ewabusinessconsultation.com" class="hover:bg-gray-300 hover:text-yellow-600 block px-6 py-2">Myasia's Dance Studio</a>
+                    <a href="https://www.ewabusinessconsultation.com" class="hover:bg-white hover:text-yellow-600 block px-6 py-2">EWA Business Consultation</a>
+                    <a href="https://www.ewabusinessconsultation.com" class="hover:bg-white hover:text-yellow-600 block px-6 py-2">Myasia's Dance Studio</a>
                 </div>
             </div>
+            <!-- STOP - Business Projects Dropdown Menu -->
+            <!-- START - Personal Projects Dropdown Menu -->
+            <div class="relative">
+              <button class="dropdown-toggle hover:bg-white hover:text-yellow-600 py-2 px-3 flex items-center gap-2 rounded">
+                <span class="pointer-events-none">Personal Projects</span>
+                <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <title>chevron-down</title>
+                  <g fill="none">
+                    <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+              </button>
+              <div class="dropdown-menu absolute hidden bg-black text-white rounded-b-lg pb-2 w-48">
+                <a href="https://github.com/cZAlpha/ipCountryFinder" class="hover:bg-white hover:text-yellow-600 transition-colors block px-6 py-2">IP Country Finder</a>
+                <a href="https://github.com/cZAlpha/HillClimbingCPlusPlus" class="hover:bg-white hover:text-yellow-600 transition-colors block px-6 py-2">Hill Climbing Algorithms</a>
+                <a href="https://github.com/cZAlpha/PythonPlaylistManager/blob/main/main.py" class="hover:bg-white hover:text-yellow-600 transition-colors block px-6 py-2">Console Playlist Manager</a>
+              </div>
+            </div>
+            <!-- STOP - Personal Projects Dropdown Menu -->
           </div>
+          <!-- STOP - Primary Navigation -->
         </div>
-      </nav>
+    </nav>
       
 
     <!-- Hero -->
     <div id="home" class="title fadeInFromBottom">
-        <p class="text-7xl">Noah Klaus</p>
-        <p class="text-3xl">Computer Scientist</p>   
+        <p class="text-7xl font-bold">Noah Klaus</p>
+        <p class="text-3xl pt-8">Computer Scientist</p>   
      </div>
 
-    <!-- Main Content -->
+    <!-- About Me Content -->
     <div class="container mx-auto mt-8 max-w-xl">
-        <div class="bg-white p-8 rounded-lg shadow">
+        <div id="about" class="bg-white p-8 rounded-lg shadow border-4 border-black">
             <h1 class="text-2xl font-bold mb-4">About Me</h1>
-            </br>
             <p class="text-gray-700">
                 I'm Noah, I've been a Research Assistant managing a team of Researchers at 
-                Delaware State University Since 2022
+                Delaware State University Since 2022. I have a passion for programming and
+                mathematics. 
             </p>
             </br>
-            <p class="text-gray-700">
-                I'm currently learning JavaScript, React, Django and refreshing my HTML and CSS
-            </p>
+            <div class="text-gray-700">
+                <p class="font-bold mb-2">I'm Currently Learning:</p>
+                <ul class="list-disc pl-5">
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Django</li>
+                    <li>Tailwind</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </div>
             </br>
-            <p class="text-gray-700">
-                Current Positions: Research Assistant, CIO
-            </p>
+            <div class="text-gray-700">
+                <p class="font-bold mb-2">Current Positions:</p>
+                <ul class="list-disc pl-5">
+                    <li>Research Assistant | Delaware State University</li>
+                    <li>CIO | EWA Business Consultation LLC</li>
+                </ul>
+            </div>
             </br>
-            <p class="text-gray-700">
-                Experience: Technical Support Specialist Intern
-            </p>
+            <div class="text-gray-700">
+                <p class="font-bold mb-2">Past Experience:</p>
+                <ul class="list-disc pl-5">
+                    <li>Technical Support Specialist Intern | Delaware Electric Cooperative</li>
+                </ul>
+            </div>
         </div>
+    </div>  
 
-        <div class="bg-white p-8 rounded-lg shadow">
+    <div class="container mx-auto mt-8 max-w-3xl pt-12 pb-12">
+        <div class="bg-white p-8 rounded-lg shadow border-4 border-black">
             <h1 class="text-2xl font-bold mb-4">My Skill Set</h1>
-            <table>
-                <tr>
-                    <td valign="top" width="20%">
-                        <p>Frontend</p>
+            <table class="flex flex-wrap">
+                <tr class="flex justify-center flex-1">
+                    <td valign="top" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 p-4">
+                        <p class="font-bold pb-5">Frontend</p>
                         <div align="center">  
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" />
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" />  
@@ -161,20 +185,20 @@
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="TypeScript" height="50" /> 
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" height="50" />  
                         </div>
-
-                        </td><td valign="top" width="20%">
-
-                        <p>Backend</p>
+                    </td>
+                    
+                    <td valign="top" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/5 p-4">
+                        <p class="font-bold pb-5">Backend</p>
                         <div align="center">  
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" />  
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" height="50" />  
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="50" />  
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" height="50" />
                         </div>
-
-                        </td><td valign="top" width="20%">
-
-                        <p>Frameworks</p>
+                    </td>
+                    
+                    <td valign="top" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 p-4">
+                        <p class="font-bold pb-5">Frameworks</p>
                         <div align="center">  
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/django-original.svg" alt="Django" height="50" />  
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg" alt="Docker" height="50" />  
@@ -183,20 +207,20 @@
                             <img style="width: 50px" src="https://www.gamingonlinux.com/uploads/tagline_gallery/sdl.jpg" alt="SDL Logo" height="50" />
                             <img style="width: 50px" src="https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png" alt="SDL Logo" height="50" />
                         </div>
+                    </td>
 
-                        </td><td valign="top" width="20%">
-
-                        <p>DevOps</p>
+                    <td valign="top" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 xl:w-1/5 p-4">
+                        <p class="font-bold pb-5">DevOps</p>
                         <div align="center">  
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/powershell.png" alt="PowerShell" height="50" />  
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" />  
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" height="50" />
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50" />
                         </div>  
+                    </td>
 
-                        </td><td valign="top" width="20%">
-
-                        <p>Electronics</p>
+                    <td valign="top" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 xl:w-1/5 p-4">
+                        <p class="font-bold pb-5">Electronics</p>
                         <div align="center">  
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/raspberrypi.png" alt="Raspberry Pi" height="50" />  
                             <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/arduino.png" alt="Arduino" height="50" />  
@@ -205,8 +229,106 @@
                 </tr>
             </table>
         </div>
-    </div>  
+    </div>
 
+    <!-- Business Projects Content -->
+    <div class="container mx-auto mt-8 max-w-xl">
+        <div id="about" class="bg-white p-8 rounded-lg shadow border-4 border-black">
+            <h1 class="text-2xl font-bold mb-4">Business Projects</h1>
+            <p class="font-bold mb-2">Content Coming Soon...</p>
+            <p class="mb-2">Check Out Navbar For Links To My Projects!</p>
+        </div>
+    </div>
+
+    <!-- Personal Projects Content -->
+    <div class="container mx-auto mt-8 max-w-xl">
+        <div id="about" class="bg-white p-8 rounded-lg shadow border-4 border-black">
+            <h1 class="text-2xl font-bold mb-4">Personal Projects</h1>
+            <p class="font-bold mb-2">Content Coming Soon...</p>
+            <p class="mb-2">Check Out Navbar For Links To My Projects!</p>
+        </div>
+    </div>
+
+    <!-- !!!ADJUST FOR FORMSPREE!!! -->
+    <!-- Contact Section -->
+    <div class="container mx-auto mt-8 max-w-3xl pt-12 pb-12">
+        <div class="bg-white p-8 rounded-lg shadow border-4 border-black">
+            <div id="contact" class="flex items-center justify-center p-12">
+                <!-- Author: FormBold Team -->
+                <!-- Learn More: https://formbold.com -->
+                <div class="mx-auto w-full max-w-[550px]">
+                    <h1 class="text-2xl font-bold text-center pb-10">Shoot Me An Email!</h1>
+                    <form action="https://formbold.com/s/FORM_ID" method="POST">
+                        <div class="mb-5">
+                        <label
+                            for="name"
+                            class="mb-3 block text-base font-medium text-[#07074D]"
+                        >
+                            Full Name
+                        </label>
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Full Name"
+                            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                        />
+                        </div>
+                        <div class="mb-5">
+                        <label
+                            for="email"
+                            class="mb-3 block text-base font-medium text-[#07074D]"
+                        >
+                            Email Address
+                        </label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="example@domain.com"
+                            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                        />
+                        </div>
+                        <div class="mb-5">
+                        <label
+                            for="subject"
+                            class="mb-3 block text-base font-medium text-[#07074D]"
+                        >
+                            Subject
+                        </label>
+                        <input
+                            type="text"
+                            name="subject"
+                            id="subject"
+                            placeholder="Enter your subject"
+                            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                        />
+                        </div>
+                        <div class="mb-5">
+                        <label
+                            for="message"
+                            class="mb-3 block text-base font-medium text-[#07074D]"
+                        >
+                            Message
+                        </label>
+                        <textarea
+                            rows="4"
+                            name="message"
+                            id="message"
+                            placeholder="Type your message"
+                            class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                        ></textarea>
+                        </div>
+                        <div class="flex justify-center">
+                            <button class="hover:shadow-form hover:bg-white hover:text-black rounded-md bg-black text-white py-3 px-8 text-base font-semibold outline-none">
+                                Submit
+                            </button>                        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 <script>
