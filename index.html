@@ -27,7 +27,7 @@
         background-color: #ff8906;
     }
 
-    .title {
+    .hero {
         font-size: 35px;
         display: grid;
         place-items: center;
@@ -39,7 +39,7 @@
         opacity: 0;
         filter: blur(5px);
         transform: translateY(30%);
-        transition: all 3s;
+        transition: all 2s;
     }
 
     .showFromTop { /*FADE IN FROM TOP | SHOW*/
@@ -128,13 +128,13 @@
       
 
     <!-- Hero -->
-    <div id="home" class="title fadeInFromBottom">
+    <div id="home" class="hero fadeInFromBottom">
         <p class="text-7xl font-bold">Noah Klaus</p>
         <p class="text-3xl pt-8">Computer Scientist</p>   
      </div>
 
-    <!-- About Me Content -->
-    <div class="container mx-auto mt-8 max-w-xl">
+    <!-- About Me Section -->
+    <div class="container mx-auto mt-8 max-w-xl p-8">
         <div id="about" class="bg-white p-8 rounded-lg shadow border-4 border-black">
             <h1 class="text-2xl font-bold mb-4">About Me</h1>
             <p class="text-gray-700">
@@ -172,69 +172,79 @@
         </div>
     </div>  
 
-    <div class="container mx-auto mt-8 max-w-3xl pt-12 pb-12">
+    <!-- Skillset Section-->
+    <div class="container mx-auto mt-8 max-w-3xl p-8">
         <div class="bg-white p-8 rounded-lg shadow border-4 border-black">
             <h1 class="text-2xl font-bold mb-4">My Skill Set</h1>
-            <table class="flex flex-wrap">
-                <tr class="flex justify-center flex-1">
-                    <td valign="top" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 p-4">
-                        <p class="font-bold pb-5">Frontend</p>
-                        <div align="center">  
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" />
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" />  
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" />  
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /> 
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="TypeScript" height="50" /> 
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" height="50" />  
-                        </div>
-                    </td>
-                    
-                    <td valign="top" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/5 p-4">
-                        <p class="font-bold pb-5">Backend</p>
-                        <div align="center">  
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" />  
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" height="50" />  
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="50" />  
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" height="50" />
-                        </div>
-                    </td>
-                    
-                    <td valign="top" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 p-4">
-                        <p class="font-bold pb-5">Frameworks</p>
-                        <div align="center">  
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/django-original.svg" alt="Django" height="50" />  
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg" alt="Docker" height="50" />  
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/opencv-icon.svg" alt="OpenCV" height="50" />  
-                            <img style="width: 50px" src="https://crowdin-static.downloads.crowdin.com/images/project-logo/369271/small/6afbec32f80242af6da64b22130b985d132.png" alt="QiskitLogo" height="50" />
-                            <img style="width: 50px" src="https://www.gamingonlinux.com/uploads/tagline_gallery/sdl.jpg" alt="SDL Logo" height="50" />
-                            <img style="width: 50px" src="https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png" alt="SDL Logo" height="50" />
-                        </div>
-                    </td>
-
-                    <td valign="top" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 xl:w-1/5 p-4">
-                        <p class="font-bold pb-5">DevOps</p>
-                        <div align="center">  
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/powershell.png" alt="PowerShell" height="50" />  
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" />  
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" height="50" />
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50" />
-                        </div>  
-                    </td>
-
-                    <td valign="top" class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 xl:w-1/5 p-4">
-                        <p class="font-bold pb-5">Electronics</p>
-                        <div align="center">  
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/raspberrypi.png" alt="Raspberry Pi" height="50" />  
-                            <img style="width: 50px" src="https://profilinator.rishav.dev/skills-assets/arduino.png" alt="Arduino" height="50" />  
-                        </div>
-                    </td>
-                </tr>
-            </table>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <tbody>
+                        <tr class="flex flex-wrap justify-center">
+                            <td class="pb-5">
+                                <p class="text-center font-bold pt-5 pb-2">Frontend</p>
+                                <div class="flex justify-center items-center">
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" />
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" />  
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" />  
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" /> 
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="TypeScript" /> 
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" />  
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-wrap justify-center">
+                            <td class="pb-5">
+                                <p class="text-center font-bold pt-5 pb-2">Backend</p>
+                                <div class="flex justify-center items-center">
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" />  
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" />  
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" />  
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-wrap justify-center">
+                            <td class="pb-5">
+                                <p class="text-center font-bold pt-5 pb-2">Frameworks</p>
+                                <div class="flex justify-center items-center">
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/django-original.svg" alt="Django" />  
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg" alt="Docker" />  
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/opencv-icon.svg" alt="OpenCV" />  
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://crowdin-static.downloads.crowdin.com/images/project-logo/369271/small/6afbec32f80242af6da64b22130b985d132.png" alt="QiskitLogo" />
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://www.gamingonlinux.com/uploads/tagline_gallery/sdl.jpg" alt="SDL Logo" />
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png" alt="SDL Logo" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-wrap justify-center">
+                            <td class="pb-5">
+                                <p class="text-center font-bold pt-5 pb-2">DevOps</p>
+                                <div class="flex justify-center items-center">
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/powershell.png" alt="PowerShell" />  
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" />  
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" />
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="flex flex-wrap justify-center">
+                            <td class="pb-5">
+                                <p class="text-center font-bold pt-5 pb-2">Electronics</p>
+                                <div class="flex justify-center items-center">
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/raspberrypi.png" alt="Raspberry Pi" />  
+                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/arduino.png" alt="Arduino" />  
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
+    
 
-    <!-- Business Projects Content -->
-    <div class="container mx-auto mt-8 max-w-xl">
+    <!-- Business Projects Section -->
+    <div class="container mx-auto mt-8 max-w-xl p-8">
         <div id="about" class="bg-white p-8 rounded-lg shadow border-4 border-black">
             <h1 class="text-2xl font-bold mb-4">Business Projects</h1>
             <p class="font-bold mb-2">Content Coming Soon...</p>
@@ -242,8 +252,8 @@
         </div>
     </div>
 
-    <!-- Personal Projects Content -->
-    <div class="container mx-auto mt-8 max-w-xl">
+    <!-- Personal Projects Section -->
+    <div class="container mx-auto mt-8 max-w-xl p-8">
         <div id="about" class="bg-white p-8 rounded-lg shadow border-4 border-black">
             <h1 class="text-2xl font-bold mb-4">Personal Projects</h1>
             <p class="font-bold mb-2">Content Coming Soon...</p>
@@ -253,7 +263,7 @@
 
     <!-- !!!ADJUST FOR FORMSPREE!!! -->
     <!-- Contact Section -->
-    <div class="container mx-auto mt-8 max-w-3xl pt-12 pb-12">
+    <div class="container mx-auto mt-8 max-w-3xl p-8">
         <div class="bg-white p-8 rounded-lg shadow border-4 border-black">
             <div id="contact" class="flex items-center justify-center p-12">
                 <!-- Author: FormBold Team -->
