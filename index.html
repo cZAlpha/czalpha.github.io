@@ -46,6 +46,17 @@
         min-height: 100vh;
     }
 
+    /* Sticky Navbar */
+    .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    }
+
+    /* START - ANIMATIONS */
+
     .fadeInFromBottom { /*FADE IN FROM TOP | HIDDEN*/
         opacity: 0;
         filter: blur(5px);
@@ -59,14 +70,16 @@
         transform: translateY(0%);
     }
 
-    /* Sticky Navbar */
-    .sticky {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-    }
+    .hover-scale:hover {
+           transform: scale(1.05);
+       }
+
+
+   .hover-scale {
+       transition: transform 0.3s ease-in-out;
+   }
+
+    /* STOP - ANIMATIONS */
 </style>
 
 <div class="bg-gradient-to-t from-indigo-500 via-purple-500 to-blue-600 deepPurpleBackground poppinsFont">
@@ -76,7 +89,7 @@
             <div class="flex items-center justify-between md:w-auto w-full">
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex-1 flex items-center">
-                    <button class="mobile-menu-button">
+                    <button class="hover-scale mobile-menu-button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <title>bars-3-bottom-left</title>
                         <g fill="none">
@@ -95,12 +108,12 @@
             </div>
              <!-- START - Primary Navigation -->
             <div class="hidden md:flex md:flex-row flex-col items-center justify-start md:space-x-1 navigation-menu pb-3 md:pb-0 navigation-menu">
-                <a href="#home" class="hover:bg-white hover:bg-opacity-60 hover:text-black transition-colors rounded py-2 px-3 block">Home</a>
-                <a href="#about" class="hover:bg-white hover:bg-opacity-60 hover:text-black transition-colors rounded py-2 px-3 block">About</a>
-                <a href="#contact" class="hover:bg-white hover:bg-opacity-60 hover:text-black transition-colors rounded py-2 px-3 block">Contact</a>
+                <a href="#home" class="hover-scale hover:bg-white hover:bg-opacity-60 hover:text-black transition-colors rounded py-2 px-3 block">Home</a>
+                <a href="#about" class="hover-scale hover:bg-white hover:bg-opacity-60 hover:text-black transition-colors rounded py-2 px-3 block">About</a>
+                <a href="#contact" class="hover-scale hover:bg-white hover:bg-opacity-60 hover:text-black transition-colors rounded py-2 px-3 block">Contact</a>
                 <!-- START - Business Projects Dropdown Menu -->
                 <div class="relative">
-                    <button class="dropdown-toggle hover:bg-white hover:bg-opacity-60 hover:text-black py-2 px-3 flex items-center gap-2 rounded">
+                    <button class="hover-scale dropdown-toggle hover:bg-white hover:bg-opacity-60 hover:text-black py-2 px-3 flex items-center gap-2 rounded">
                         <span class="pointer-events-none">Business Projects</span>
                         <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <title>chevron-down</title>
@@ -110,14 +123,14 @@
                         </svg>
                     </button>
                     <div class="z-50 dropdown-menu absolute hidden bg-black text-white rounded-b-lg pb-2 w-60">
-                        <a href="https://www.ewabusinessconsultation.com" class="hover:bg-white hover:text-black block px-6 py-2">EWA Business Consultation</a>
-                        <a href="https://www.fmlstudios.site/" class="hover:bg-white hover:text-black block px-6 py-2">Myasia's Dance Studio</a>
+                        <a href="https://www.ewabusinessconsultation.com" class="hover-scale hover:bg-white hover:text-black block px-6 py-2">EWA Business Consultation</a>
+                        <a href="https://www.fmlstudios.site/" class="hover-scale hover:bg-white hover:text-black block px-6 py-2">Myasia's Dance Studio</a>
                     </div>
                 </div>
                 <!-- STOP - Business Projects Dropdown Menu -->
                 <!-- START - Personal Projects Dropdown Menu -->
                 <div class="relative">
-                    <button class="dropdown-toggle hover:bg-white hover:bg-opacity-60 hover:text-black py-2 px-3 flex items-center gap-2 rounded">
+                    <button class="hover-scale dropdown-toggle hover:bg-white hover:bg-opacity-60 hover:text-black py-2 px-3 flex items-center gap-2 rounded">
                         <span class="pointer-events-none">Personal Projects</span>
                         <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <title>chevron-down</title>
@@ -127,9 +140,9 @@
                         </svg>
                     </button>
                     <div class="dropdown-menu absolute hidden bg-black text-white rounded-b-lg pb-2 w-48">
-                        <a href="https://github.com/cZAlpha/Trashman-Simulator" class="hover:bg-white hover:text-black transition-colors block px-6 py-2">Trashman Game</a>
-                        <a href="https://github.com/cZAlpha/ipCountryFinder" class="hover:bg-white hover:text-black transition-colors block px-6 py-2">IP Country Finder</a>
-                        <a href="https://github.com/cZAlpha/FoodOrderingLab" class="hover:bg-white hover:text-black transition-colors block px-6 py-2">Food Ordering App</a>
+                        <a href="https://github.com/cZAlpha/Trashman-Simulator" class="hover-scale hover:bg-white hover:text-black transition-colors block px-6 py-2">Trashman Game</a>
+                        <a href="https://github.com/cZAlpha/ipCountryFinder" class="hover-scale hover:bg-white hover:text-black transition-colors block px-6 py-2">IP Country Finder</a>
+                        <a href="https://github.com/cZAlpha/FoodOrderingLab" class="hover-scale hover:bg-white hover:text-black transition-colors block px-6 py-2">Food Ordering App</a>
                     </div>
                 </div>
                 <!-- STOP - Personal Projects Dropdown Menu -->
@@ -137,17 +150,16 @@
             <!-- STOP - Primary Navigation -->
         </div>
     </nav>
-      
 
     <!-- Hero -->
     <div id="home" class="hero fadeInFromBottom">
-        <p class="text-6xl text-white font-bold">Noah Klaus</p>
-        <p class="text-2xl text-white pt-8">Computer Science Student</p>
+        <p class="hover-scale text-6xl text-white font-bold">Noah Klaus</p>
+        <p class="hover-scale text-2xl text-white pt-8">Computer Science Student</p>
      </div>
 
     <!-- About Me Section -->
-    <div class="container mx-auto mt-8 max-w-xl p-8">
-        <div id="about" class="bg-white p-8 rounded-lg shadow border-4 border-black">
+    <div class="container mx-auto mt-8 max-w-xl p-8 fadeInFromBottom">
+        <div id="about" class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
             <h1 class="text-2xl font-bold mb-4">About Me</h1>
             <p class="text-gray-700">
                 I'm Noah, I've been a Research Assistant managing a team of Researchers at 
@@ -185,8 +197,8 @@
     </div>  
 
     <!-- Skillset Section-->
-    <div class="container mx-auto mt-8 max-w-3xl p-8">
-        <div class="bg-white p-8 rounded-lg shadow border-4 border-black">
+    <div class="container mx-auto mt-8 max-w-3xl p-8 fadeInFromBottom">
+        <div class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
             <h1 class="text-2xl font-bold mb-4">My Skill Set</h1>
             <div class="overflow-x-auto">
                 <table class="w-full">
@@ -195,13 +207,13 @@
                             <td class="pb-5">
                                 <p class="text-center font-bold pt-5 pb-2">Frontend</p>
                                 <div class="flex justify-center items-center">
-                                    <img class="h-auto w-10 sm:w-10 md:w-14 lg:w-16 xl:w-16" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" />
-                                    <img class="h-auto w-10 sm:w-10 md:w-14 lg:w-16 xl:w-16" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" />  
-                                    <img class="h-auto w-10 sm:w-10 md:w-14 lg:w-16 xl:w-16" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" />  
-                                    <img class="h-auto w-10 sm:w-10 md:w-14 lg:w-16 xl:w-16" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" /> 
-                                    <img class="h-auto w-10 sm:w-10 md:w-14 lg:w-16 xl:w-16" src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="TypeScript" /> 
-                                    <img class="h-auto w-10 sm:w-10 md:w-14 lg:w-16 xl:w-16" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" />  
-                                    <img class="h-auto w-10 sm:w-10 md:w-14 lg:w-16 xl:w-16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1024px-Tailwind_CSS_Logo.svg.png?20230715030042" alt="Tailwind" />  
+                                    <img class="hover-scale h-auto w-10 sm:w-10 md:w-14 lg:w-16 xl:w-16" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" />
+                                    <img class="hover-scale h-auto w-10 sm:w-10 md:w-14 lg:w-16 xl:w-16" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" />  
+                                    <img class="hover-scale h-auto w-10 sm:w-10 md:w-14 lg:w-16 xl:w-16" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" />  
+                                    <img class="hover-scale h-auto w-10 sm:w-10 md:w-14 lg:w-16 xl:w-16" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" /> 
+                                    <img class="hover-scale h-auto w-10 sm:w-10 md:w-14 lg:w-16 xl:w-16" src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="TypeScript" /> 
+                                    <img class="hover-scale h-auto w-10 sm:w-10 md:w-14 lg:w-16 xl:w-16" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" />  
+                                    <img class="hover-scale h-auto w-10 sm:w-10 md:w-14 lg:w-16 xl:w-16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1024px-Tailwind_CSS_Logo.svg.png?20230715030042" alt="Tailwind" />  
                                 </div>
                             </td>
                         </tr>
@@ -209,10 +221,10 @@
                             <td class="pb-5">
                                 <p class="text-center font-bold pt-5 pb-2">Backend</p>
                                 <div class="flex justify-center items-center">
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" />  
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" />  
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" />  
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" />
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" />  
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" />  
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" />  
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" />
                                 </div>
                             </td>
                         </tr>
@@ -220,12 +232,12 @@
                             <td class="pb-5">
                                 <p class="text-center font-bold pt-5 pb-2">Frameworks</p>
                                 <div class="flex justify-center items-center">
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/django-original.svg" alt="Django" />  
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg" alt="Docker" />  
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/opencv-icon.svg" alt="OpenCV" />  
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://crowdin-static.downloads.crowdin.com/images/project-logo/369271/small/6afbec32f80242af6da64b22130b985d132.png" alt="QiskitLogo" />
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://www.gamingonlinux.com/uploads/tagline_gallery/sdl.jpg" alt="SDL Logo" />
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png" alt="SDL Logo" />
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/django-original.svg" alt="Django" />  
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg" alt="Docker" />  
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/opencv-icon.svg" alt="OpenCV" />  
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://crowdin-static.downloads.crowdin.com/images/project-logo/369271/small/6afbec32f80242af6da64b22130b985d132.png" alt="QiskitLogo" />
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://www.gamingonlinux.com/uploads/tagline_gallery/sdl.jpg" alt="SDL Logo" />
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png" alt="SDL Logo" />
                                 </div>
                             </td>
                         </tr>
@@ -233,10 +245,10 @@
                             <td class="pb-5">
                                 <p class="text-center font-bold pt-5 pb-2">DevOps</p>
                                 <div class="flex justify-center items-center">
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/powershell.png" alt="PowerShell" />  
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" />  
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" />
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" />
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/powershell.png" alt="PowerShell" />  
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" />  
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" />
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" />
                                 </div>
                             </td>
                         </tr>
@@ -244,8 +256,8 @@
                             <td class="pb-5">
                                 <p class="text-center font-bold pt-5 pb-2">Electronics</p>
                                 <div class="flex justify-center items-center">
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/raspberrypi.png" alt="Raspberry Pi" />  
-                                    <img class="h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/arduino.png" alt="Arduino" />  
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/raspberrypi.png" alt="Raspberry Pi" />  
+                                    <img class="hover-scale h-auto w-10 sm:w-12 md:w-16 lg:w-18 xl:w-18" src="https://profilinator.rishav.dev/skills-assets/arduino.png" alt="Arduino" />  
                                 </div>
                             </td>
                         </tr>
@@ -257,8 +269,8 @@
     
 
     <!-- Business Projects Section -->
-    <div class="container mx-auto mt-8 max-w-3xl p-8">
-        <div id="about" class="bg-white p-8 rounded-lg shadow border-4 border-black">
+    <div class="container mx-auto mt-8 max-w-3xl p-8 fadeInFromBottom">
+        <div id="about" class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
             <h1 class="text-2xl font-bold mb-4">Business Projects</h1>
             <!-- START - IMAGE CAROUSEL -->
             <div class="max-w-2xl mx-auto">
@@ -275,12 +287,12 @@
                         </div>
                     </div>
                     <!-- Slider controls -->
-                    <button type="button" class="flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"data-carousel-prev>
+                    <button type="button" class="hover-scale flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"data-carousel-prev>
                         <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                         </svg>
                     </button>
-                    <button type="button" class="flex absolute top-1/2 right-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition" data-carousel-next>
+                    <button type="button" class="hover-scale flex absolute top-1/2 right-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition" data-carousel-next>
                         <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
@@ -292,12 +304,10 @@
             <!-- STOP  - IMAGE CAROUSEL -->
             <h1 class="text-lg font-bold text-center pb-4 pt-4">FML Studios</h1>
             <p class="text-justify p-2">
-                FML Studios was a website created for a client of my employer: EWA LLC.
-                She runs a dance studio and needed a professional website that explains
-                her business' purpose, drive, and the ability to gather information 
-                about future clients of hers. We are currently working on the E-commerce
-                portion of the website, and hope to have her website up and running
-                on a domain of her choosing within the next couple of months.
+                FML Studios, a website developed by EWA LLC for a burgeoning dance studio 
+                CEO, facilitated business guidance, online presence establishment, event 
+                management, class coordination, and E-commerce, successfully achieving 
+                these objectives.
             </p>
             <h1 class="text-lg font-bold text-center pb-4 pt-6">EWA Business Consultation</h1>
             <p class="text-justify p-2">
@@ -309,8 +319,8 @@
     </div>
 
     <!-- Personal Projects Section -->
-    <div class="container mx-auto mt-8 max-w-3xl p-8">
-        <div id="about" class="bg-white p-8 rounded-lg shadow border-4 border-black">
+    <div class="container mx-auto mt-8 max-w-3xl p-8 fadeInFromBottom">
+        <div id="about" class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
             <h1 class="text-2xl font-bold mb-4">Personal Projects</h1>
             <!-- START - IMAGE CAROUSEL -->
             <div class="max-w-2xl mx-auto">
@@ -376,8 +386,8 @@
     </div>
 
     <!-- Contact Section -->
-    <div class="container mx-auto mt-8 max-w-3xl p-8">
-        <div class="bg-white p-8 rounded-lg shadow border-4 border-black">
+    <div class="container mx-auto mt-8 max-w-3xl p-8 fadeInFromBottom">
+        <div class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
             <div id="contact" class="flex items-center justify-center p-12">
                 <div class="mx-auto w-full max-w-[550px]">
                     <h1 class="text-2xl font-bold text-center pb-2">Shoot Me An Email!</h1>
@@ -459,32 +469,37 @@
             <div class="sm:flex sm:items-center sm:justify-between">
                 <!-- Logo -->
                 <div class="flex">
-                    <a href="https://www.github.com/czalpha" class="text-black hover:text-yellow-600 transition-colors flex flex-1 justify-center items-center py-5 px-2">
+                    <a href="https://www.github.com/czalpha" class="hover-scale hover:text-yellow-600 transition-colors flex flex-1 justify-center items-center py-5 px-2">
+                        <img class="h-auto w-10 sm:w-12 md:w-12 lg:w-12 xl:w-12 pr-2" src="assets/threechevronlogo.svg" alt="logo" />
                         <span class="font-bold">Noah Klaus</span>
                     </a>
                 </div>
                 <ul class="flex flex-1 flex-row justify-center md:justify-end items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 pt-10 md:pt-0 md:pr-10 ">
                     <li class="p-2">
-                        <a href="#home" class="hover:underline me-4 md:me-6">Home</a>
+                        <a href="#home" class="hover-scale hover:underline me-4 md:me-6">Home</a>
                     </li>
                     <li class="p-2">
-                        <a href="#about" class="hover:underline me-4 md:me-6">About</a>
+                        <a href="#about" class="hover-scale hover:underline me-4 md:me-6">About</a>
                     </li>
                     <li class="p-2">
-                        <a href="#contact" class="hover:underline">Contact</a>
+                        <a href="#contact" class="hover-scale hover:underline">Contact</a>
                     </li>
                 </ul>
                 <!-- Vertical barrier -->
                 <div class="h-12 w-1 opacity-0 md:opacity-80 lg:opacity-80 xl:opacity-100 bg-gray-300 mx-4"></div>
-                <div class="flex flex-wrap justify-center gap-2">          
-                    <a href="https://www.linkedin.com/in/noah-klaus-2187421ab/" class="bg-blue-600 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
-                        <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.583 23.583h-4.472V14.17c0-1.832-.037-4.198-2.552-4.198c-2.553 0-2.938 1.989-2.938 4.048v9.563H9.4V9.787h4.27v2.152h.056c.596-1.133 2.054-2.32 4.216-2.32c4.517 0 5.35 2.974 5.35 6.84V23.583zM4.49 8.636a1.832 1.832 0 1 1 0-3.665a1.832 1.832 0 0 1 0 3.665zm-2.749 15.948h4.48V9.787h-4.48V24zm0 0"/></svg>
-                    </a>
-                    <a href="https://github.com/cZAlpha" class="bg-gray-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
-                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-5" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                        <g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385c.6.105.825-.255.825-.57c0-.285-.015-1.23-.015-2.235c-3.015.555-3.795-.735-4.035-1.41c-.135-.345-.72-1.41-1.23-1.695c-.42-.225-1.02-.78-.015-.795c.945-.015 1.62.87 1.845 1.23c1.08 1.815 2.805 1.305 3.495.99c.105-.78.42-1.305.765-1.605c-2.67-.3-5.46-1.335-5.46-5.925c0-1.305.465-2.385 1.23-3.225c-.12-.3-.54-1.53.12-3.18c0 0 1.005-.315 3.3 1.23c.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23c.66 1.65.24 2.88.12 3.18c.765.84 1.23 1.905 1.23 3.225c0 4.605-2.805 5.625-5.475 5.925c.435.375.81 1.095.81 2.22c0 1.605-.015 2.895-.015 3.3c0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" fill="currentColor" /></g>
-                      </svg>
-                    </a>
+                <div class="flex flex-wrap justify-center gap-2">  
+                    <div class="hover-scale">
+                        <a href="https://www.linkedin.com/in/noah-klaus-2187421ab/" class="bg-blue-600 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                            <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.583 23.583h-4.472V14.17c0-1.832-.037-4.198-2.552-4.198c-2.553 0-2.938 1.989-2.938 4.048v9.563H9.4V9.787h4.27v2.152h.056c.596-1.133 2.054-2.32 4.216-2.32c4.517 0 5.35 2.974 5.35 6.84V23.583zM4.49 8.636a1.832 1.832 0 1 1 0-3.665a1.832 1.832 0 0 1 0 3.665zm-2.749 15.948h4.48V9.787h-4.48V24zm0 0"/></svg>
+                        </a>
+                    </div>    
+                    <div class="hover-scale">
+                        <a href="https://github.com/cZAlpha" class="bg-gray-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-5" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                <g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385c.6.105.825-.255.825-.57c0-.285-.015-1.23-.015-2.235c-3.015.555-3.795-.735-4.035-1.41c-.135-.345-.72-1.41-1.23-1.695c-.42-.225-1.02-.78-.015-.795c.945-.015 1.62.87 1.845 1.23c1.08 1.815 2.805 1.305 3.495.99c.105-.78.42-1.305.765-1.605c-2.67-.3-5.46-1.335-5.46-5.925c0-1.305.465-2.385 1.23-3.225c-.12-.3-.54-1.53.12-3.18c0 0 1.005-.315 3.3 1.23c.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23c.66 1.65.24 2.88.12 3.18c.765.84 1.23 1.905 1.23 3.225c0 4.605-2.805 5.625-5.475 5.925c.435.375.81 1.095.81 2.22c0 1.605-.015 2.895-.015 3.3c0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" fill="currentColor" /></g>
+                            </svg>
+                        </a>
+                    </div>    
                 </div>
             </div>
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
@@ -556,10 +571,6 @@
     const hiddenFromTopElements = document.querySelectorAll('.fadeInFromBottom');
     hiddenFromTopElements.forEach( (el) => topObserver.observe(el) );
     // STOP  - 'fadeInFromBottom' call
-
-    // START - Image Carousel
-
-    // STOP  - Image Carousel
 </script>    
     
 </body>
