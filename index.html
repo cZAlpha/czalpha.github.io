@@ -129,9 +129,9 @@
                             </g>
                         </svg>
                     </button>
-                    <div class="z-50 dropdown-menu absolute hidden bg-black text-white rounded-b-lg pb-2 w-60">
-                        <a href="https://www.ewabusinessconsultation.com" class="hover-scale hover:bg-white hover:text-black block px-6 py-2">EWA Business Consultation</a>
+                    <div class="z-50 dropdown-menu absolute hidden bg-white bg-opacity-60 text-black rounded-b-lg pb-2 w-60">
                         <a href="https://www.fmlstudios.site/" class="hover-scale hover:bg-white hover:text-black block px-6 py-2">Myasia's Dance Studio</a>
+                        <a href="https://www.ewabusinessconsultation.com" class="hover-scale hover:bg-white hover:text-black block px-6 py-2">EWA Business Consultation</a>
                     </div>
                 </div>
                 <!-- STOP - Business Projects Dropdown Menu -->
@@ -146,10 +146,10 @@
                             </g>
                         </svg>
                     </button>
-                    <div class="dropdown-menu absolute hidden bg-black text-white rounded-b-lg pb-2 w-48">
-                        <a href="https://github.com/cZAlpha/Trashman-Simulator" class="hover-scale hover:bg-white hover:text-black transition-colors block px-6 py-2">Trashman Game</a>
-                        <a href="https://github.com/cZAlpha/ipCountryFinder" class="hover-scale hover:bg-white hover:text-black transition-colors block px-6 py-2">IP Country Finder</a>
+                    <div class="dropdown-menu absolute hidden bg-white bg-opacity-60 text-black rounded-b-lg pb-2 w-56">
+                        <a href="https://github.com/cZAlpha/Plasmainterferometry" class="hover-scale hover:bg-white hover:text-black transition-colors block px-6 py-2">Plasmainterferometry</a>
                         <a href="https://github.com/cZAlpha/FoodOrderingLab" class="hover-scale hover:bg-white hover:text-black transition-colors block px-6 py-2">Food Ordering App</a>
+                        <a href="https://github.com/cZAlpha/Trashman-Simulator" class="hover-scale hover:bg-white hover:text-black transition-colors block px-6 py-2">Trashman Game</a>                    
                     </div>
                 </div>
                 <!-- STOP - Personal Projects Dropdown Menu -->
@@ -165,8 +165,8 @@
      </div>
 
     <!-- About Me Section -->
-    <div class="container mx-auto mt-8 max-w-xl p-8 fadeInFromBottom">
-        <div id="about" class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
+    <div id="about" class="container mx-auto mt-8 max-w-xl p-8 fadeInFromBottom">
+        <div class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
             <h1 class="text-2xl font-bold mb-4">About Me</h1>
             <p class="text-gray-700">
                 I'm Noah, I've been a Research Assistant managing a team of Researchers at 
@@ -328,7 +328,7 @@
     <!-- Personal Projects Section -->
     <div class="container mx-auto mt-8 max-w-3xl p-8 fadeInFromBottom">
         <div id="about" class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
-            <h1 class="text-2xl font-bold mb-4">Personal Projects</h1>
+            <h1 class="text-2xl font-bold mb-10">Personal Projects</h1>
             <!-- START - IMAGE CAROUSEL -->
             <div class="max-w-2xl mx-auto">
                 <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg" data-carousel="static">
@@ -336,15 +336,15 @@
                     <div class="relative h-80 md:h-96" data-carousel-inner>
                         <!-- Item 1 -->
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="assets/trashmangamescreenshot.png"class="object-cover w-full h-full" alt="Trashman Game">
+                            <img src="assets/plasma_UI.png" class="object-cover w-full h-full" alt="PlasmaInterferometryUserInterface">
                         </div>
                         <!-- Item 2 -->
                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="assets/ipCountryFinderScreenshot.png"class="object-cover w-full h-full" alt="IP Country Finder">
+                            <img src="assets/plasma_example_image_ANGLED_CROPPED.png" class="object-cover w-full h-full" alt="Inverse Abel 3D Graph">
                         </div>
                         <!-- Item 3 -->
                         <div class="hidden duration-700 ease-in-out flex justify-center items-center" data-carousel-item>
-                            <img src="assets/foodOrderingLabPicture.png" class="object-cover w-auto h-full" alt="Not Done Yet">
+                            <img src="assets/plasma_example_image_PHASESHIFT.png" class="object-cover w-auto h-full" alt="Phase Shift">
                         </div>
                     </div>
                     <!-- Slider controls -->
@@ -363,31 +363,53 @@
                 <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
             </div>
             <!-- STOP  - IMAGE CAROUSEL -->
+            <h1 class="hover-scale text-lg font-bold text-center p-4">
+                <a href="https://github.com/cZAlpha/Plasmainterferometry">Plasmainterferometry</a>
+            </h1>   
+            <p class="text-justify pt-2 pb-12">
+                The Plasmainterferometry project is a Python program designed to measure the 
+                density of plasma and gas using laser fringe patterns. Users take images of 
+                these patterns, trace the fringe lines, and convert the images into a special 
+                format. The program processes these images to analyze the density of the 
+                plasma or gas. By running the main program file and selecting the desired 
+                analysis options, users can generate various graphs to visualize the results. 
+                The process involves image preparation, tracing, and saving the lines in a 
+                specific format before using the program to complete the analysis.
+            </p>
 
-            <h1 class="text-lg font-bold text-center pb-4 pt-4">Trashman Game</h1>
-            <p class="text-justify p-2">
-                The Trashman Game (also known as the Trashman Simulator) is a game that I 
-                wrote from scratch using the SDL2 C++ library. It is completely written in
-                C++ and features a main menu, win screen, and two levels. Everything visible
-                in the game was drawn by hand by me, I hope that you enjoy it!
-            </p>
-            <h1 class="text-lg font-bold text-center pb-4 pt-6">IP Country Finder</h1>
-            <p class="text-justify p-2">
-                My IP country finder project consists of a Python application that uses
-                a GUI to allow the user to input IPV4 or 6 addresses, and will return
-                the country and city of origin of that address. I was able to complete 
-                this project through the help of my brother who has a deep understanding 
-                of how IP addresses work, and other important networking concepts that 
-                he helped me to learn and implement into this project.
-            </p>
-            <h1 class="text-lg font-bold text-center pb-4 pt-6">Food Ordering App</h1>
-            <p class="text-justify p-2">
+
+            <div class="pt-10 flex justify-center">
+                <div class="w-full h-auto max-w-xs sm:max-w-xs md:max-w-xs lg:max-w-xs xl:max-w-xs">
+                    <a href="https://github.com/cZAlpha/FoodOrderingLab">
+                        <img src="assets/foodOrderingLabPicture.png" class="hover-scale rounded-lg shadow-lg object-contain" alt="Food Ordering Lab">
+                    </a>
+                </div>
+            </div>
+            <h1 class="hover-scale text-lg font-bold text-center pb-4 pt-6">
+                <a href="https://github.com/cZAlpha/FoodOrderingLab">Food Ordering App</a>
+            </h1>   
+            <p class="text-justify pt-2 pb-12">
                 This programming project includes an IOS application made using React Native
                 that you are able to use through XCode's simulator. It allows for
                 authorization for admin logins, general public use, etc. It allows you to 
                 upload images from your machine through the application in order to create
                 and/or edit products, their names and prices. Furthermore, users are able 
                 to order products and those products will appear in their cart.
+            </p>
+
+            <div class="pt-10">
+                <a href="https://github.com/cZAlpha/Trashman-Simulator">
+                    <img src="assets/trashmangamescreenshot.png"class="hover-scale rounded-lg shadow-lg object-cover w-full h-full" alt="Trashman Game">
+                </a>
+            </div>
+            <h1 class="hover-scale text-lg font-bold text-center p-4">
+                <a href="https://github.com/cZAlpha/Trashman-Simulator">Trashman Game</a>
+            </h1>
+            <p class="text-justify pt-2 pb-12">
+                The Trashman Game (also known as the Trashman Simulator) is a game that I 
+                wrote from scratch using the SDL2 C++ library. It is completely written in
+                C++ and features a main menu, win screen, and two levels. Everything visible
+                in the game was drawn by hand by me, I hope that you enjoy it!
             </p>
         </div>
     </div>
