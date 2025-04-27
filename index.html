@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noah Klaus' Portfolio</title>
     <meta name="theme-color" content="#000">
+    <!-- Tailwind import -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Personal Logo -->
     <link rel="icon" href="assets/threechevronlogo.svg" type="image/x-icon">
-
+    
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Noah Klaus' Website">
     <meta property="og:description" content="Learn more about me in my handcrafted website!">
     <meta property="og:image" content="assets/previewImage.jpg">
     <meta property="og:url" content="https://czalpha.github.io/">
     <meta property="og:type" content="website">
+    
+    <!-- Particle JS Import (For animated BG) -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
 <style>
@@ -23,15 +28,7 @@
     html {
         scroll-behavior: smooth;
     }
-
-    .backgroundImage {
-        background-image: url(./assets/backgroundImage.png);
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
+    
     /* Media query for mobile devices */
     @media only screen and (max-width: 768px) {
         .backgroundImage {
@@ -41,27 +38,19 @@
             background-attachment: fixed;
         }
     }
-
+    
     .poppinsFont {
         font-family: 'Poppins', sans-serif;
     }
-
+    
     .orange {
         color: #ff8906; /* Orange color */
     }
-
-    .orangeBackground {
-        background-color: #ff8906;
-    }
-
+    
     .deepPurple {
         color: #483248;
     }
-
-    .deepPurpleBackground {
-        background-color: #483248;
-    }
-
+    
     .hero {
         font-size: 35px;
         display: flex;
@@ -70,7 +59,7 @@
         align-items: center;
         min-height: 100vh;
     }
-
+    
     /* Sticky Navbar */
     .sticky {
     position: fixed;
@@ -79,36 +68,84 @@
     width: 100%;
     z-index: 999;
     }
-
+    
     /* START - ANIMATIONS */
-
     .fadeInFromBottom { /*FADE IN FROM TOP | HIDDEN*/
         opacity: 0;
         filter: blur(5px);
         transform: translateY(30%);
         transition: all 2s;
     }
-
+    
     .showFromTop { /*FADE IN FROM TOP | SHOW*/
         opacity: 1;
         filter: blur(0px);
         transform: translateY(0%);
     }
-
+    
     .hover-scale:hover {
-           transform: scale(1.05);
-       }
-
-
-   .hover-scale {
-       transition: transform 0.3s ease-in-out;
-   }
-
+        transform: scale(1.05);
+    }
+    
+    .hover-scale {
+        transition: transform 0.3s ease-in-out;
+    }
     /* STOP - ANIMATIONS */
 </style>
 
-<body class="backgroundImage poppinsFont">
-    <!--OLD GRADIENT BACKGROUND: bg-gradient-to-t from-indigo-500 via-purple-500 to-blue-600-->
+<body class="poppinsFont">
+    <!-- Background using particle js -->
+    <div class="fixed top-0 left-0 w-full h-full bg-black"></div>
+    <div id="particles-js" class="fixed top-0 left-0 w-full h-full -z-10"></div>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 500 } },
+                color: { value: "#ff0606" }, // Orange theme
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 7, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#FFF", // White
+                    opacity: 0.5,
+                    width: 1,
+                },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                },
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                onhover: { 
+                    enable: true, 
+                    mode: "repulse",
+                    // Add repulse configuration:
+                    repulse: {
+                    distance: 1,    // Reduce repulsion distance (default: 100)
+                    duration: 0.1    // Reduce animation speed (default: 0.4)
+                    }
+                },
+                onclick: { 
+                    enable: true, 
+                    mode: "push",
+                    // Optional: Reduce push strength if desired
+                    push: {
+                    particles_nb: 2  // Fewer particles pushed (default: 4)
+                    }
+                },
+                },
+            },
+        });
+    </script>
+    
     <!-- Navbar -->
     <nav class="bg-gradient-to-b from-black to-transparent text-white sticky">
         <div class="container mx-auto px-4 md:flex items-center gap-6">
@@ -188,13 +225,13 @@
             <!-- STOP - Primary Navigation -->
         </div>
     </nav>
-
+    
     <!-- Hero -->
     <div id="home" class="hero fadeInFromBottom">
         <p class="hover-scale text-6xl text-white font-bold">Noah Klaus</p>
-        <p class="hover-scale text-2xl text-white pt-8">Computer Science Student</p>
+        <p class="hover-scale text-2xl text-white pt-8">Computer Scientist</p>
     </div>
-
+    
     <!-- About Me Section -->
     <div id="about" class="container mx-auto mt-8 max-w-xl p-8 fadeInFromBottom">
         <div class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
