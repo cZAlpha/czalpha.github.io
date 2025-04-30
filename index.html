@@ -24,7 +24,7 @@
 <style>
     /* Import Poppins font from Google Fonts API */
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+    
     html {
         scroll-behavior: smooth;
     }
@@ -186,8 +186,8 @@
                         </svg>
                     </button>
                     <div class="z-50 dropdown-menu absolute hidden bg-white text-black rounded-b-lg pb-2 w-60">
-                        <a href="https://www.fmlstudios.site/" class="hover:bg-gray-200 hover:text-black block px-6 py-2">Myasia's Dance Studio</a>
-                        <a href="https://www.ewabusinessconsultation.com" class="hover:bg-gray-200 hover:text-black block px-6 py-2">EWA Business Consultation</a>
+                        <a href="#BusinessProjects" class="hover:bg-gray-200 hover:text-black block px-6 py-2">Myasia's Dance Studio</a>
+                        <a href="#BusinessProjects" class="hover:bg-gray-200 hover:text-black block px-6 py-2">EWA Business Consultation</a>
                     </div>
                 </div>
                 <!-- STOP - Business Projects Dropdown Menu -->
@@ -203,27 +203,27 @@
                         </svg>
                     </button>
                     <div class="dropdown-menu absolute hidden bg-white text-black rounded-b-lg pb-2 w-56">
-                        <a href="https://github.com/cZAlpha/Lumetric" class="bg-white bg-opacity-100 hover:bg-gray-200 hover:text-black transition-colors block px-6 py-2">
+                        <a href="#Lumetric" class="bg-white bg-opacity-100 hover:bg-gray-200 hover:text-black transition-colors block px-6 py-2">
                             <p class="hover-scale">
                                 Lumetric
                             </p>
                         </a>
-                        <a href="https://github.com/cZAlpha/FarmerAI" class="bg-white bg-opacity-100 hover:bg-gray-200 hover:text-black transition-colors block px-6 py-2">
+                        <a href="#FarmerAI" class="bg-white bg-opacity-100 hover:bg-gray-200 hover:text-black transition-colors block px-6 py-2">
                             <p class="hover-scale">
                                 Farmer AI
                             </p>
                         </a>
-                        <a href="https://github.com/cZAlpha/Plasmainterferometry" class="bg-white bg-opacity-100 hover:bg-gray-200 hover:text-black transition-colors block px-6 py-2">
+                        <a href="#PlasmaInterferometry" class="bg-white bg-opacity-100 hover:bg-gray-200 hover:text-black transition-colors block px-6 py-2">
                             <p class="hover-scale">
                                 Plasmainterferometry
                             </p>
                         </a>
-                        <a href="https://github.com/cZAlpha/PyFileConverter.git" class="bg-white bg-opacity-100 hover:bg-gray-200 hover:text-black transition-colors block px-6 py-2">
+                        <a href="#PyFileConverter" class="bg-white bg-opacity-100 hover:bg-gray-200 hover:text-black transition-colors block px-6 py-2">
                             <p class="hover-scale">
                                 PyFileConverter
                             </p>
                         </a>    
-                        <a href="https://github.com/cZAlpha/FoodOrderingLab" class="bg-white bg-opacity-100 hover:bg-gray-200 hover:text-black transition-colors block px-6 py-2">
+                        <a href="#FoodOrderingApp" class="bg-white bg-opacity-100 hover:bg-gray-200 hover:text-black transition-colors block px-6 py-2">
                             <p class="hover-scale">
                                 Food Ordering App
                             </p>
@@ -242,70 +242,136 @@
         <p class="hover-scale text-2xl text-white pt-8">Computer Scientist</p>
     </div>
     
-    <!-- About Me Section -->
-    <div id="about" class="container mx-auto mt-8 max-w-xl p-8 fadeInFromBottom">
-        <div class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
-            <div class="flex flex-row justify-between items-center mb-4"> <!-- About me title and social icons in a flex row -->
-                <div class=""> <!-- About me title -->
-                    <h1 class="text-2xl font-bold">About Me</h1>
+    <!-- About Me Section with Enhanced Design -->
+    <div id="about" class="container mx-auto my-16 max-w-2xl p-6">
+        <div class="bg-gradient-to-br from-white to-gray-100 p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                <!-- About me title with icon -->
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                    <h1 class="text-3xl font-bold text-gray-800">About Me</h1>
                 </div>
-                <div class=""> <!-- Social Icons-->
-                    <div class="flex flex-col">
-                        <div class="flex flex-wrap justify-center gap-2">  
-                            <div class="hover-scale">
-                                <a href="https://github.com/cZAlpha" class="bg-gray-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded shadow-md">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-5" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                        <g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385c.6.105.825-.255.825-.57c0-.285-.015-1.23-.015-2.235c-3.015.555-3.795-.735-4.035-1.41c-.135-.345-.72-1.41-1.23-1.695c-.42-.225-1.02-.78-.015-.795c.945-.015 1.62.87 1.845 1.23c1.08 1.815 2.805 1.305 3.495.99c.105-.78.42-1.305.765-1.605c-2.67-.3-5.46-1.335-5.46-5.925c0-1.305.465-2.385 1.23-3.225c-.12-.3-.54-1.53.12-3.18c0 0 1.005-.315 3.3 1.23c.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23c.66 1.65.24 2.88.12 3.18c.765.84 1.23 1.905 1.23 3.225c0 4.605-2.805 5.625-5.475 5.925c.435.375.81 1.095.81 2.22c0 1.605-.015 2.895-.015 3.3c0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" fill="currentColor" /></g>
-                                    </svg>
-                                </a>
-                            </div>    
-                            <div class="hover-scale">
-                                <a href="https://www.linkedin.com/in/noah--klaus/" class="bg-blue-600 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded shadow-md">
-                                    <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.583 23.583h-4.472V14.17c0-1.832-.037-4.198-2.552-4.198c-2.553 0-2.938 1.989-2.938 4.048v9.563H9.4V9.787h4.27v2.152h.056c.596-1.133 2.054-2.32 4.216-2.32c4.517 0 5.35 2.974 5.35 6.84V23.583zM4.49 8.636a1.832 1.832 0 1 1 0-3.665a1.832 1.832 0 0 1 0 3.665zm-2.749 15.948h4.48V9.787h-4.48V24zm0 0"/></svg>
-                                </a>
-                            </div>    
+                
+                <!-- Social Icons with improved design -->
+                <div class="flex gap-3">
+                    <a href="https://github.com/cZAlpha" class="bg-gray-800 hover:bg-gray-700 p-2 text-white rounded-full transition-all duration-300 flex items-center justify-center w-10 h-10" title="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385c.6.105.825-.255.825-.57c0-.285-.015-1.23-.015-2.235c-3.015.555-3.795-.735-4.035-1.41c-.135-.345-.72-1.41-1.23-1.695c-.42-.225-1.02-.78-.015-.795c.945-.015 1.62.87 1.845 1.23c1.08 1.815 2.805 1.305 3.495.99c.105-.78.42-1.305.765-1.605c-2.67-.3-5.46-1.335-5.46-5.925c0-1.305.465-2.385 1.23-3.225c-.12-.3-.54-1.53.12-3.18c0 0 1.005-.315 3.3 1.23c.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23c.66 1.65.24 2.88.12 3.18c.765.84 1.23 1.905 1.23 3.225c0 4.605-2.805 5.625-5.475 5.925c.435.375.81 1.095.81 2.22c0 1.605-.015 2.895-.015 3.3c0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/noah--klaus/" class="bg-blue-600 hover:bg-blue-700 p-2 text-white rounded-full transition-all duration-300 flex items-center justify-center w-10 h-10" title="LinkedIn">
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Introduction with subtle styling -->
+            <div class="bg-blue-50 p-4 rounded-lg mb-6 border-l-4 border-blue-400">
+                <p class="text-gray-700 leading-relaxed">
+                    I'm <span class="font-semibold">Noah</span>, a software developer and currently the CIO of Sage Advisory DE. 
+                    Check out my GitHub for cool projects I've worked on and connect with me on LinkedIn!
+                </p>
+            </div>
+            
+            <!-- Sections with improved icons and spacing -->
+            <div class="space-y-6">
+                <!-- Currently Learning Section -->
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <div class="flex items-center gap-2 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        <h2 class="text-lg font-bold text-gray-800">I'm Currently Learning:</h2>
+                    </div>
+                    <ul class="list-none pl-7 space-y-2">
+                        <li class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Artificial Intelligence Model Development
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Computer Networking
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Cyber Security
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Current Position Section -->
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <div class="flex items-center gap-2 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <h2 class="text-lg font-bold text-gray-800">Current Position:</h2>
+                    </div>
+                    <div class="pl-7">
+                        <div class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span class="font-medium">Chief Information Officer</span>
+                        </div>
+                        <p class="text-gray-500 pl-6">Sage Advisory DE</p>
+                    </div>
+                </div>
+                
+                <!-- Past Experience Section -->
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <div class="flex items-center gap-2 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <h2 class="text-lg font-bold text-gray-800">Past Experience:</h2>
+                    </div>
+                    <div class="pl-7 space-y-3">
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="font-medium">Quantum Computing Research Assistant</span>
+                            </div>
+                            <p class="text-gray-500 pl-6">Delaware State University</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="font-medium">Laser Amplification Technology Intern</span>
+                            </div>
+                            <p class="text-gray-500 pl-6">Lawrence Livermore National Laboratory</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="font-medium">Technical Support Specialist Intern</span>
+                            </div>
+                            <p class="text-gray-500 pl-6">Delaware Electric Cooperative</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <p class="text-gray-700">
-                I'm Noah, I've been a Quantum Computing Research Assistant since 2022. Checkout my GitHub for cool projects I've done and check out my LinkedIn to connect with me!
-            </p>
-            
-
-            </br>
-            <div class="text-gray-700">
-                <p class="font-bold mb-2">I'm Currently Learning:</p>
-                <ul class="list-disc pl-5">
-                    <li>JavaScript (React JS)</li>
-                    <li>Django (Python)</li>
-                    <li>Cyber Security</li>
-                    <li>Web Application Development</li>
-                </ul>
-            </div>
-            </br>
-            <div class="text-gray-700">
-                <p class="font-bold mb-2">Current Positions:</p>
-                <ul class="list-disc pl-5">
-                    <li>Quantum Computing Research Assistant</li>
-                    <p class="text-gray-500">Delaware State University</p>
-                    <li>Chief Information Officer</li>
-                    <p class="text-gray-500">Sage Advisory DE</p>
-                </ul>
-            </div>
-            </br>
-            <div class="text-gray-700">
-                <p class="font-bold mb-2">Past Experience:</p>
-                <ul class="list-disc pl-5">
-                    <li>Laser Amplification Technology Intern</li>
-                    <p class="text-gray-500">Lawrence Livermore National Laboratory</p>
-                    <li>Technical Support Specialist Intern</li>
-                    <p class="text-gray-500">Delaware Electric Cooperative</p>
-                </ul>
-            </div>
         </div>
-    </div>  
-
+    </div>
+    
     <!-- Skillset Section-->
     <div class="container mx-auto mt-8 max-w-3xl p-8 fadeInFromBottom">
         <div class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
@@ -377,10 +443,9 @@
         </div>
     </div>
     
-
     <!-- Business Projects Section -->
-    <div class="container mx-auto mt-8 max-w-3xl p-8 fadeInFromBottom">
-        <div id="about" class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
+    <div id="BusinessProjects" class="container mx-auto mt-8 max-w-3xl p-8 fadeInFromBottom">
+        <div class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
             <h1 class="text-2xl font-bold mb-4">Business Projects</h1>
             <!-- START - IMAGE CAROUSEL -->
             <div class="max-w-2xl mx-auto">
@@ -422,258 +487,296 @@
             <h1 class="text-lg font-bold text-center pb-4 pt-6">EWA Business Consultation</h1>
             <p class="text-justify p-2">
                 EWA Business Consultation is a company that offers tailored business 
-                solutions designed to empower organizations across various industries.  
-                I am currently employed at EWA LLC as the Chief Information Officer.
+                solutions designed to empower organizations across various industries.
             </p>
         </div>
     </div>
-
-    <!-- Personal Projects Section -->
-    <div class="container mx-auto mt-8 max-w-3xl p-8 fadeInFromBottom">
-        <div id="about" class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
-            <h1 class="text-2xl font-bold mb-10">Personal Projects Pt. 1</h1>
-            <!-- START - IMAGE CAROUSEL -->
-            <div class="max-w-2xl mx-auto shadow-md">
-                <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg" data-carousel="static">
-                    <!-- Carousel wrapper -->
-                    <div class="relative h-80 md:110" data-carousel-inner>
-                        <!-- Item 1 -->
-                        <div class="hidden duration-700 ease-in-out flex justify-center items-center" data-carousel-item>
-                            <a href="https://github.com/cZAlpha/Lumetric">
-                                <img src="assets/PersonalProjects/Lumetric/Lumetric_homePage.png" class="object-cover w-auto h-full" alt="Phase Shift">
-                            </a>
-                        </div>
-                        <!-- Item 2 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <a href="https://github.com/cZAlpha/Lumetric">
-                                <img src="assets/PersonalProjects/Lumetric/Lumetric_toolsPage.png" class="object-cover w-full h-full" alt="Inverse Abel 3D Graph">
-                            </a>
-                        </div>
-                        <!-- Item 3 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <a href="https://github.com/cZAlpha/Lumetric">
-                                <img src="assets/PersonalProjects/Lumetric/Lumetric_AssociationMatrix.png" class="object-cover w-full h-full" alt="PlasmaInterferometryUserInterface">
-                            </a>
-                        </div>
-                        <!-- Item 4 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <a href="https://github.com/cZAlpha/Lumetric">
-                                <img src="assets/PersonalProjects/Lumetric/Lumetric_programPerformance.png" class="object-cover w-full h-full" alt="PlasmaInterferometryUserInterface">
-                            </a>
+    
+    <!-- Personal Projects Section - Modern Grid Layout -->
+    <div class="container mx-auto py-16 px-4 max-w-6xl">
+        <div class="bg-white p-8 rounded-lg shadow-lg border-4 border-black transition-all duration-300 hover:shadow-xl">
+            <h1 class="text-3xl font-bold mb-12 text-center text-white fadeInFromBottom">Personal Projects</h1>
+            
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Project Card: Lumetric -->
+                <div id="Lumetric" class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.02] fadeInFromBottom">
+                    <div class="relative h-64 overflow-hidden">
+                        <!-- Carousel for Lumetric -->
+                        <div id="lumetric-carousel" class="carousel relative w-full h-full" data-carousel="static">
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-full" data-carousel-inner>
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out h-full flex justify-center items-center bg-gray-100" data-carousel-item>
+                                    <a href="https://github.com/cZAlpha/Lumetric" class="h-full w-full">
+                                        <img src="assets/PersonalProjects/Lumetric/Lumetric_homePage.png" class="object-cover w-full h-full" alt="Lumetric Home Page">
+                                    </a>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="https://github.com/cZAlpha/Lumetric" class="h-full w-full">
+                                        <img src="assets/PersonalProjects/Lumetric/Lumetric_toolsPage.png" class="object-cover w-full h-full" alt="Lumetric Tools Page">
+                                    </a>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="https://github.com/cZAlpha/Lumetric" class="h-full w-full">
+                                        <img src="assets/PersonalProjects/Lumetric/Lumetric_AssociationMatrix.png" class="object-cover w-full h-full" alt="Association Matrix">
+                                    </a>
+                                </div>
+                                <!-- Item 4 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="https://github.com/cZAlpha/Lumetric" class="h-full w-full">
+                                        <img src="assets/PersonalProjects/Lumetric/Lumetric_programPerformance.png" class="object-cover w-full h-full" alt="Program Performance">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Carousel controls -->
+                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-prev>
+                                <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-next>
+                                <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-                    <!-- Slider controls -->
-                    <button type="button" class="flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"data-carousel-prev>
-                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button type="button" class="flex absolute top-1/2 right-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"data-carousel-next>
-                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
+                    
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-3 transition-all duration-300 hover:text-blue-600">
+                            <a href="https://github.com/cZAlpha/Lumetric" class="flex items-center">
+                                Lumetric
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            Lumetric is a web-based assessment tool designed to help DSU professors streamline 
+                            accreditation processes and reduce time spent on administrative tasks. It enables 
+                            educators to input courses and sections, upload evaluation tools used in their courses, 
+                            and automatically analyze student performance against course and program learning 
+                            objectives (CLOs and PLOs).
+                        </p>
+                    </div>
                 </div>
-            
-                <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
-            </div>
-            <!-- STOP  - IMAGE CAROUSEL -->
-            <h1 class="hover-scale text-lg font-bold text-center p-4">
-                <a href="https://github.com/cZAlpha/Lumetric">Lumetric</a>
-            </h1>   
-            <p class="text-justify pt-2 pb-12">
-                Lumetric is a web-based assessment tool designed to help DSU professors streamline 
-                accreditation processes and reduce time spent on administrative tasks. It enables 
-                educators to input courses and sections, upload evaluation tools used in their courses, 
-                and automatically analyze student performance against course and program learning 
-                objectives (CLOs and PLOs). Lumetric offers granular insights and generates detailed 
-                reports at the program, course, and section levels which empowers faculty to focus 
-                more on teaching and curriculum development rather than manual accreditation tracking.
-            </p>
-
-            <!-- START - IMAGE CAROUSEL -->
-            <div class="max-w-2xl mx-auto shadow-md">
-                <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg" data-carousel="static">
-                    <!-- Carousel wrapper -->
-                    <div class="relative h-80 md:h-96" data-carousel-inner>
-                        <!-- Item 1 -->
-                        <div class="hidden duration-700 ease-in-out flex justify-center items-center" data-carousel-item>
-                            <a href="https://github.com/cZAlpha/FarmerAI">
-                                <img src="assets/PersonalProjects/FarmerAI/FarmerAI_Example.png" class="object-cover w-auto h-full" alt="Phase Shift">
-                            </a>
-                        </div>
-                        <!-- Item 2 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <a href="https://github.com/cZAlpha/FarmerAI">
-                                <img src="assets/PersonalProjects/FarmerAI/FarmerAI_ConsoleOutput.png" class="object-cover w-full h-full" alt="Inverse Abel 3D Graph">
-                            </a>
+                
+                <!-- Project Card: Farmer AI -->
+                <div id="FarmerAI" class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.02] fadeInFromBottom">
+                    <div class="relative h-64 overflow-hidden">
+                        <!-- Carousel for Farmer AI -->
+                        <div id="farmerai-carousel" class="carousel relative w-full h-full" data-carousel="static">
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-full" data-carousel-inner>
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out h-full flex justify-center items-center bg-gray-100" data-carousel-item>
+                                    <a href="https://github.com/cZAlpha/FarmerAI" class="h-full w-full">
+                                        <img src="assets/PersonalProjects/FarmerAI/FarmerAI_Example.png" class="object-cover w-full h-full" alt="Farmer AI Example">
+                                    </a>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="https://github.com/cZAlpha/FarmerAI" class="h-full w-full">
+                                        <img src="assets/PersonalProjects/FarmerAI/FarmerAI_ConsoleOutput.png" class="object-cover w-full h-full" alt="Farmer AI Console Output">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Carousel controls -->
+                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-prev>
+                                <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-next>
+                                <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-                    <!-- Slider controls -->
-                    <button type="button" class="flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"data-carousel-prev>
-                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button type="button" class="flex absolute top-1/2 right-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"data-carousel-next>
-                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
+                    
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-3 transition-all duration-300 hover:text-blue-600">
+                            <a href="https://github.com/cZAlpha/FarmerAI" class="flex items-center">
+                                Farmer AI
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            FarmerAI is a Python-based chatbot application designed to answer agriculture-related 
+                            questions for farmers, gardeners, and agricultural enthusiasts. This interactive tool 
+                            leverages advanced language models to provide reliable information on topics 
+                            like crop management, pest control, and irrigation techniques.
+                        </p>
+                    </div>
                 </div>
-            
-                <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
-            </div>
-            <!-- STOP  - IMAGE CAROUSEL -->
-            <h1 class="hover-scale text-lg font-bold text-center p-4">
-                <a href="https://github.com/cZAlpha/FarmerAI">Farmer AI</a>
-            </h1>   
-            <p class="text-justify pt-2 pb-12">
-                FarmerAI is a Python-based chatbot application designed to answer agriculture-related 
-                questions for farmers, gardeners, and agricultural enthusiasts. This interactive tool 
-                leverages advanced language models to provide reliable and helpful information on topics 
-                like crop management, pest control, irrigation techniques, and farming best practices. 
-                Users can choose between different AI models, with the current working option being 
-                AgriQBot, which was trained on specialized agricultural datasets. The application 
-                features a user-friendly interface built with CustomTkinter, making it accessible even for those with limited technical expertise. FarmerAI aims to democratize agricultural knowledge by making expert-level information instantly available to anyone with questions about farming and cultivation.
-            </p>
-            
-            <!-- START - IMAGE CAROUSEL -->
-            <div class="max-w-2xl mx-auto shadow-md">
-                <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg" data-carousel="static">
-                    <!-- Carousel wrapper -->
-                    <div class="relative h-80 md:h-96" data-carousel-inner>
-                        <!-- Item 1 -->
-                        <div class="hidden duration-700 ease-in-out flex justify-center items-center" data-carousel-item>
-                            <a href="https://github.com/cZAlpha/Plasmainterferometry">
-                                <img src="assets/PersonalProjects/PlasmaInterferometry/plasma_example_image_PHASESHIFT.png" class="object-cover w-auto h-full" alt="Phase Shift">
-                            </a>
-                        </div>
-                        <!-- Item 2 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <a href="https://github.com/cZAlpha/Plasmainterferometry">
-                                <img src="assets/PersonalProjects/PlasmaInterferometry/plasma_example_image_ANGLED_CROPPED.png" class="object-cover w-full h-full" alt="Inverse Abel 3D Graph">
-                            </a>
-                        </div>
-                        <!-- Item 3 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <a href="https://github.com/cZAlpha/Plasmainterferometry">
-                                <img src="assets/PersonalProjects/PlasmaInterferometry/plasma_UI.png" class="object-cover w-full h-full" alt="PlasmaInterferometryUserInterface">
-                            </a>
+                
+                <!-- Project Card: Plasmainterferometry -->
+                <div id="PlasmaInterferometry" class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.02] fadeInFromBottom">
+                    <div class="relative h-64 overflow-hidden">
+                        <!-- Carousel for Plasmainterferometry -->
+                        <div id="plasma-carousel" class="carousel relative w-full h-full" data-carousel="static">
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-full" data-carousel-inner>
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out h-full flex justify-center items-center bg-gray-100" data-carousel-item>
+                                    <a href="https://github.com/cZAlpha/Plasmainterferometry" class="h-full w-full">
+                                        <img src="assets/PersonalProjects/PlasmaInterferometry/plasma_example_image_PHASESHIFT.png" class="object-cover w-full h-full" alt="Phase Shift">
+                                    </a>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="https://github.com/cZAlpha/Plasmainterferometry" class="h-full w-full">
+                                        <img src="assets/PersonalProjects/PlasmaInterferometry/plasma_example_image_ANGLED_CROPPED.png" class="object-cover w-full h-full" alt="Angled Cropped">
+                                    </a>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="https://github.com/cZAlpha/Plasmainterferometry" class="h-full w-full">
+                                        <img src="assets/PersonalProjects/PlasmaInterferometry/plasma_UI.png" class="object-cover w-full h-full" alt="Plasma UI">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Carousel controls -->
+                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-prev>
+                                <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-next>
+                                <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-                    <!-- Slider controls -->
-                    <button type="button" class="flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"data-carousel-prev>
-                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button type="button" class="flex absolute top-1/2 right-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"data-carousel-next>
-                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
+                    
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-3 transition-all duration-300 hover:text-blue-600">
+                            <a href="https://github.com/cZAlpha/Plasmainterferometry" class="flex items-center">
+                                Plasmainterferometry
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            The Plasmainterferometry project is a Python program designed to measure the 
+                            density of plasma and gas using laser fringe patterns. Users take images of 
+                            these patterns, trace the fringe lines, and convert the images for analysis 
+                            to visualize plasma or gas density results.
+                        </p>
+                    </div>
                 </div>
-            
-                <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
-            </div>
-            <!-- STOP  - IMAGE CAROUSEL -->
-            <h1 class="hover-scale text-lg font-bold text-center p-4">
-                <a href="https://github.com/cZAlpha/Plasmainterferometry">Plasmainterferometry</a>
-            </h1>   
-            <p class="text-justify pt-2 pb-12">
-                The Plasmainterferometry project is a Python program designed to measure the 
-                density of plasma and gas using laser fringe patterns. Users take images of 
-                these patterns, trace the fringe lines, and convert the images into a special 
-                format. The program processes these images to analyze the density of the 
-                plasma or gas. By running the main program file and selecting the desired 
-                analysis options, users can generate various graphs to visualize the results. 
-                The process involves image preparation, tracing, and saving the lines in a 
-                specific format before using the program to complete the analysis.
-            </p>
-            </div>
-    </div>
-        
-    <div class="container mx-auto mt-8 max-w-3xl p-8 fadeInFromBottom">
-        <div id="about" class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
-            <h1 class="text-2xl font-bold mb-10">Personal Projects Pt. 2 </h1>
-            <!-- START - IMAGE CAROUSEL -->
-            <div class="max-w-2xl mx-auto shadow-md">
-                <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg" data-carousel="static">
-                    <!-- Carousel wrapper -->
-                    <div class="relative h-80 md:h-96" data-carousel-inner>
-                        <!-- Item 1 -->
-                        <div class="hidden duration-700 ease-in-out flex justify-center items-center" data-carousel-item>
-                            <a href="https://github.com/cZAlpha/PyFileConverter">
-                                <img src="assets/PersonalProjects/PyFileConverter/mainMenuLightMode.png" class="object-cover w-auto h-auto" alt="Main Menu Light Mode">
-                            </a>
-                        </div>
-                        <!-- Item 2 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <a href="https://github.com/cZAlpha/PyFileConverter">
-                                <img src="assets/PersonalProjects/PyFileConverter/themeMenuLightMode.png" class="object-cover w-auto h-auto" alt="Theme Menu Light Mode">
-                            </a>
-                        </div>
-                        <!-- Item 3 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <a href="https://github.com/cZAlpha/PyFileConverter">
-                                <img src="assets/PersonalProjects/PyFileConverter/mainMenuDarkMode.png" class="object-cover w-auto h-auto" alt="Main Menu Dark Mode">
-                            </a>
-                        </div>
-                        <!-- Item 4 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <a href="https://github.com/cZAlpha/PyFileConverter">
-                                <img src="assets/PersonalProjects/PyFileConverter/themeMenuDarkMode.png" class="object-cover w-auto h-auto" alt="Theme Menu Dark Mode">
-                            </a>
+                
+                <!-- Project Card: PyFile Converter -->
+                <div id="PyFileConverter" class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.02] fadeInFromBottom">
+                    <div class="relative h-64 overflow-hidden">
+                        <!-- Carousel for PyFile Converter -->
+                        <div id="pyfile-carousel" class="carousel relative w-full h-full" data-carousel="static">
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-full" data-carousel-inner>
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out h-full flex justify-center items-center bg-gray-100" data-carousel-item>
+                                    <a href="https://github.com/cZAlpha/PyFileConverter" class="h-full w-full">
+                                        <img src="assets/PersonalProjects/PyFileConverter/mainMenuLightMode.png" class="object-cover w-full h-full" alt="Main Menu Light Mode">
+                                    </a>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="https://github.com/cZAlpha/PyFileConverter" class="h-full w-full">
+                                        <img src="assets/PersonalProjects/PyFileConverter/themeMenuLightMode.png" class="object-cover w-full h-full" alt="Theme Menu Light Mode">
+                                    </a>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="https://github.com/cZAlpha/PyFileConverter" class="h-full w-full">
+                                        <img src="assets/PersonalProjects/PyFileConverter/mainMenuDarkMode.png" class="object-cover w-full h-full" alt="Main Menu Dark Mode">
+                                    </a>
+                                </div>
+                                <!-- Item 4 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="https://github.com/cZAlpha/PyFileConverter" class="h-full w-full">
+                                        <img src="assets/PersonalProjects/PyFileConverter/themeMenuDarkMode.png" class="object-cover w-full h-full" alt="Theme Menu Dark Mode">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Carousel controls -->
+                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-prev>
+                                <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-next>
+                                <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-                    <!-- Slider controls -->
-                    <button type="button" class="flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"data-carousel-prev>
-                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button type="button" class="flex absolute top-1/2 right-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"data-carousel-next>
-                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
+                    
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-3 transition-all duration-300 hover:text-blue-600">
+                            <a href="https://github.com/cZAlpha/PyFileConverter" class="flex items-center">
+                                PyFile Converter
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            The Pyfile Converter application is a Python based application mainly made for Mac OS that is able to
+                            convert text and image files, with video file conversion coming soon. It is open source and welcomes
+                            contributions from other developers.
+                        </p>
+                    </div>
                 </div>
-            
-                <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
-            </div>
-            <!-- STOP  - IMAGE CAROUSEL -->
-            <h1 class="hover-scale text-lg font-bold text-center p-4">
-                <a href="https://github.com/cZAlpha/PyFileConverter">Pyfile Converter</a>
-            </h1>
-            <p class="text-justify pt-2 pb-12">
-                The Pyfile Converter application is a Python based application mainly made for Mac OS that is able to
-                convert text and image files, with video file conversion coming soon. It is open source, if you would
-                like to make any contributions please feel free and send me and email to let me know what you've 
-                accomplished!
-            </p>
-
-            <div class="pt-10 flex justify-center">
-                <div class="w-full h-auto max-w-xs sm:max-w-xs md:max-w-xs lg:max-w-xs xl:max-w-xs">
-                    <a href="https://github.com/cZAlpha/FoodOrderingLab">
-                        <img src="assets/PersonalProjects/foodOrderingLabPicture.png" class="hover-scale rounded-lg shadow-lg object-contain" alt="Food Ordering Lab">
-                    </a>
+                
+                <!-- Project Card: Food Ordering App -->
+                <div id="FoodOrderingApp" class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.02] md:col-span-2 fadeInFromBottom">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 p-4 flex items-center justify-center">
+                            <a href="https://github.com/cZAlpha/FoodOrderingLab" class="block hover:scale-105 transition-all duration-300">
+                                <img src="assets/PersonalProjects/foodOrderingLabPicture.png" class="rounded-lg shadow-md object-contain max-h-64" alt="Food Ordering Lab">
+                            </a>
+                        </div>
+                        <div class="md:w-2/3 p-6">
+                            <h2 class="text-xl font-bold mb-3 transition-all duration-300 hover:text-blue-600">
+                                <a href="https://github.com/cZAlpha/FoodOrderingLab" class="flex items-center">
+                                    Food Ordering App
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>
+                            </h2>
+                            <p class="text-gray-700 leading-relaxed">
+                                This programming project includes an IOS application made using React Native
+                                that you are able to use through XCode's simulator. It allows for
+                                authorization for admin logins, general public use, etc. It allows you to 
+                                upload images from your machine through the application in order to create
+                                and/or edit products, their names and prices. Furthermore, users are able 
+                                to order products and those products will appear in their cart.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <h1 class="hover-scale text-lg font-bold text-center pb-4 pt-6">
-                <a href="https://github.com/cZAlpha/FoodOrderingLab">Food Ordering App</a>
-            </h1>   
-            <p class="text-justify pt-2 pb-12">
-                This programming project includes an IOS application made using React Native
-                that you are able to use through XCode's simulator. It allows for
-                authorization for admin logins, general public use, etc. It allows you to 
-                upload images from your machine through the application in order to create
-                and/or edit products, their names and prices. Furthermore, users are able 
-                to order products and those products will appear in their cart.
-            </p>
         </div>
     </div>
-
+    
+    <!-- Required Scripts For Carousels in Previous Section -->
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+    
     <!-- Contact Section -->
     <div class="container mx-auto mt-8 max-w-3xl p-8 fadeInFromBottom">
         <div class="hover-scale bg-white p-4 rounded-lg shadow border-4 border-black">
@@ -742,18 +845,22 @@
                         ></textarea>
                         </div>
                         <div class="flex justify-center pt-4">
-                            <button class="hover:shadow-form hover:bg-white hover:text-black rounded-md bg-black text-white py-3 px-8 text-base font-semibold outline-none">
+                            <button class="rounded-md bg-black text-white py-3 px-8 text-base font-semibold outline-none border-2 border-black transition-all duration-300 hover:bg-white hover:text-black hover:shadow-lg flex items-center gap-2">
                                 Submit
-                            </button>                        
+                                <!-- Arrow Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
+    
     <!-- Footer Section -->
-    <footer class="bg-white shadow dark:bg-gray-900">
+    <footer class="bg-white shadow dark:bg-gray-900 fadeInFromBottom">
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
             <div class="sm:flex sm:items-center sm:justify-between">
                 <!-- Logo -->
@@ -792,7 +899,7 @@
                 </div>
             </div>
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Noah Klaus</a>. All Rights Reserved.</span>
+            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="#" class="hover:underline">Noah Klaus</a>. All Rights Reserved.</span>
         </div>
     </footer>
 </body>
