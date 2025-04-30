@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 800 400"
+   version="1.1"
+   id="svg9"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs9" />
+  <!-- Background -->
+  <rect
+     x="0"
+     y="0"
+     width="800"
+     height="400"
+     rx="20"
+     fill="#f8f9fa"
+     id="rect1" />
+  <g
+     transform="translate(69.817746,36.28777)"
+     id="g5">
+    <!-- Purple card with shadow -->
+    <filter
+       id="shadow1"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feDropShadow
+         dx="0"
+         dy="4"
+         stdDeviation="10"
+         flood-opacity="0.2" />
+    </filter>
+    <rect
+       x="0"
+       y="0"
+       width="280"
+       height="240"
+       rx="20"
+       fill="#7952b3"
+       filter="url(#shadow1)"
+       id="rect2"
+       style="fill:#7952b3;fill-opacity:1" />
+    <!-- Blue card with shadow -->
+    <filter
+       id="shadow2"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feDropShadow
+         dx="0"
+         dy="4"
+         stdDeviation="6"
+         flood-opacity="0.2" />
+    </filter>
+    <rect
+       x="30"
+       y="30"
+       width="280"
+       height="240"
+       rx="20"
+       fill="#5ca0d3"
+       filter="url(#shadow2)"
+       id="rect3" />
+    <!-- Orange card with shadow -->
+    <filter
+       id="shadow3"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feDropShadow
+         dx="0"
+         dy="4"
+         stdDeviation="4"
+         flood-opacity="0.2" />
+    </filter>
+    <rect
+       x="60"
+       y="60"
+       width="280"
+       height="240"
+       rx="20"
+       fill="#ff9933"
+       filter="url(#shadow3)"
+       id="rect4" />
+    <!-- Red card with shadow -->
+    <filter
+       id="shadow4"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feDropShadow
+         dx="0"
+         dy="4"
+         stdDeviation="2"
+         flood-opacity="0.2" />
+    </filter>
+    <rect
+       x="90"
+       y="90"
+       width="280"
+       height="240"
+       rx="20"
+       fill="#e74c3c"
+       filter="url(#shadow4)"
+       id="rect5" />
+  </g>
+  <!-- Stacked cards with drop shadows -->
+  <!-- Text with modern styling -->
+  <g
+     transform="translate(489.44844,120.45083)"
+     id="g9">
+    <g
+       id="g16"
+       transform="translate(5.203837,24.978417)">
+      <rect
+         x="129.17569"
+         y="150"
+         width="29.981012"
+         height="6"
+         rx="5.9962025"
+         fill="#5ca0d3"
+         id="rect9"
+         style="stroke-width:1.41377" />
+      <rect
+         x="69.148155"
+         y="150"
+         width="50.973415"
+         height="6"
+         rx="5.0973415"
+         fill="#ff9933"
+         id="rect8"
+         style="stroke-width:1.3035" />
+      <rect
+         x="0"
+         y="150"
+         width="60"
+         height="6"
+         rx="3"
+         fill="#e74c3c"
+         id="rect7" />
+    </g>
+    <!-- Subtitle -->
+    <text
+       x="4"
+       y="130"
+       font-family="Arial, sans-serif"
+       font-weight="400"
+       font-size="24px"
+       fill="#6c757d"
+       id="text7"><tspan
+         x="4"
+         y="130"
+         id="tspan14">Software Developer</tspan><tspan
+         x="4"
+         y="160"
+         id="tspan13">Computer Scientist</tspan></text>
+    <g
+       id="g15">
+      <text
+         x="0"
+         y="80"
+         font-family="Arial, sans-serif"
+         font-weight="700"
+         font-size="64px"
+         fill="#212529"
+         id="text6">Klaus</text>
+      <text
+         x="0"
+         y="0"
+         font-family="Arial, sans-serif"
+         font-weight="700"
+         font-size="64px"
+         fill="#212529"
+         id="text5">Noah</text>
+    </g>
+    <!-- Decorative elements -->
+  </g>
+</svg>
