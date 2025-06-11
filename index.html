@@ -174,6 +174,22 @@
                 <a href="#home" class="hover-scale hover:bg-white hover:bg-opacity-60 hover:text-black transition-colors rounded py-2 px-3 block">Home</a>
                 <a href="#about" class="hover-scale hover:bg-white hover:bg-opacity-60 hover:text-black transition-colors rounded py-2 px-3 block">About</a>
                 <a href="#contact" class="hover-scale hover:bg-white hover:bg-opacity-60 hover:text-black transition-colors rounded py-2 px-3 block">Contact</a>
+                <!-- START - Website Demos Dropdown Menu -->
+                <div class="relative">
+                    <button class="hover-scale dropdown-toggle hover:bg-white hover:bg-opacity-60 hover:text-black py-2 px-3 flex items-center gap-2 rounded w-54 justify-between">
+                        <span class="pointer-events-none">Website Demos</span>
+                        <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <title>chevron-down</title>
+                            <g fill="none">
+                                <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div class="z-50 dropdown-menu absolute hidden bg-white text-black rounded-b-lg pb-2 w-54">
+                        <a href="#TelepathyNetworks" class="hover:bg-gray-200 hover:text-black block px-6 py-2">Telepathy Networks</a>
+                    </div>
+                </div>
+                <!-- STOP - Website Demos Dropdown Menu -->
                 <!-- START - Website Templates Dropdown Menu -->
                 <div class="relative">
                     <button class="hover-scale dropdown-toggle hover:bg-white hover:bg-opacity-60 hover:text-black py-2 px-3 flex items-center gap-2 rounded w-56 justify-between">
@@ -516,7 +532,7 @@
                                 </svg>
                             </a>
                         </h2>
-                        <p class="text-gray-700 leading-relaxed">
+                        <p class="text-sm md:text-md text-gray-700 leading-relaxed">
                             The Smokey Template offers a clean, minimal foundation perfect for fast deployment and easy customization. 
                             While simple by design, it includes all the essential components needed to launch a modern, responsive 
                             website—making it an ideal starting point for developers and agencies alike.
@@ -580,11 +596,82 @@
                                 </svg>
                             </a>
                         </h2>
-                        <p class="text-gray-700 leading-relaxed">
+                        <p class="text-sm md:text-md text-gray-700 leading-relaxed">
                             This modern real estate agency website template features a sleek, responsive design built for showcasing property 
                             listings with ease. With a clean layout, intuitive navigation, and integrated contact forms, it's perfect for 
                             agencies looking to present homes professionally and connect with clients seamlessly. The template includes 
                             dynamic listing cards, and space for agent profiles, making it a great solution for any real estate business.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Website Demos Section -->
+    <div class="container mx-auto py-16 px-4 max-w-6xl">
+        <div class="bg-white p-8 rounded-lg shadow-lg border-4 border-black transition-all duration-300 hover:shadow-xl">
+            <h1 class="text-3xl font-bold mb-12 text-center text-white fadeInFromBottom">Website Demos</h1>
+            
+            <!-- Website Demos Grid -->
+            <div class="flex items-center justify-center w-full">
+                <!-- Demo Card: Telepathy Netwrosk Demo -->
+                <div id="TelepathyNetworks" class="max-w-xl bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.02] fadeInFromBottom">
+                    <div class="relative h-72 overflow-hidden">
+                        <!-- Carousel for Smokey Template -->
+                        <div id="telepathy-networks-carousel" class="carousel relative w-full h-full" data-carousel="static">
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-full" data-carousel-inner>
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out h-full flex justify-center items-center bg-gray-100" data-carousel-item>
+                                    <a href="./WebsiteDemos/TelepathyNetworks/index.html" target="_blank" rel="noopener noreferrer" class="h-full w-full">
+                                        <img src="assets/WebsiteDemos/TelepathyNetworks/Hero.png" class="object-cover w-full h-full" alt="Hero Section">
+                                    </a>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="./WebsiteDemos/TelepathyNetworks/index.html" target="_blank" rel="noopener noreferrer" class="h-full w-full">
+                                        <img src="assets/WebsiteDemos/TelepathyNetworks/Services.png" class="object-cover w-full h-full" alt="Services Section">
+                                    </a>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="./WebsiteDemos/TelepathyNetworks/index.html" target="_blank" rel="noopener noreferrer" class="h-full w-full">
+                                        <img src="assets/WebsiteDemos/TelepathyNetworks/Contact.png" class="object-cover w-full h-full" alt="Contact Us Section">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Carousel controls -->
+                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-prev>
+                                <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-next>
+                                <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <h2 class="flex flex-row gap-x-4 items-center text-xl font-bold mb-3">
+                            <a href="./WebsiteDemos/TelepathyNetworks/index.html" target="_blank" rel="noopener noreferrer" class="flex items-center transition-all duration-400 transform hover:text-blue-500 hover:scale-105">
+                                Telepathy Networks
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </h2>
+                        <p class="text-sm md:text-md text-gray-700 leading-relaxed">
+                            Telepathy Networks is a modern IT solutions provider offering comprehensive voice and data services 
+                            for businesses. The website features a sleek, dark-themed design with smooth animations, showcasing 
+                            their expertise in network management, VoIP, cloud storage, web development, and desktop support. 
+                            Key highlights include an interactive mobile menu with glassmorphism effects, animated navigation 
+                            links, and a responsive contact form. The clean layout emphasizes their professional services while 
+                            maintaining an engaging user experience with subtle transitions and hover effects.
                         </p>
                     </div>
                 </div>
@@ -646,7 +733,7 @@
                                 <p class="text-sm font-light">Private</p>
                             </div>
                         </h2>
-                        <p class="text-gray-700 leading-relaxed">
+                        <p class="text-sm md:text-md text-gray-700 leading-relaxed">
                             Lumetric is a web-based assessment tool designed to help DSU professors streamline 
                             accreditation processes and reduce time spent on administrative tasks. It enables 
                             educators to input courses and sections, upload evaluation tools used in their courses, 
@@ -701,7 +788,7 @@
                                 </svg>
                             </a>
                         </h2>
-                        <p class="text-gray-700 leading-relaxed">
+                        <p class="text-sm md:text-md text-gray-700 leading-relaxed">
                             FarmerAI is a Python-based chatbot application designed to answer agriculture-related 
                             questions for farmers, gardeners, and agricultural enthusiasts. This interactive tool 
                             leverages advanced language models to provide reliable information on topics 
@@ -753,7 +840,7 @@
                                 <p class="text-sm font-light">DoD Funded</p>
                             </div>
                         </h2>
-                        <p class="text-gray-700 leading-relaxed">
+                        <p class="text-sm md:text-md text-gray-700 leading-relaxed">
                             Droidship is a battleship-like game that employs simulated quantum teleportation 
                             to teach users about quantum computing concepts like superposition, joint measurements, 
                             quantum circuits, quantum logic gates, and more. This project's repository is also private 
@@ -805,7 +892,7 @@
                                 <p class="text-sm font-light">DoD Funded</p>
                             </div>
                         </h2>
-                        <p class="text-gray-700 leading-relaxed">
+                        <p class="text-sm md:text-md text-gray-700 leading-relaxed">
                             A game designed to teach the basics of quantum computing and quantum circuitry, this project consists 
                             of a web application along with a website to contain said web application. Quantum computing education 
                             through gamification. This project's repository is also private for legal reasons, please contact me 
@@ -864,7 +951,7 @@
                                 </svg>
                             </a>
                         </h2>
-                        <p class="text-gray-700 leading-relaxed">
+                        <p class="text-sm md:text-md text-gray-700 leading-relaxed">
                             The Plasmainterferometry project is a Python program designed to measure the 
                             density of plasma and gas using laser fringe patterns. Users take images of 
                             these patterns, trace the fringe lines, and convert the images for analysis 
@@ -929,7 +1016,7 @@
                                 </svg>
                             </a>
                         </h2>
-                        <p class="text-gray-700 leading-relaxed">
+                        <p class="text-sm md:text-md text-gray-700 leading-relaxed">
                             The Pyfile Converter application is a Python based application mainly made for Mac OS that is able to
                             convert text and image files, with video file conversion coming soon. It is open source and welcomes
                             contributions from other developers.
@@ -954,7 +1041,7 @@
                                     </svg>
                                 </a>
                             </h2>
-                            <p class="text-gray-700 leading-relaxed">
+                            <p class="text-sm md:text-md text-gray-700 leading-relaxed">
                                 This programming project includes an IOS application made using React Native
                                 that you are able to use through XCode's simulator. It allows for
                                 authorization for admin logins, general public use, etc. It allows you to 
