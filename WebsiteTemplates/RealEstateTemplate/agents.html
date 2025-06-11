@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Company Name - Agents</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+         @font-face {
+            font-family: 'League Spartan';
+            src: url('./assets/fonts/LeagueSpartan/static/LeagueSpartan-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+         }
+         
+         @font-face {
+            font-family: 'League Spartan';
+            src: url('./assets/fonts/LeagueSpartan/static/LeagueSpartan-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+         }
+         
+         .font-spartan {
+            font-family: 'League Spartan', sans-serif;
+         }
+         
+         .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+            background-color: white;
+            transition: transform 0.3s ease;
+         }
+         .card:hover {
+            transform: translateY(-5px);
+         }
+         .card-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #f3f4f6; /* Tailwind gray-100 */
+            padding: 1rem;
+            transform: translateY(50%);
+            transition: transform 0.3s ease;
+            max-height: 160px;
+         }
+         .card:hover .card-info {
+            transform: translateY(0%);
+         }
+      </style>
+   </head>
+   <body class="font-spartan bg-gray-100 text-gray-900">
+      <!-- Header & Navbar -->
+      <header class="flex justify-between items-center px-6 py-4 border-b bg-white shadow-sm">
+         <!-- Navbar -->
+         <nav class="fixed top-0 left-0 md:bg-white w-full text-black shadow z-50" id="mainNav">
+            <div class="container min-h-20 bg-white mx-auto px-4 py-3 flex items-center justify-between">
+               <div class="flex items-center justify-center">
+                  <img class="h-auto w-8 mr-2" src="" alt="logo" />
+                  <a href="#page-top" class="font-extrabold text-xl pt-[2px]">Company Name</a>
+               </div>
+               
+               <!-- Navbar -->
+               <nav class="hidden md:flex space-x-6 text-sm">
+                  <a href="index.html" class="relative inline-block text-gray-700 hover:text-black transition-all duration-200
+                     after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+                     after:bg-black after:transition-all after:duration-300 hover:after:w-full">HOME</a>
+                  <a href="listings.html" class="relative inline-block text-gray-700 hover:text-black transition-all duration-200
+                     after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+                     after:bg-black after:transition-all after:duration-300 hover:after:w-full">LISTINGS</a>
+                  <a href="sell.html" class="relative inline-block text-gray-700 hover:text-black transition-all duration-200
+                     after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+                     after:bg-black after:transition-all after:duration-300 hover:after:w-full">SELL</a>
+                  <a href="agents.html" class="relative inline-block text-black font-bold transition-all duration-200
+                     after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full
+                     after:bg-black after:transition-all after:duration-300">AGENTS</a>
+                  <a href="contactUs.html" class="relative inline-block text-gray-700 hover:text-black transition-all duration-200
+                     after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+                     after:bg-black after:transition-all after:duration-300 hover:after:w-full">CONTACT US</a>
+               </nav>
+               
+               <!-- Mobile toggle button (hidden on md+) -->
+               <button id="menu-toggle" class="lg:hidden focus:outline-none" aria-label="Toggle navigation">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+               </button>
+               
+               <!-- Scroll Up Button for Mobile -->
+               <a href="#" class="block md:hidden fixed bottom-8 right-8 z-50 text-black bg-white bg-opacity-60 p-4 rounded-full" aria-label="Scroll up button">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                     <polyline points="18,15 12,9 6,15"/>
+                  </svg>
+               </a>
+            </div>
+            
+            <!-- Mobile nav links (hidden on lg+) -->
+            <div id="navbarResponsive" class="max-h-0 bg-black/20 backdrop-blur-md overflow-hidden transition-all duration-300 ease-in-out lg:hidden px-4">
+               <ul class="flex flex-col items-end space-y-2 py-4 text-center gap-y-2 mr-8" role="navigation" aria-label="Navigation menu">
+                  <li><a href="index.html" class="text-lg text-white" aria-label="About section">HOME</a></li>
+                  <li><a href="listings.html" class="text-lg text-white" aria-label="Gallery section">LISTINGS</a></li>
+                  <li><a href="sell.html" class="text-lg text-white" aria-label="Contact section">SELL</a></li>
+                  <li><a href="agents.html" class="text-lg text-white" aria-label="Contact section">AGENTS</a></li>
+                  <li><a href="contactUs.html" class="text-lg text-white" aria-label="Contact section">CONTACT US</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+
+      <!-- Main Content -->
+      <section class="max-w-6xl mx-auto px-6 py-12">
+         <!-- Hero Section -->
+         <div class="mt-10 mb-16 text-center">
+            <h1 class="text-4xl font-bold mb-3">Meet Our Expert Agents</h1>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+               Our dedicated team is committed to helping you find your dream home with confidence and ease. Get to know the agents who make it happen.
+            </p>
+         </div>
+         
+         <!-- Agents Section -->
+         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-20">
+            <!-- Agent 1 -->
+            <div class="card relative p-6">
+               <img
+                  src="./assets/images/agent0.jpg"
+                  alt="Ashley Greene"
+                  class="rounded-full w-32 h-32 object-cover mx-auto mb-6 shadow-md"
+               />
+               <div class="text-center">
+                  <h3 class="text-2xl font-semibold mb-1">Ashley Greene</h3>
+                  <p class="text-gray-600 mb-3 text-sm">Real Estate Specialist | 10+ Years Experience</p>
+                  <p class="text-gray-700 text-base leading-relaxed">
+                     “I’m passionate about matching clients with homes that fit their lifestyle perfectly. Let’s work together to find yours.”
+                  </p>
+               </div>
+            </div>
+            
+            <!-- Agent 2 -->
+            <div class="card relative p-6">
+               <img
+                  src="./assets/images/agent1.jpg"
+                  alt="Marcus Lee"
+                  class="rounded-full w-32 h-32 object-cover mx-auto mb-6 shadow-md"
+               />
+               <div class="text-center">
+                  <h3 class="text-2xl font-semibold mb-1">Marcus Lee</h3>
+                  <p class="text-gray-600 mb-3 text-sm">Buyer & Seller Specialist | 5 Years Experience</p>
+                  <p class="text-gray-700 text-base leading-relaxed">
+                     “Whether buying or selling, I’ll guide you through every step with expertise and personalized care.”
+                  </p>
+               </div>
+            </div>
+         </div>
+
+         <!-- Why Choose Our Agents Section -->
+         <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6 text-center">Why Choose Our Agents?</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center text-gray-700">
+               <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto mb-3 h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <h3 class="font-semibold mb-1">Proven Track Record</h3>
+                  <p>Years of successful sales and happy clients in the local market.</p>
+               </div>
+               <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto mb-3 h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V3h4v18M15 21V8h4v13M9 12h2M9 16h2" />
+                  </svg>
+                  <h3 class="font-semibold mb-1">Personalized Service</h3>
+                  <p>We listen carefully to your needs and tailor every step to you.</p>
+               </div>
+               <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto mb-3 h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 2a10 10 0 100 20 10 10 0 000-20zm3.5 7.5l-2.5 6-6 2.5 2.5-6 6-2.5z" />
+                  </svg>
+                  <h3 class="font-semibold mb-1">Expert Guidance</h3>
+                  <p>Knowledge of market trends and negotiation skills to get the best deal.</p>
+               </div>
+            </div>
+         </section>
+
+         <!-- Get In Touch Section -->
+         <section class="bg-gray-100 p-10 rounded-xl text-center max-w-3xl drop-shadow-md mx-auto">
+            <h2 class="text-3xl font-bold mb-4">Ready to Find Your Perfect Home?</h2>
+            <p class="mb-6 text-gray-700">
+               Contact one of our expert agents today to schedule a consultation or a private tour. We're here to help you every step of the way.
+            </p>
+            <a href="contactUs.html">
+               <button
+                  class="px-8 py-3 bg-gray-900 hover:bg-gray-700 text-gray-200 rounded-full font-semibold transition transform hover:scale-105 drop-shadow-md"
+               >
+                  Contact an Agent
+               </button>
+            </a>
+         </section>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-gray-900 text-gray-300 font-spartan px-6 py-10">
+         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+               <h3 class="text-white text-xl font-bold mb-4">Company Name</h3>
+               <p class="text-sm mb-4">We list modern and beautiful spaces that inspire and last.</p>
+               <p class="text-sm">
+                  456 Market Street<br />
+                  Springfield, USA
+               </p>
+               <p class="mt-2 text-sm">Email: <a href="mailto:contact@companyname.com" class="underline hover:text-white">contact@companyname.com</a></p>
+               <p class="text-sm">Phone: <a href="tel:+1234567890" class="underline hover:text-white">(123) 456-7890</a></p>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+               <h4 class="text-white font-semibold mb-4">Navigation</h4>
+               <ul class="space-y-2 text-sm">
+                  <li><a href="#" class="hover:text-white transition">Listings</a></li>
+                  <li><a href="#" class="hover:text-white transition">Sell</a></li>
+                  <li><a href="#" class="hover:text-white transition">Agents</a></li>
+                  <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+               </ul>
+            </div>
+            
+            <!-- Listing Types -->
+            <div>
+               <h4 class="text-white font-semibold mb-4">Listing Types</h4>
+               <ul class="space-y-2 text-sm">
+                  <li><a href="#" class="hover:text-white transition">Land</a></li>
+                  <li><a href="#" class="hover:text-white transition">Commercial</a></li>
+                  <li><a href="#" class="hover:text-white transition">Residential</a></li>
+                  <li><a href="#" class="hover:text-white transition">Industrial</a></li>
+                  <li><a href="#" class="hover:text-white transition">Urban</a></li>
+               </ul>
+            </div>
+            
+            <!-- Social & Newsletter -->
+            <div>
+               <h4 class="text-white font-semibold mb-4">Connect with us</h4>
+               <div class="flex space-x-4 mb-6">
+                  <a href="#" aria-label="Facebook" class="hover:text-white transition">
+                     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.87v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.87 0 1.8.15 1.8.15v2h-1c-1 0-1.3.63-1.3 1.3V12h2.3l-.37 3h-1.93v7A10 10 0 0022 12z"/></svg>
+                  </a>
+                  <a href="#" aria-label="Twitter" class="hover:text-white transition">
+                     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M22.46 6c-.77.34-1.6.57-2.46.67a4.28 4.28 0 001.88-2.37 8.57 8.57 0 01-2.71 1.04 4.25 4.25 0 00-7.24 3.87A12.05 12.05 0 013 5.16a4.25 4.25 0 001.32 5.67 4.22 4.22 0 01-1.92-.53v.05a4.25 4.25 0 003.41 4.17 4.24 4.24 0 01-1.9.07 4.25 4.25 0 003.96 2.95A8.53 8.53 0 012 19.54a12.05 12.05 0 006.52 1.91c7.82 0 12.1-6.48 12.1-12.1 0-.18 0-.35-.01-.53A8.65 8.65 0 0022.46 6z"/></svg>
+                  </a>
+                  <a href="#" aria-label="Instagram" class="hover:text-white transition">
+                     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 3a1 1 0 110 2 1 1 0 010-2zm-5 2a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+                  </a>
+               </div>
+               <form class="flex flex-col sm:flex-row gap-2" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                  <input
+                     type="email"
+                     placeholder="Your email"
+                     required
+                     class="px-3 py-2 rounded-l-md border border-gray-700 bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 flex-grow"
+                  />
+                  <button
+                     type="submit"
+                     class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-r-md font-semibold transition"
+                  >
+                     Subscribe
+                  </button>
+               </form>
+            </div>
+         </div>
+         <div class="mt-10 border-t border-gray-800 pt-6 text-center text-xs text-gray-500 select-none">
+            &copy; 2025 Company Name. All rights reserved.
+         </div>
+      </footer>
+      
+      <script>
+         // START - JS to toggle mobile nav
+         const toggle = document.getElementById("menu-toggle");
+         const nav = document.getElementById("navbarResponsive");
+         const toggleSvg = toggle.querySelector("svg");
+         
+         // Add transition classes to the SVG for smooth rotation
+         toggleSvg.classList.add("transition-transform", "duration-300", "ease-in-out");
+         
+         let isOpen = false;
+         
+         toggle.addEventListener("click", () => {
+         if (nav.classList.contains("max-h-0")) {
+            // Opening menu
+            nav.classList.remove("max-h-0");
+            nav.classList.add("max-h-96");
+            
+            // Rotate SVG to X (45 degrees creates a modern subtle rotation)
+            // or 180 degrees for full rotation, or 90 degrees for quarter turn
+            toggleSvg.style.transform = "rotate(180deg)";
+            
+            isOpen = true;
+         } else {
+            // Closing menu
+            nav.classList.remove("max-h-96");
+            nav.classList.add("max-h-0");
+            
+            // Rotate back to original position
+            toggleSvg.style.transform = "rotate(0deg)";
+            
+            isOpen = false;
+         }
+         
+         toggleSvg.style.transform += " scale(1.1)";
+         
+         // Reset scale after animation
+         setTimeout(() => {
+            if (isOpen) {
+               toggleSvg.style.transform = "rotate(180deg) scale(1)";
+            } else {
+               toggleSvg.style.transform = "rotate(0deg) scale(1)";
+            }
+         }, 150);
+         });
+         // STOP - JS to toggle mobile nav
+      </script>
+   </body>
+</html>

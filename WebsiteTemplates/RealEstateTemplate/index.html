@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- Website Title (The name of the tab in the browser) -->
+      <title>Company Name</title>
+      <!-- Tailwind CSS Import-->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+         @font-face {
+            font-family: 'League Spartan';
+            src: url('./assets/fonts/LeagueSpartan/static/LeagueSpartan-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+         }
+         
+         @font-face {
+            font-family: 'League Spartan';
+            src: url('./assets/fonts/LeagueSpartan/static/LeagueSpartan-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+         }
+         
+         /* Extend Tailwind's Syntax to Include Spartan */
+         .font-spartan {
+            font-family: 'League Spartan', sans-serif;
+         }
+         
+         .card {
+            position: relative;
+            overflow: hidden;
+         }
+         .card-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #f3f4f6; /* Tailwind's gray-100 */
+            padding: 1rem; /* p-4 */
+            transform: translateY(50%);
+            transition: transform 0.3s ease;
+            /* clip the extra content for smooth reveal */
+            max-height: 180px;
+         }
+         .card:hover .card-info {
+            transform: translateY(0%);
+         }
+      </style>
+   </head>
+   
+   <body class="font-spartan bg-white text-gray-900">
+      <!-- Header & Navbar -->
+      <header class="flex justify-between items-center px-6 py-4 border-b">
+         <!-- Navbar -->
+         <nav class="fixed top-0 left-0 md:bg-white w-full text-black shadow z-50" id="mainNav">
+            <div class="container min-h-20 bg-white mx-auto px-4 py-3 flex items-center justify-between">
+               <div class="flex items-center justify-center">
+                  <img class="h-auto w-8 mr-2" src="" alt="logo" />
+                  <a href="#page-top" class="font-extrabold text-xl pt-[2px]">Company Name</a>
+               </div>
+               
+               <!-- Navbar -->
+               <nav class="hidden md:flex space-x-6 text-sm">
+                  <a href="index.html" class="relative inline-block text-black font-bold transition-all duration-200
+                     after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full
+                     after:bg-black after:transition-all after:duration-300">HOME</a>
+                  <a href="listings.html" class="relative inline-block text-gray-700 hover:text-black transition-all duration-200
+                     after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+                     after:bg-black after:transition-all after:duration-300 hover:after:w-full">LISTINGS</a>
+                  <a href="sell.html" class="relative inline-block text-gray-700 hover:text-black transition-all duration-200
+                     after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+                     after:bg-black after:transition-all after:duration-300 hover:after:w-full">SELL</a>
+                  <a href="agents.html" class="relative inline-block text-gray-700 hover:text-black transition-all duration-200
+                     after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+                     after:bg-black after:transition-all after:duration-300 hover:after:w-full">AGENTS</a>
+                  <a href="contactUs.html" class="relative inline-block text-gray-700 hover:text-black transition-all duration-200
+                     after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+                     after:bg-black after:transition-all after:duration-300 hover:after:w-full">CONTACT US</a>
+               </nav>
+               
+               <!-- Mobile toggle button (hidden on md+) -->
+               <button id="menu-toggle" class="lg:hidden focus:outline-none" aria-label="Toggle navigation">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+               </button>
+               
+               <!-- Scroll Up Button for Mobile -->
+               <a href="#" class="block md:hidden fixed bottom-8 right-8 z-50 text-black bg-white bg-opacity-60 p-4 rounded-full" aria-label="Scroll up button">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                     <polyline points="18,15 12,9 6,15"/>
+                  </svg>
+               </a>
+            </div>
+            
+            <!-- Mobile nav links (hidden on lg+) -->
+            <div id="navbarResponsive" class="max-h-0 bg-black/20 backdrop-blur-md overflow-hidden transition-all duration-300 ease-in-out lg:hidden px-4">
+               <ul class="flex flex-col items-end space-y-2 py-4 text-center gap-y-2 mr-8" role="navigation" aria-label="Navigation menu">
+                  <li><a href="index.html" class="text-lg text-white" aria-label="About section">HOME</a></li>
+                  <li><a href="listings.html" class="text-lg text-white" aria-label="Gallery section">LISTINGS</a></li>
+                  <li><a href="sell.html" class="text-lg text-white" aria-label="Contact section">SELL</a></li>
+                  <li><a href="agents.html" class="text-lg text-white" aria-label="Contact section">AGENTS</a></li>
+                  <li><a href="contactUs.html" class="text-lg text-white" aria-label="Contact section">CONTACT US</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      
+      <!-- Hero Section -->
+      <section class="md:mt-10 relative text-center px-4 py-24 text-white">
+         <img src="./assets/images/homeModern.jpg" alt="Building" class="absolute inset-0 w-full h-full object-cover z-0" />
+         <div class="absolute inset-0 bg-black/40 z-10"></div>
+         
+         <div class="relative z-20">
+            <h1 class="text-4xl md:text-6xl font-semibold leading-snug tracking-tight font-spartan">
+               Company Name
+            </h1>
+            <h2 class="text-xl text-gray-200">
+               We have what you need, from modern to quaint, and everything inbetween.
+            </h2>
+            <button class="mt-6 px-6 py-3 bg-gray-100 hover:bg-white text-gray-800 hover:text-black hover:scale-105 rounded-full font-semibold tracking-wide transition-all duration-300">
+               Check our listings
+            </button>
+         </div>
+      </section>
+      
+      <!-- Listing Type Navigation Bar -->
+      <nav class="flex flex-wrap justify-center md:justify-between gap-3 md:gap-4 px-4 md:px-20 py-4 border-t border-b text-base md:text-lg font-bold font-spartan">
+         <a href="#" class="text-gray-800 hover:text-black hover:scale-105 transition-all duration-200">Land</a>
+         <a href="#" class="text-gray-800 hover:text-black hover:scale-105 transition-all duration-200">Comercial</a>
+         <a href="#" class="underline text-gray-800 hover:text-black hover:scale-105 transition-all duration-200">Residential</a>
+         <a href="#" class="text-gray-800 hover:text-black hover:scale-105 transition-all duration-200">Industrial</a>
+         <a href="#" class="text-gray-800 hover:text-black hover:scale-105 transition-all duration-200">Urban</a>
+      </nav>
+      
+      <!-- Listings Section -->
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 py-8">
+         <!-- Quaint Acres Listing -->
+         <div class="bg-gray-100 rounded-lg card w-full">
+            <img src="./assets/images/homeQuaint.jpg" alt="Quaint Acres" class="w-full" />
+            
+            <!-- Mobile details-->
+            <div class="block md:hidden px-4">
+               <div class="flex justify-between items-center mt-2 mb-2">
+                  <div class="flex items-end justify-center gap-2 py-2">
+                     <h2 class="text-lg font-bold">Quaint Acres</h2>
+                     <p class="text-md text-gray-500">2021</p>
+                  </div>
+                  
+                  <a href="./quaintAcresPropertyListing.html" class="px-4 py-2 bg-gray-900 text-white rounded-full text-xs font-semibold hover:bg-black transition">
+                     View Details
+                  </a>
+               </div>
+               
+               <p class="text-md text-gray-700 mb-3">
+                  Beautiful countryside property with plenty of space and scenic views.
+               </p>
+            </div>
+            
+            <!-- Desktop interactive details -->
+            <div class="hidden md:block">
+               <div class="card-info">
+                  <h2 class="text-md font-bold mb-1">Quaint Acres</h2>
+                  <p class="text-sm text-gray-500 mb-3">2021</p>
+                  <p class="text-xs text-gray-700 mb-3">
+                     Beautiful countryside property with plenty of space and scenic views.
+                  </p>
+                  <a href="./quaintAcresPropertyListing.html" class="px-4 py-2 bg-gray-900 text-white rounded-full text-xs font-semibold hover:bg-black transition">
+                     View Details
+                  </a>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Modern Municiple Listing -->
+         <div class="bg-gray-100 rounded-lg card w-full">
+            <img src="./assets/images/homeTwilight0.jpg" alt="Quaint Acres" class="w-full" />
+            
+            <!-- Mobile details-->
+            <div class="block md:hidden px-4">
+               <div class="flex justify-between items-center mt-2 mb-2">
+                  <div class="flex items-end justify-center gap-2 py-2">
+                     <h2 class="text-lg font-bold">Modern Municiple</h2>
+                     <p class="text-md text-gray-500">2022</p>
+                  </div>
+                  
+                  <a href="./modernMuniciplePropertyListing.html" class="px-4 py-2 bg-gray-900 text-white rounded-full text-xs font-semibold hover:bg-black transition">
+                     View Details
+                  </a>
+               </div>
+               
+               <p class="text-md text-gray-700 mb-3">
+                  Beautiful countryside property with plenty of space and scenic views.
+               </p>
+            </div>   
+            
+            <!-- Desktop interactive details -->
+            <div class="hidden md:block">
+               <div class="card-info">
+                  <h2 class="text-md font-bold mb-1">Modern Municiple</h2>
+                  <p class="text-sm text-gray-500 mb-3">2022</p>
+                  <p class="text-xs text-gray-700 mb-3">
+                     Gorgeous modern house in the suburbs of a major metropolitan area.
+                  </p>
+                  <a href="./modernMuniciplePropertyListing.html" class="px-4 py-2 bg-gray-900 text-white rounded-full text-xs font-semibold hover:bg-black transition">
+                     View Details
+                  </a>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Side Carousel -->
+         <div class="bg-pink-50 p-6 rounded-lg text-center relative overflow-hidden">
+            <!-- Carousel Content -->
+            <div id="carousel" class="relative h-48">
+               <!-- Slide 1 -->
+               <div class="mt-10 carousel-slide absolute inset-0 transition-opacity duration-700 opacity-100 pointer-events-auto">
+                  <h3 class="text-lg font-semibold">Let's create beautiful spaces together!</h3>
+                  <p class="text-sm text-gray-600 mt-2">Our top specialists will help you design the property of your dreams.</p>
+                  <button class="mt-6 px-6 py-3 bg-gray-800 hover:bg-black text-gray-300 hover:text-white hover:scale-105 rounded-full font-semibold tracking-wide transition-all duration-300 cursor-pointer">
+                     See our list of agents!
+                  </button>
+               </div>
+               
+               <!-- Slide 2 -->
+               <div class="mt-10 carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none">
+                  <h3 class="text-lg font-semibold">Need help finding the right location?</h3>
+                  <p class="text-sm text-gray-600 mt-2">We specialize in matching clients with ideal investment opportunities.</p>
+                  <button class="mt-6 px-6 py-3 bg-gray-800 hover:bg-black text-gray-300 hover:text-white hover:scale-105 rounded-full font-semibold tracking-wide transition-all duration-300 cursor-pointer">
+                     Contact Us
+                  </button>
+               </div>
+               
+               <!-- Slide 3 -->
+               <div class="mt-10 carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none">
+                  <h3 class="text-lg font-semibold">Interested in our properties?</h3>
+                  <p class="text-sm text-gray-600 mt-2">Sign up for our newsletter and receive communications on new and updated listings!</p>
+                  <button class="mt-6 px-6 py-3 bg-gray-800 hover:bg-black text-gray-300 hover:text-white hover:scale-105 rounded-full font-semibold tracking-wide transition-all duration-300 cursor-pointer">
+                     Click here to sign up!
+                  </button>
+               </div>
+            </div>
+            
+            <!-- Carousel Navigation Dots  -->
+            <div class="flex justify-center space-x-2 mt-6">
+               <button class="w-3 h-3 rounded-full bg-gray-300 carousel-dot" data-index="0"></button>
+               <button class="w-3 h-3 rounded-full bg-gray-300 carousel-dot" data-index="1"></button>
+               <button class="w-3 h-3 rounded-full bg-gray-300 carousel-dot" data-index="2"></button>
+            </div>
+            
+            <!-- Circular timer SVG -->
+            <svg class="absolute bottom-2 right-2 w-8 h-8" viewBox="0 0 36 36">
+               <circle
+                  class="text-gray-300"
+                  stroke-width="3"
+                  stroke="currentColor"
+                  fill="none"
+                  cx="18"
+                  cy="18"
+                  r="15"
+               />
+               <circle
+                  id="progress-ring"
+                  stroke-width="3"
+                  stroke="#4B5563"
+                  fill="none"
+                  cx="18"
+                  cy="18"
+                  r="15"
+                  stroke-linecap="round"
+                  stroke-dasharray="94.2"
+                  stroke-dashoffset="94.2"
+                  transform="rotate(-90 18 18)"
+               />
+            </svg>
+         </div>
+      </section>
+      
+      <!-- Contact Us Section -->
+      <section class="flex flex-col md:flex-row items-center text-center md:text-left px-12 py-12 gap-6">
+         <!-- Left: Contact Info -->
+         <div class="md:w-1/2 space-y-4">
+            <h2 class="text-2xl md:text-3xl font-medium leading-snug tracking-tight">
+               Get in Touch With Us
+            </h2>
+            <p class="text-gray-600 text-base">
+               We'd love to hear from you! Reach out with questions, collaborations, or just to say hello.
+            </p>
+            
+            <div class="text-gray-700 space-y-2 text-sm">
+               <p><strong>Email:</strong> contact@companyname.com</p>
+               <p><strong>Phone:</strong> (123) 456-7890</p>
+               <p><strong>Location:</strong> 456 Market Street, Springfield, USA</p>
+               <p><strong>Hours:</strong> Mon–Fri, 9am–5pm EST</p>
+            </div>
+         </div>
+         
+         <!-- Right: Form -->
+         <div class="md:w-1/2 w-full border rounded-lg border-gray-200">
+            <form class="space-y-4 bg-white p-6 rounded-2xl shadow-xl">
+               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+               <input type="text" placeholder="First Name" class="w-full p-3 border border-gray-300 rounded-lg" />
+               <input type="text" placeholder="Last Name" class="w-full p-3 border border-gray-300 rounded-lg" />
+               </div>
+               <input type="email" placeholder="Email Address" class="w-full p-3 border border-gray-300 rounded-lg" />
+               <textarea placeholder="Your Message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg resize-none"></textarea>
+               <button type="submit" class="mt-2 px-6 py-3 bg-gray-900 text-white rounded-full font-semibold tracking-wide w-full">
+                  Send Message
+               </button>
+            </form>
+         </div>
+      </section>
+      
+      <!-- Footer -->
+      <footer class="bg-gray-900 text-gray-300 font-spartan px-6 py-10">
+         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+               <h3 class="text-white text-xl font-bold mb-4">Company Name</h3>
+               <p class="text-sm mb-4">
+               We list modern and beautiful spaces that inspire and last.
+               </p>
+               <p class="text-sm">
+               456 Market Street<br />
+               Springfield, USA
+               </p>
+               <p class="mt-2 text-sm">Email: <a href="mailto:contact@companyname.com" class="underline hover:text-white">contact@companyname.com</a></p>
+               <p class="text-sm">Phone: <a href="tel:+1234567890" class="underline hover:text-white">(123) 456-7890</a></p>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+               <h4 class="text-white font-semibold mb-4">Navigation</h4>
+               <ul class="space-y-2 text-sm">
+               <li><a href="#" class="hover:text-white transition">Listings</a></li>
+               <li><a href="#" class="hover:text-white transition">Sell</a></li>
+               <li><a href="#" class="hover:text-white transition">Agents</a></li>
+               <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+               </ul>
+            </div>
+            
+            <!-- Listing Types -->
+            <div>
+               <h4 class="text-white font-semibold mb-4">Listing Types</h4>
+               <ul class="space-y-2 text-sm">
+               <li><a href="#" class="hover:text-white transition">Land</a></li>
+               <li><a href="#" class="hover:text-white transition">Commercial</a></li>
+               <li><a href="#" class="hover:text-white transition">Residential</a></li>
+               <li><a href="#" class="hover:text-white transition">Industrial</a></li>
+               <li><a href="#" class="hover:text-white transition">Urban</a></li>
+               </ul>
+            </div>
+            
+            <!-- Social & Newsletter -->
+            <div>
+               <h4 class="text-white font-semibold mb-4">Connect with us</h4>
+               <div class="flex space-x-4 mb-6">
+               <a href="#" aria-label="Facebook" class="hover:text-white transition">
+                  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.87v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.87 0 1.8.15 1.8.15v2h-1c-1 0-1.3.63-1.3 1.3V12h2.3l-.37 3h-1.93v7A10 10 0 0022 12z"/></svg>
+               </a>
+               <a href="#" aria-label="Twitter" class="hover:text-white transition">
+                  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M22.46 6c-.77.34-1.6.57-2.46.67a4.28 4.28 0 001.88-2.37 8.57 8.57 0 01-2.71 1.04 4.25 4.25 0 00-7.24 3.87A12.05 12.05 0 013 5.16a4.25 4.25 0 001.32 5.67 4.22 4.22 0 01-1.92-.53v.05a4.25 4.25 0 003.41 4.17 4.24 4.24 0 01-1.9.07 4.25 4.25 0 003.96 2.95A8.53 8.53 0 012 19.54a12.05 12.05 0 006.52 1.91c7.82 0 12.1-6.48 12.1-12.1 0-.18 0-.35-.01-.53A8.65 8.65 0 0022.46 6z"/></svg>
+               </a>
+               <a href="#" aria-label="Instagram" class="hover:text-white transition">
+                  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 3a1 1 0 110 2 1 1 0 010-2zm-5 2a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+               </a>
+               </div>
+               
+               <!-- Newsletter Form -->
+               <form class="flex flex-col sm:flex-row gap-2" onsubmit="event.preventDefault(); alert('Subscribed!');">
+               <input
+                  type="email"
+                  placeholder="Your email"
+                  required
+                  class="px-3 py-2 rounded-l-md border border-gray-700 bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 flex-grow"
+               />
+               <button
+                  type="submit"
+                  class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-r-md font-semibold transition"
+               >
+                  Subscribe
+               </button>
+               </form>
+            </div>
+         </div>
+         
+         <div class="mt-10 border-t border-gray-800 pt-6 text-center text-xs text-gray-500 select-none">
+            &copy; 2025 Company Name. All rights reserved.
+         </div>
+      </footer>
+      
+      <!-- Javascript -->
+      <script>
+         // START - JS to toggle mobile nav
+         const toggle = document.getElementById("menu-toggle");
+         const nav = document.getElementById("navbarResponsive");
+         const toggleSvg = toggle.querySelector("svg");
+         
+         // Add transition classes to the SVG for smooth rotation
+         toggleSvg.classList.add("transition-transform", "duration-300", "ease-in-out");
+         
+         let isOpen = false;
+         
+         toggle.addEventListener("click", () => {
+         if (nav.classList.contains("max-h-0")) {
+            // Opening menu
+            nav.classList.remove("max-h-0");
+            nav.classList.add("max-h-96");
+            
+            // Rotate SVG to X (45 degrees creates a modern subtle rotation)
+            // or 180 degrees for full rotation, or 90 degrees for quarter turn
+            toggleSvg.style.transform = "rotate(180deg)";
+            
+            isOpen = true;
+         } else {
+            // Closing menu
+            nav.classList.remove("max-h-96");
+            nav.classList.add("max-h-0");
+            
+            // Rotate back to original position
+            toggleSvg.style.transform = "rotate(0deg)";
+            
+            isOpen = false;
+         }
+         
+         toggleSvg.style.transform += " scale(1.1)";
+         
+         // Reset scale after animation
+         setTimeout(() => {
+            if (isOpen) {
+               toggleSvg.style.transform = "rotate(180deg) scale(1)";
+            } else {
+               toggleSvg.style.transform = "rotate(0deg) scale(1)";
+            }
+         }, 150);
+         });
+         // STOP - JS to toggle mobile nav
+         
+         // START - Carousel Scripting
+         const slides = document.querySelectorAll('.carousel-slide');
+         const dots = document.querySelectorAll('.carousel-dot');
+         const progressRing = document.getElementById('progress-ring');
+         
+         const radius = 15;
+         const circumference = 2 * Math.PI * radius;
+         
+         let current = 0;
+         let pauseUntil = 0;
+         const slideDuration = 6000; // 6 seconds
+         let lastChangeTime = Date.now();
+         
+         progressRing.style.strokeDasharray = circumference;
+         progressRing.style.strokeDashoffset = circumference;
+         
+         function setProgress(percent) {
+            const offset = circumference - (percent / 100) * circumference;
+            progressRing.style.strokeDashoffset = offset;
+         }
+         
+         function showSlide(index) {
+            slides.forEach((slide, i) => {
+               slide.style.opacity = i === index ? '1' : '0';
+               slide.style.pointerEvents = i === index ? 'auto' : 'none';
+            });
+            dots.forEach((dot, i) => {
+               dot.classList.toggle('bg-gray-500', i === index);
+               dot.classList.toggle('bg-gray-300', i !== index);
+            });
+            current = index;
+            lastChangeTime = Date.now();
+            pauseUntil = 0; // Reset pause on manual change
+            setProgress(0);  // Reset progress ring
+         }
+         
+         dots.forEach((dot, i) => { // For each nav dot
+            dot.addEventListener('click', () => { // Add an click event listener
+               showSlide(i); // Show the current slide using index
+               pauseUntil = Date.now() + slideDuration; // pause for 6 sec
+            });
+         });
+         
+         // Animation loop updating progress and slide
+         function update() {
+            const now = Date.now();
+            let elapsed = now - lastChangeTime;
+            
+            if (pauseUntil && now < pauseUntil) {
+               // paused, keep progress at 0 or full depending on design
+               setProgress(0);
+            } else {
+               if (elapsed >= slideDuration) {
+                  // move to next slide
+                  const next = (current + 1) % slides.length;
+                  showSlide(next);
+                  lastChangeTime = now;
+               }
+               // Update progress bar (0% to 100%)
+               const progressPercent = (elapsed / slideDuration) * 100;
+               setProgress(progressPercent);
+            }
+            
+            requestAnimationFrame(update);
+         }
+         
+         // Init
+         showSlide(0);
+         update();
+         // STOP  - Carousel Scripting
+      </script>
+   </body>   
+</html>

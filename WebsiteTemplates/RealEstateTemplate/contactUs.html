@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- Website Title (The name of the tab in the browser) -->
+      <title>Company Name - Contact</title>
+      <!-- Tailwind CSS Import-->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+         @font-face {
+            font-family: 'League Spartan';
+            src: url('./assets/fonts/LeagueSpartan/static/LeagueSpartan-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+         }
+         
+         @font-face {
+            font-family: 'League Spartan';
+            src: url('./assets/fonts/LeagueSpartan/static/LeagueSpartan-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+         }
+         
+         /* Extend Tailwind's Syntax to Include Spartan */
+         .font-spartan {
+            font-family: 'League Spartan', sans-serif;
+         }
+         
+         .card {
+            position: relative;
+            overflow: hidden;
+         }
+         .card-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #f3f4f6; /* Tailwind's gray-100 */
+            padding: 1rem; /* p-4 */
+            transform: translateY(50%);
+            transition: transform 0.3s ease;
+            /* clip the extra content for smooth reveal */
+            max-height: 180px;
+         }
+         .card:hover .card-info {
+            transform: translateY(0%);
+         }
+      </style>
+   </head>
+   
+   <body class="font-spartan bg-white text-gray-900">
+      <!-- Header & Navbar -->
+      <header class="flex justify-between items-center px-6 py-4 border-b">
+         <!-- Navbar -->
+         <nav class="fixed top-0 left-0 md:bg-white w-full text-black shadow z-50" id="mainNav">
+            <div class="container min-h-20 bg-white mx-auto px-4 py-3 flex items-center justify-between">
+               <div class="flex items-center justify-center">
+                  <img class="h-auto w-8 mr-2" src="" alt="logo" />
+                  <a href="#page-top" class="font-extrabold text-xl pt-[2px]">Company Name</a>
+               </div>
+               
+               <!-- Navbar -->
+               <nav class="hidden md:flex space-x-6 text-sm">
+                  <a href="index.html" class="relative inline-block text-gray-700 hover:text-black transition-all duration-200
+                     after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+                     after:bg-black after:transition-all after:duration-300 hover:after:w-full">HOME</a>
+                  <a href="listings.html" class="relative inline-block text-gray-700 hover:text-black transition-all duration-200
+                     after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+                     after:bg-black after:transition-all after:duration-300 hover:after:w-full">LISTINGS</a>
+                  <a href="sell.html" class="relative inline-block text-gray-700 hover:text-black transition-all duration-200
+                     after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+                     after:bg-black after:transition-all after:duration-300 hover:after:w-full">SELL</a>
+                  <a href="agents.html" class="relative inline-block text-gray-700 hover:text-black transition-all duration-200
+                     after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+                     after:bg-black after:transition-all after:duration-300 hover:after:w-full">AGENTS</a>
+                  <a href="contactUs.html" class="relative inline-block text-black font-bold transition-all duration-200
+                     after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full
+                     after:bg-black after:transition-all after:duration-300">CONTACT US</a>
+               </nav>
+               
+               <!-- Mobile toggle button (hidden on md+) -->
+               <button id="menu-toggle" class="lg:hidden focus:outline-none" aria-label="Toggle navigation">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+               </button>
+               
+               <!-- Scroll Up Button for Mobile -->
+               <a href="#" class="block md:hidden fixed bottom-8 right-8 z-50 text-black bg-white bg-opacity-60 p-4 rounded-full" aria-label="Scroll up button">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                     <polyline points="18,15 12,9 6,15"/>
+                  </svg>
+               </a>
+            </div>
+            
+            <!-- Mobile nav links (hidden on lg+) -->
+            <div id="navbarResponsive" class="max-h-0 bg-black/20 backdrop-blur-md overflow-hidden transition-all duration-300 ease-in-out lg:hidden px-4">
+               <ul class="flex flex-col items-end space-y-2 py-4 text-center gap-y-2 mr-8" role="navigation" aria-label="Navigation menu">
+                  <li><a href="index.html" class="text-lg text-white" aria-label="About section">HOME</a></li>
+                  <li><a href="listings.html" class="text-lg text-white" aria-label="Gallery section">LISTINGS</a></li>
+                  <li><a href="sell.html" class="text-lg text-white" aria-label="Contact section">SELL</a></li>
+                  <li><a href="agents.html" class="text-lg text-white" aria-label="Contact section">AGENTS</a></li>
+                  <li><a href="contactUs.html" class="text-lg text-white" aria-label="Contact section">CONTACT US</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      
+      <!-- Contact Us Page Content -->
+      <section class="max-w-7xl mx-auto px-6 py-12 font-spartan text-gray-800">
+         <!-- Contact Us Form Section -->
+         <section class="flex flex-col md:flex-row items-center text-center md:text-left gap-10 mt-10 mb-16">
+            <!-- Contact Info -->
+            <div class="md:w-1/2 space-y-4">
+               <h2 class="text-3xl font-bold">Get in Touch With Us</h2>
+               <p class="text-gray-600 text-base">
+               We'd love to hear from you! Reach out with questions, collaborations, or just to say hello.
+               </p>
+               <div class="text-gray-700 space-y-2 text-sm">
+               <p><strong>Email:</strong> contact@companyname.com</p>
+               <p><strong>Phone:</strong> (123) 456-7890</p>
+               <p><strong>Location:</strong> 456 Market Street, Springfield, USA</p>
+               <p><strong>Hours:</strong> Mon–Fri, 9am–5pm EST</p>
+               </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="md:w-1/2 w-full border rounded-lg border-gray-200">
+               <form class="space-y-4 bg-white p-6 rounded-2xl shadow-xl">
+               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <input type="text" placeholder="First Name" class="w-full p-3 border border-gray-300 rounded-lg" />
+                  <input type="text" placeholder="Last Name" class="w-full p-3 border border-gray-300 rounded-lg" />
+               </div>
+               <input type="email" placeholder="Email Address" class="w-full p-3 border border-gray-300 rounded-lg" />
+               <textarea placeholder="Your Message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg resize-none"></textarea>
+               <button type="submit" class="mt-2 px-6 py-3 bg-gray-900 text-white rounded-full font-semibold tracking-wide w-full">
+                  Send Message
+               </button>
+               </form>
+            </div>
+         </section>
+         
+         <!-- Location + Google Maps Section -->
+         <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-6">Visit Our Office</h2>
+            <p class="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
+               We’re conveniently located in downtown Springfield. Stop by our office or use the map below to get directions.
+            </p>
+            <div class="w-full h-80 rounded-xl overflow-hidden shadow-lg">
+               <iframe
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.736317943758!2d-75.16352608460833!3d39.95258327942301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU3JzA4LjkiTiA3NcKwMDknNTAuNyJX!5e0!3m2!1sen!2sus!4v1606437833896!5m2!1sen!2sus"
+               width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+               </iframe>
+            </div>
+         </section>
+         
+         <!-- FAQs Section -->
+         <section class="mb-8">
+            <h2 class="text-3xl font-bold text-center mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-6 max-w-3xl mx-auto">
+               <div>
+               <h3 class="font-semibold text-lg">What’s the typical response time?</h3>
+               <p class="text-gray-600 text-sm">We usually respond to all inquiries within 1–2 business days.</p>
+               </div>
+               <div>
+               <h3 class="font-semibold text-lg">Can I visit without an appointment?</h3>
+               <p class="text-gray-600 text-sm">Walk-ins are welcome during office hours, but we recommend scheduling an appointment for dedicated time.</p>
+               </div>
+               <div>
+               <h3 class="font-semibold text-lg">Do you offer virtual consultations?</h3>
+               <p class="text-gray-600 text-sm">Absolutely! We’re happy to set up a Zoom or Google Meet to discuss your needs remotely.</p>
+               </div>
+            </div>
+         </section>
+      </section>
+      
+      <!-- Footer -->
+      <footer class="bg-gray-900 text-gray-300 font-spartan px-6 py-10">
+         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+               <h3 class="text-white text-xl font-bold mb-4">Company Name</h3>
+               <p class="text-sm mb-4">
+               We list modern and beautiful spaces that inspire and last.
+               </p>
+               <p class="text-sm">
+               456 Market Street<br />
+               Springfield, USA
+               </p>
+               <p class="mt-2 text-sm">Email: <a href="mailto:contact@companyname.com" class="underline hover:text-white">contact@companyname.com</a></p>
+               <p class="text-sm">Phone: <a href="tel:+1234567890" class="underline hover:text-white">(123) 456-7890</a></p>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+               <h4 class="text-white font-semibold mb-4">Navigation</h4>
+               <ul class="space-y-2 text-sm">
+               <li><a href="#" class="hover:text-white transition">Listings</a></li>
+               <li><a href="#" class="hover:text-white transition">Sell</a></li>
+               <li><a href="#" class="hover:text-white transition">Agents</a></li>
+               <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+               </ul>
+            </div>
+            
+            <!-- Listing Types -->
+            <div>
+               <h4 class="text-white font-semibold mb-4">Listing Types</h4>
+               <ul class="space-y-2 text-sm">
+               <li><a href="#" class="hover:text-white transition">Land</a></li>
+               <li><a href="#" class="hover:text-white transition">Commercial</a></li>
+               <li><a href="#" class="hover:text-white transition">Residential</a></li>
+               <li><a href="#" class="hover:text-white transition">Industrial</a></li>
+               <li><a href="#" class="hover:text-white transition">Urban</a></li>
+               </ul>
+            </div>
+            
+            <!-- Social & Newsletter -->
+            <div>
+               <h4 class="text-white font-semibold mb-4">Connect with us</h4>
+               <div class="flex space-x-4 mb-6">
+               <a href="#" aria-label="Facebook" class="hover:text-white transition">
+                  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.87v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.87 0 1.8.15 1.8.15v2h-1c-1 0-1.3.63-1.3 1.3V12h2.3l-.37 3h-1.93v7A10 10 0 0022 12z"/></svg>
+               </a>
+               <a href="#" aria-label="Twitter" class="hover:text-white transition">
+                  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M22.46 6c-.77.34-1.6.57-2.46.67a4.28 4.28 0 001.88-2.37 8.57 8.57 0 01-2.71 1.04 4.25 4.25 0 00-7.24 3.87A12.05 12.05 0 013 5.16a4.25 4.25 0 001.32 5.67 4.22 4.22 0 01-1.92-.53v.05a4.25 4.25 0 003.41 4.17 4.24 4.24 0 01-1.9.07 4.25 4.25 0 003.96 2.95A8.53 8.53 0 012 19.54a12.05 12.05 0 006.52 1.91c7.82 0 12.1-6.48 12.1-12.1 0-.18 0-.35-.01-.53A8.65 8.65 0 0022.46 6z"/></svg>
+               </a>
+               <a href="#" aria-label="Instagram" class="hover:text-white transition">
+                  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 3a1 1 0 110 2 1 1 0 010-2zm-5 2a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+               </a>
+               </div>
+               
+               <!-- Newsletter Form -->
+               <form class="flex flex-col sm:flex-row gap-2" onsubmit="event.preventDefault(); alert('Subscribed!');">
+               <input
+                  type="email"
+                  placeholder="Your email"
+                  required
+                  class="px-3 py-2 rounded-l-md border border-gray-700 bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 flex-grow"
+               />
+               <button
+                  type="submit"
+                  class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-r-md font-semibold transition"
+               >
+                  Subscribe
+               </button>
+               </form>
+            </div>
+         </div>
+         
+         <div class="mt-10 border-t border-gray-800 pt-6 text-center text-xs text-gray-500 select-none">
+            &copy; 2025 Company Name. All rights reserved.
+         </div>
+      </footer>
+      
+      <script>
+         // START - JS to toggle mobile nav
+         const toggle = document.getElementById("menu-toggle");
+         const nav = document.getElementById("navbarResponsive");
+         const toggleSvg = toggle.querySelector("svg");
+         
+         // Add transition classes to the SVG for smooth rotation
+         toggleSvg.classList.add("transition-transform", "duration-300", "ease-in-out");
+         
+         let isOpen = false;
+         
+         toggle.addEventListener("click", () => {
+         if (nav.classList.contains("max-h-0")) {
+            // Opening menu
+            nav.classList.remove("max-h-0");
+            nav.classList.add("max-h-96");
+            
+            // Rotate SVG to X (45 degrees creates a modern subtle rotation)
+            // or 180 degrees for full rotation, or 90 degrees for quarter turn
+            toggleSvg.style.transform = "rotate(180deg)";
+            
+            isOpen = true;
+         } else {
+            // Closing menu
+            nav.classList.remove("max-h-96");
+            nav.classList.add("max-h-0");
+            
+            // Rotate back to original position
+            toggleSvg.style.transform = "rotate(0deg)";
+            
+            isOpen = false;
+         }
+         
+         toggleSvg.style.transform += " scale(1.1)";
+         
+         // Reset scale after animation
+         setTimeout(() => {
+            if (isOpen) {
+               toggleSvg.style.transform = "rotate(180deg) scale(1)";
+            } else {
+               toggleSvg.style.transform = "rotate(0deg) scale(1)";
+            }
+         }, 150);
+         });
+         // STOP - JS to toggle mobile nav
+      </script>
+   </body>   
+</html>
