@@ -174,11 +174,10 @@
                 <a href="#home" class="hover-scale hover:bg-white hover:bg-opacity-60 hover:text-black transition-colors rounded py-2 px-3 block">Home</a>
                 <a href="#about" class="hover-scale hover:bg-white hover:bg-opacity-60 hover:text-black transition-colors rounded py-2 px-3 block">About</a>
                 <a href="#contact" class="hover-scale hover:bg-white hover:bg-opacity-60 hover:text-black transition-colors rounded py-2 px-3 block">Contact</a>
-                <a href="./WebsiteTemplates/RealEstateTemplate/index.html" class="hover-scale hover:bg-white hover:bg-opacity-60 hover:text-black transition-colors rounded py-2 px-3 block">test</a>
-                <!-- START - Business Projects Dropdown Menu -->
+                <!-- START - Website Templates Dropdown Menu -->
                 <div class="relative">
-                    <button class="hover-scale dropdown-toggle hover:bg-white hover:bg-opacity-60 hover:text-black py-2 px-3 flex items-center gap-2 rounded w-60 justify-between">
-                        <span class="pointer-events-none">Business Projects</span>
+                    <button class="hover-scale dropdown-toggle hover:bg-white hover:bg-opacity-60 hover:text-black py-2 px-3 flex items-center gap-2 rounded w-56 justify-between">
+                        <span class="pointer-events-none">Website Templates</span>
                         <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <title>chevron-down</title>
                             <g fill="none">
@@ -186,12 +185,12 @@
                             </g>
                         </svg>
                     </button>
-                    <div class="z-50 dropdown-menu absolute hidden bg-white text-black rounded-b-lg pb-2 w-60">
-                        <a href="#BusinessProjects" class="hover:bg-gray-200 hover:text-black block px-6 py-2">Myasia's Dance Studio</a>
-                        <a href="#BusinessProjects" class="hover:bg-gray-200 hover:text-black block px-6 py-2">EWA Business Consultation</a>
+                    <div class="z-50 dropdown-menu absolute hidden bg-white text-black rounded-b-lg pb-2 w-56">
+                        <a href="#SmokeyTemplate" class="hover:bg-gray-200 hover:text-black block px-6 py-2">Smokey Template</a>
+                        <a href="#RealEstateTemplate" class="hover:bg-gray-200 hover:text-black block px-6 py-2">Real Estate</a>
                     </div>
                 </div>
-                <!-- STOP - Business Projects Dropdown Menu -->
+                <!-- STOP - Website Templates Dropdown Menu -->
                 <!-- START - Personal Projects Dropdown Menu -->
                 <div class="relative">
                     <button class="hover-scale dropdown-toggle hover:bg-white hover:bg-opacity-60 hover:text-black py-2 px-3 flex items-center gap-2 rounded w-56 justify-between">
@@ -253,7 +252,7 @@
         <p class="hover-scale text-2xl text-white pt-8">Computer Scientist</p>
     </div>
     
-    <!-- About Me Section with Enhanced Design -->
+    <!-- About Me Section -->
     <div id="about" class="container mx-auto my-16 max-w-2xl p-6">
         <div class="bg-gradient-to-br from-white to-gray-100 p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:shadow-xl">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
@@ -454,74 +453,146 @@
         </div>
     </div>
     
-    <!-- Business Projects Section -->
-    <div id="BusinessProjects" class="container mx-auto mt-8 max-w-3xl p-8 fadeInFromBottom">
-        <div class="hover-scale bg-white p-8 rounded-lg shadow border-4 border-black">
-            <h1 class="text-2xl font-bold mb-4">Business Projects</h1>
-            <!-- START - IMAGE CAROUSEL -->
-            <div class="max-w-2xl mx-auto">
-                <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg" data-carousel="static">
-                    <!-- Carousel wrapper -->
-                    <div class="relative h-80 md:h-96" data-carousel-inner>
-                        <!-- Item 1 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="assets/BusinessProjects/fmlstudios.png" class="object-cover w-full h-full" alt="FML Studios">
-                        </div>
-                        <!-- Item 2 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <img src="assets/BusinessProjects/EWALLC_BusinessWebsiteScreenshot.png" class="object-cover w-full h-full" alt="EWA LLC">
+    <!-- Website Templates Section -->
+    <div class="container mx-auto py-16 px-4 max-w-6xl">
+        <div class="bg-white p-8 rounded-lg shadow-lg border-4 border-black transition-all duration-300 hover:shadow-xl">
+            <h1 class="text-3xl font-bold mb-12 text-center text-white fadeInFromBottom">Website Templates</h1>
+            
+            <!-- Website Templates Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Template Card: Smokey Template -->
+                <div id="SmokeyTemplate" class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.02] fadeInFromBottom">
+                    <div class="relative h-72 overflow-hidden">
+                        <!-- Carousel for Smokey Template -->
+                        <div id="smokey-template-carousel" class="carousel relative w-full h-full" data-carousel="static">
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-full" data-carousel-inner>
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out h-full flex justify-center items-center bg-gray-100" data-carousel-item>
+                                    <a href="./WebsiteTemplates/SmokeyTemplate/index.html" target="_blank" rel="noopener noreferrer" class="h-full w-full">
+                                        <img src="assets/WebsiteTemplates/SmokeyTemplate/Hero.png" class="object-cover w-full h-full" alt="Hero Section">
+                                    </a>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="./WebsiteTemplates/SmokeyTemplate/index.html" target="_blank" rel="noopener noreferrer" class="h-full w-full">
+                                        <img src="assets/WebsiteTemplates/SmokeyTemplate/About.png" class="object-cover w-full h-full" alt="About Us Section">
+                                    </a>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="./WebsiteTemplates/SmokeyTemplate/index.html" target="_blank" rel="noopener noreferrer" class="h-full w-full">
+                                        <img src="assets/WebsiteTemplates/SmokeyTemplate/Gallery.png" class="object-cover w-full h-full" alt="Gallery Section">
+                                    </a>
+                                </div>
+                                <!-- Item 4 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="./WebsiteTemplates/SmokeyTemplate/index.html" target="_blank" rel="noopener noreferrer" class="h-full w-full">
+                                        <img src="assets/WebsiteTemplates/SmokeyTemplate/ContactUs.png" class="object-cover w-full h-full" alt="Contact Us Section">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Carousel controls -->
+                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-prev>
+                                <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-next>
+                                <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-                    <!-- Slider controls -->
-                    <button type="button" class="hover-scale flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition"data-carousel-prev>
-                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button type="button" class="hover-scale flex absolute top-1/2 right-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition" data-carousel-next>
-                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
+                    
+                    <div class="p-6">
+                        <h2 class="flex flex-row gap-x-4 items-center text-xl font-bold mb-3">
+                            <a href="./WebsiteTemplates/SmokeyTemplate/index.html" target="_blank" rel="noopener noreferrer" class="flex items-center transition-all duration-400 transform hover:text-blue-500 hover:scale-105">
+                                Smokey Template
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            The Smokey Template offers a clean, minimal foundation perfect for fast deployment and easy customization. 
+                            While simple by design, it includes all the essential components needed to launch a modern, responsive 
+                            website—making it an ideal starting point for developers and agencies alike.
+                        </p>
+                    </div>
                 </div>
-            
-                <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+                
+                <!-- Template Card: Real Estate Template -->
+                <div id="RealEstateTemplate" class="bg-gray-50 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.02] fadeInFromBottom">
+                    <div class="relative h-72 overflow-hidden">
+                        <!-- Carousel for Real Estate Template -->
+                        <div id="real-estate-carousel" class="carousel relative w-full h-full" data-carousel="static">
+                            <!-- Carousel wrapper -->
+                            <div class="relative h-full" data-carousel-inner>
+                                <!-- Item 1 -->
+                                <div class="hidden duration-700 ease-in-out h-full flex justify-center items-center bg-gray-100" data-carousel-item>
+                                    <a href="./WebsiteTemplates/RealEstateTemplate/index.html" target="_blank" rel="noopener noreferrer" class="h-full w-full">
+                                        <img src="assets/WebsiteTemplates/RealEstateTemplate/HomePage.png" class="object-cover w-full h-full" alt="Home Page">
+                                    </a>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="./WebsiteTemplates/RealEstateTemplate/index.html" target="_blank" rel="noopener noreferrer" class="h-full w-full">
+                                        <img src="assets/WebsiteTemplates/RealEstateTemplate/PropertyPage.png" class="object-cover w-full h-full" alt="Property Page">
+                                    </a>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="./WebsiteTemplates/RealEstateTemplate/index.html" target="_blank" rel="noopener noreferrer" class="h-full w-full">
+                                        <img src="assets/WebsiteTemplates/RealEstateTemplate/AgentsPage.png" class="object-cover w-full h-full" alt="Agents Page">
+                                    </a>
+                                </div>
+                                <!-- Item 4 -->
+                                <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                                    <a href="./WebsiteTemplates/RealEstateTemplate/index.html" target="_blank" rel="noopener noreferrer" class="h-full w-full">
+                                        <img src="assets/WebsiteTemplates/RealEstateTemplate/ContactPage.png" class="object-cover w-full h-full" alt="Contact Page">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Carousel controls -->
+                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-prev>
+                                <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-next>
+                                <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <h2 class="flex flex-row gap-x-4 items-center text-xl font-bold mb-3">
+                            <a href="./WebsiteTemplates/RealEstateTemplate/index.html" target="_blank" rel="noopener noreferrer" class="flex items-center transition-all duration-400 transform hover:text-blue-500 hover:scale-105">
+                                Real Estate Template
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            This modern real estate agency website template features a sleek, responsive design built for showcasing property 
+                            listings with ease. With a clean layout, intuitive navigation, and integrated contact forms, it's perfect for 
+                            agencies looking to present homes professionally and connect with clients seamlessly. The template includes 
+                            dynamic listing cards, and space for agent profiles, making it a great solution for any real estate business.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <!-- STOP  - IMAGE CAROUSEL -->
-            <div class="flex w-full items-center justify-center pt-4">
-                <h2 class="text-xl font-bold mb-3 transition-all duration-300 hover:text-yellow-600">
-                    <a href="https://www.fmlstudios.site/" target="_blank" rel="noopener noreferrer" class="flex items-center">
-                        FML Studios
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                    </a>
-                </h2>
-            </div>
-            <p class="text-justify p-2">
-                FML Studios, a website developed by EWA LLC for a burgeoning dance studio 
-                CEO, facilitated business guidance, online presence establishment, event 
-                management, class coordination, and E-commerce, successfully achieving 
-                these objectives.
-            </p>
-            <div class="flex w-full items-center justify-center pt-4">
-                <h2 class="text-xl font-bold mb-3 transition-all duration-300 hover:text-red-600">
-                    <a href="https://www.ewabusinessconsultation.com/" target="_blank" rel="noopener noreferrer" class="flex items-center">
-                        EWA Business Consultation
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                    </a>
-                </h2>
-            </div>
-            <p class="text-justify p-2">
-                EWA Business Consultation is a company that offers tailored business 
-                solutions designed to empower organizations across various industries.
-            </p>
         </div>
     </div>
     
-    <!-- Personal Projects Section - Modern Grid Layout -->
+    <!-- Personal Projects Section -->
     <div class="container mx-auto py-16 px-4 max-w-6xl">
         <div class="bg-white p-8 rounded-lg shadow-lg border-4 border-black transition-all duration-300 hover:shadow-xl">
             <h1 class="text-3xl font-bold mb-12 text-center text-white fadeInFromBottom">Personal Projects</h1>
@@ -555,12 +626,12 @@
                             </div>
                             
                             <!-- Carousel controls -->
-                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-prev>
+                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-prev>
                                 <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                                 </svg>
                             </button>
-                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-next>
+                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-next>
                                 <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
@@ -608,12 +679,12 @@
                             </div>
                             
                             <!-- Carousel controls -->
-                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-prev>
+                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-prev>
                                 <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                                 </svg>
                             </button>
-                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-next>
+                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-next>
                                 <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
@@ -657,12 +728,12 @@
                             </div>
                             
                             <!-- Carousel controls -->
-                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-prev>
+                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-prev>
                                 <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                                 </svg>
                             </button>
-                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-next>
+                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-next>
                                 <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
@@ -709,12 +780,12 @@
                             </div>
                             
                             <!-- Carousel controls -->
-                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-prev>
+                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-prev>
                                 <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                                 </svg>
                             </button>
-                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-next>
+                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-next>
                                 <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
@@ -771,12 +842,12 @@
                             </div>
                             
                             <!-- Carousel controls -->
-                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-prev>
+                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-prev>
                                 <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                                 </svg>
                             </button>
-                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-next>
+                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-next>
                                 <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
@@ -836,12 +907,12 @@
                             </div>
                             
                             <!-- Carousel controls -->
-                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-prev>
+                            <button type="button" class="absolute top-1/2 left-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-prev>
                                 <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                                 </svg>
                             </button>
-                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow hover:bg-white focus:outline-none transition-all" data-carousel-next>
+                            <button type="button" class="absolute top-1/2 right-3 z-30 flex items-center justify-center w-10 h-10 -translate-y-1/2 bg-white/70 rounded-full shadow bg-gray-100 bg-opacity-[40%] hover:bg-white focus:outline-none transition-all" data-carousel-next>
                                 <svg class="w-4 h-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
