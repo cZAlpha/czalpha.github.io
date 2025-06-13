@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      <title>Medical Office</title>
+      
+      <!-- SEO Meta Tags -->
+      <meta name="description" content="Medical Office is a modern, accessible medical clinic website offering 24/7 emergency care, qualified doctors, and easy appointment scheduling. ADA-compliant and mobile-friendly." />
+      <meta name="keywords" content="medical clinic, healthcare, doctors, emergency services, appointments, 24/7 care, neurology, cardiology, dentistry, Medical Office, ADA compliant, Tailwind CSS" />
+      <meta name="author" content="Medical Office Team" />
+      <meta name="robots" content="index, follow" />
+      <meta name="theme-color" content="#6B21A8" />
+      
+      <!-- Canonical URL -->
+      <link rel="canonical" href="https://www.medicalclinic.com/" />
+      
+      <!-- Open Graph / Facebook -->
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.medicalclinic.com/" />
+      <meta property="og:title" content="Medical Office | Trusted Medical Clinic with 24/7 Care" />
+      <meta property="og:description" content="Explore Medical Office — a reliable, modern medical clinic offering emergency services, expert care, and easy online appointments." />
+      <meta property="og:image" content="https://www.medicalclinic.com/images/og-image.jpg" />
+      <meta property="og:locale" content="en_US" />
+      
+      <!-- Twitter Card -->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="https://www.medicalofficeclinic.com/" />
+      <meta name="twitter:title" content="Medical Clinic | Trusted Medical Clinic with 24/7 Care" />
+      <meta name="twitter:description" content="Explore Medical Clinic — a reliable, modern medical clinic offering emergency services, expert care, and easy online appointments." />
+      <meta name="twitter:image" content="https://www.medicalclinic.com/images/twitter-card.jpg" />
+      
+      <!-- Favicon -->
+      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      <!-- Tailwind Import -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      
+      <!-- Animation classes -->
+      <style>
+         .animate-fade-in-down {
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInDown 0.8s ease-out forwards;
+         }
+         .animate-fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+         }
+         .delay-100 { animation-delay: 0.1s; }
+         .delay-200 { animation-delay: 0.2s; }
+         .delay-300 { animation-delay: 0.3s; }
+         .delay-400 { animation-delay: 0.4s; }
+         
+         @keyframes fadeInDown {
+            to {
+               opacity: 1;
+               transform: translateY(0);
+            }  
+         }
+         @keyframes fadeInUp {
+            to {
+               opacity: 1;
+               transform: translateY(0);
+            }
+         }
+         
+         /* Slide animation keyframes */
+         .animate-slide-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 0.8s ease-out forwards;
+         }
+         .delay-100 { animation-delay: 0.1s; }
+         .delay-200 { animation-delay: 0.2s; }
+         .delay-300 { animation-delay: 0.3s; }
+         .delay-400 { animation-delay: 0.4s; }
+         .delay-500 { animation-delay: 0.5s; }
+         
+         @keyframes slideUp {
+            to {
+               opacity: 1;
+               transform: translateY(0);
+            }
+         }
+      </style>
+   </head>
+   <body class="font-sans antialiased text-gray-800">
+      <!-- Top Contact Bar -->
+      <div class="bg-black text-white text-sm">
+         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+         <div class="flex flex-col md:flex-row justify-start items-center gap-2 md:gap-6">
+            <!-- Phone number -->
+            <div class="flex items-center gap-2">
+               <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h2l3 9 4-8 4 8 3-9h2" />
+               </svg>
+               <span>+ 1235 2355 98</span>
+            </div>
+            <!-- Email address -->
+            <div class="flex items-center gap-2">
+               <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+               </svg>
+               <span>youremail@email.com</span>
+            </div>
+         </div>
+         </div>
+      </div>
+      
+      <!-- Navbar -->
+      <header class="sticky top-0 z-50 bg-gray-900 text-white shadow">
+         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <a href="index.html" class="text-xl font-bold">Medical Office</a>
+            
+            <button
+                  aria-label="Toggle navigation"
+                  class="md:hidden focus:outline-none"
+                  onclick="toggleMobileMenu()"
+            >
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+            </button>
+            
+            <nav id="nav-menu" class="hidden md:flex gap-6 items-center text-sm font-medium">
+                  <a href="#home" class="hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400">Home</a>
+                  <a href="#services" class="hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400">About</a>
+                  <a href="#departments" class="hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400">Departments</a>
+                  <a href="#doctors" class="hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400">Doctors</a>
+                  <a href="#blog" class="hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400">Blog</a>
+                  <a href="#contact" class="hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400">Contact</a>
+                  <a href="../../index.html" class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded text-white transition-colors">Back to Portfolio</a>
+            </nav>
+         </div>
+         
+         <!-- Mobile Menu -->
+         <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 right-0 bg-gray-900 shadow-lg transition-all duration-300 ease-in-out transform translate-y-0 opacity-0">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                  <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:text-purple-400 hover:bg-gray-800">Home</a>
+                  <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium hover:text-purple-400 hover:bg-gray-800">About</a>
+                  <a href="#departments" class="block px-3 py-2 rounded-md text-base font-medium hover:text-purple-400 hover:bg-gray-800">Departments</a>
+                  <a href="#doctors" class="block px-3 py-2 rounded-md text-base font-medium hover:text-purple-400 hover:bg-gray-800">Doctors</a>
+                  <a href="#blog" class="block px-3 py-2 rounded-md text-base font-medium hover:text-purple-400 hover:bg-gray-800">Blog</a>
+                  <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:text-purple-400 hover:bg-gray-800">Contact</a>
+                  <a href="../../index.html" class="block px-3 py-2 rounded-md text-base font-medium bg-purple-600 hover:bg-purple-700 text-white">Back to Portfolio</a>
+            </div>
+         </div>
+      </header>
+      
+      <!-- Scroll Up Button for Mobile -->
+      <a href="#home" class="block md:hidden fixed bottom-8 right-8 z-50 text-black bg-white bg-opacity-60 p-4 rounded-full" aria-label="Scroll up button">
+         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+         <polyline points="18,15 12,9 6,15"/>
+         </svg>
+      </a>
+      
+      <main>
+         <!-- Hero Section -->
+         <section
+            id="home"
+            class="relative bg-cover bg-center h-[90vh] flex items-center"
+            style="background-image: url('images/bg_3.jpg');"
+            role="region"
+            aria-label="Welcome Banner"
+         >
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+            <div class="text-white max-w-xl">
+               <p class="text-lg mb-2 animate-fade-in-down delay-100">Welcome to Medical Office</p>
+               <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight animate-fade-in-down delay-200">
+                  We are here<br />for your Care
+               </h1>
+               <p class="mb-6 text-base md:text-lg animate-fade-in-up delay-300">
+                  Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+               </p>
+               <a
+                  href="#consultForm"
+                  class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 animate-fade-in-up delay-400 focus:outline-none focus:ring-4 focus:ring-purple-400"
+               >
+                  Make an appointment
+               </a>
+            </div>
+            </div>
+         </section>
+         
+         <!-- About Section -->
+         <section id="about-section" class="bg-white py-16">
+            <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+               <!-- About Image -->
+               <div class="h-96 bg-cover bg-center rounded-xl shadow-lg" style="background-image: url('images/about.jpg');" role="img" aria-label="About Medical Office clinic image"></div>
+               
+               <!-- About Content -->
+               <div>
+                  <h2 class="text-3xl font-bold mb-4 text-gray-900">
+                  We Are <span class="text-purple-600">Medical Office</span> A Medical Clinic
+                  </h2>
+                  <p class="mb-4 text-gray-700">
+                  A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                  It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                  </p>
+                  <div class="flex flex-wrap gap-4 mt-6">
+                  <a href="#consultForm" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition">Make an appointment</a>
+                  <a href="#contact" class="border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-6 py-3 rounded-lg transition">Contact us</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <!-- Services + Consultation Form Section -->
+         <section id="services" class="bg-gray-50 py-16">
+            <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-12 gap-10">
+               <!-- Services -->
+               <div  class="lg:col-span-7">
+                  <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+                  <div class="grid sm:grid-cols-2 gap-6">
+                     <!-- Service Item -->
+                     <div class="bg-white shadow p-6 rounded-lg flex items-start gap-4">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                        </svg>
+                        <div>
+                           <h3 class="text-lg font-semibold mb-1">Emergency Services</h3>
+                           <p class="text-gray-600 text-sm">Quick access to medical emergency support, any time.</p>
+                        </div>
+                     </div>
+                     <!-- Repeat with unique content -->
+                     <div class="bg-white shadow p-6 rounded-lg flex items-start gap-4">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M12 14v-4m0 0V6m0 4H8m4 0h4" />
+                        </svg>
+                        <div>
+                           <h3 class="text-lg font-semibold mb-1">Qualified Doctors</h3>
+                           <p class="text-gray-600 text-sm">Top-tier specialists across all fields of medicine.</p>
+                        </div>
+                     </div>
+                     <div class="bg-white shadow p-6 rounded-lg flex items-start gap-4">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M3 12h18M3 17h18" />
+                        </svg>
+                        <div>
+                           <h3 class="text-lg font-semibold mb-1">Outdoors Checkup</h3>
+                           <p class="text-gray-600 text-sm">We come to you — home and workplace health checks.</p>
+                        </div>
+                     </div>
+                     <div class="bg-white shadow p-6 rounded-lg flex items-start gap-4">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M15 12h.01M12 12h.01M9 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <div>
+                           <h3 class="text-lg font-semibold mb-1">24 Hours Service</h3>
+                           <p class="text-gray-600 text-sm">Round-the-clock availability for urgent medical care.</p>
+                        </div>
+                     </div>
+                     <div class="bg-white shadow p-6 rounded-lg flex items-start gap-4">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2a2 2 0 012-2h2a2 2 0 012 2v2m4 0V5a2 2 0 00-2-2H7a2 2 0 00-2 2v12m14 0v2a2 2 0 01-2 2H7a2 2 0 01-2-2v-2" />
+                        </svg>
+                        <div>
+                           <h3 class="text-lg font-semibold mb-1">Lab Testing</h3>
+                           <p class="text-gray-600 text-sm">On-site diagnostic testing with rapid results and expert analysis.</p>
+                        </div>
+                     </div>
+                     <div class="bg-white shadow p-6 rounded-lg flex items-start gap-4">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M3 7v4a2 2 0 002 2h3v2H6v4h4v-4h4v4h4v-4h-2v-2h3a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2z" />
+                        </svg>
+                        <div>
+                           <h3 class="text-lg font-semibold mb-1">Pediatric Care</h3>
+                           <p class="text-gray-600 text-sm">Compassionate care for infants, children, and young adults.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+               <!-- Free Consultation Form -->
+               <div class="lg:col-span-5 bg-white shadow-lg p-8 rounded-lg">
+                  <h3 class="text-2xl font-bold mb-2">Free Consultation</h3>
+                  <!-- PRODUCTION: Make sure this form is correctly hooked up using JS and everything -->
+                  <form id="consultForm" novalidate aria-label="Appointment Request Form">
+                     <div class="mb-4" aria-hidden="true">
+                        <h1 class="italic mb-2">Fields marked <span class="text-red-500">*</span> are required</h1>
+                     </div>
+                     <!-- Name inputs -->
+                     <div class="grid grid-cols-2 gap-4 mb-2">
+                        <!-- First Name -->
+                        <div>
+                           <fieldset>
+                              <h1 class="font-medium mb-2" aria-hidden="true">First Name <span class="text-red-500">*</span></h1>
+                              <legend class="sr-only">First Name</legend>
+                              <label for="firstName" class="sr-only">First Name</label>
+                              <input type="text" id="firstName" name="firstName" placeholder="First Name" 
+                                       required aria-required="true"
+                                       class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                       aria-label="First Name">
+                           </fieldset>
+                        </div>
+                        <!-- Last Name -->
+                        <div>
+                           <fieldset>
+                              <h1 class="font-medium mb-2" aria-hidden="true">Last Name <span class="text-red-500">*</span></h1>
+                              <legend class="sr-only">Last Name</legend>
+                              <label for="lastName" class="sr-only">Last Name</label>
+                              <input type="text" id="lastName" name="lastName" placeholder="Last Name" 
+                                       required aria-required="true"
+                                       class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                       aria-label="Last Name">
+                           </fieldset>
+                        </div>
+                     </div>
+                     
+                     <!-- Email + Phone number -->
+                     <div class="grid grid-cols-2 gap-4 mb-2">
+                        <!-- Email -->
+                        <div>
+                           <h1 class="font-medium mb-2" aria-hidden="true">Email <span class="text-red-500">*</span></h1>
+                           <label for="email" class="sr-only">Your Email</label>
+                           <input type="email" id="email" name="email" placeholder="youremail@email.com" required class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <!-- Phone number -->
+                        <div>
+                           <fieldset>
+                              <h1 class="font-medium mb-2" aria-hidden="true">Phone Number <span class="text-red-500">*</span></h1>
+                              <legend class="sr-only">Phone Number</legend>
+                              <label for="phone" class="sr-only">Phone</label>
+                              <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" 
+                                    required aria-required="true"
+                                    class="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                    aria-label="Phone Number">
+                           </fieldset>
+                        </div>
+                     </div>
+                     
+                     <!-- Services selection -->
+                     <div class="mb-4">
+                        <fieldset>
+                           <h1 class="font-medium mb-2" aria-hidden="true">Service <span class="text-red-500">*</span></h1>
+                           <legend class="sr-only">Select Services</legend>
+                           <div class="relative">
+                                 <button type="button" 
+                                       class="w-full border border-gray-300 px-4 py-2 rounded bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 flex items-center justify-between"
+                                       aria-label="Select Your Services"
+                                       aria-expanded="false"
+                                       aria-haspopup="listbox"
+                                       onclick="toggleDropdown()">
+                                    <span id="selected-text" class="text-gray-500">Select Your Services</span>
+                                    <svg class="w-5 h-5 text-gray-400 transition-transform duration-200" id="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                 </button>
+                                 
+                                 <div id="dropdown-menu" 
+                                    class="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded shadow-lg opacity-0 invisible transform scale-y-95 transition-all duration-200 origin-top"
+                                    role="listbox"
+                                    aria-label="Service options">
+                                    
+                                    <label class="flex items-center px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors duration-150 border-b border-gray-100 last:border-b-0">
+                                       <input type="checkbox" 
+                                                name="service" 
+                                                value="Neurology" 
+                                                class="w-4 h-4 text-purple-600 border-2 border-gray-300 rounded focus:ring-purple-500 focus:ring-2 mr-3"
+                                                onchange="updateSelection()">
+                                       <span class="text-gray-900 select-none">Neurology</span>
+                                    </label>
+                                    
+                                    <label class="flex items-center px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors duration-150 border-b border-gray-100 last:border-b-0">
+                                       <input type="checkbox" 
+                                                name="service" 
+                                                value="Cardiology" 
+                                                class="w-4 h-4 text-purple-600 border-2 border-gray-300 rounded focus:ring-purple-500 focus:ring-2 mr-3"
+                                                onchange="updateSelection()">
+                                       <span class="text-gray-900 select-none">Cardiology</span>
+                                    </label>
+                                    
+                                    <label class="flex items-center px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors duration-150 border-b border-gray-100 last:border-b-0">
+                                       <input type="checkbox" 
+                                                name="service" 
+                                                value="Dental" 
+                                                class="w-4 h-4 text-purple-600 border-2 border-gray-300 rounded focus:ring-purple-500 focus:ring-2 mr-3"
+                                                onchange="updateSelection()">
+                                       <span class="text-gray-900 select-none">Dental</span>
+                                    </label>
+                                    
+                                    <label class="flex items-center px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors duration-150 border-b border-gray-100 last:border-b-0">
+                                       <input type="checkbox" 
+                                                name="service" 
+                                                value="Ophthalmology" 
+                                                class="w-4 h-4 text-purple-600 border-2 border-gray-300 rounded focus:ring-purple-500 focus:ring-2 mr-3"
+                                                onchange="updateSelection()">
+                                       <span class="text-gray-900 select-none">Ophthalmology</span>
+                                    </label>
+                                    
+                                    <label class="flex items-center px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors duration-150 border-b border-gray-100 last:border-b-0">
+                                       <input type="checkbox" 
+                                                name="service" 
+                                                value="Other" 
+                                                class="w-4 h-4 text-purple-600 border-2 border-gray-300 rounded focus:ring-purple-500 focus:ring-2 mr-3"
+                                                onchange="updateSelection()">
+                                       <span class="text-gray-900 select-none">Other Services</span>
+                                    </label>
+                                 </div>
+                           </div>
+                        </fieldset>
+                     </div>
+                     
+                     <!-- Message -->
+                     <div class="mb-4">
+                        <fieldset>
+                           <h1 class="font-medium mb-2" aria-hidden="true">Message</h1>
+                           <legend class="sr-only">Message</legend>
+                           <label for="message" class="sr-only">Message</label>
+                           <textarea id="message" name="message" rows="3" placeholder="Message" class="resize-none w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                           </textarea>
+                        </fieldset>
+                     </div>
+                     
+                     <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg transition" aria-label="Request appointment">
+                        Request Appointment
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </section>
+         
+         <!-- Departments Section -->
+         <section id="departments" class="bg-white py-16">
+            <div class="max-w-7xl mx-auto px-4">
+               <div class="text-center mb-12">
+                  <h2 class="text-3xl font-bold text-gray-900 mb-2">Departments</h2>
+                  <p class="text-gray-600">Our many departments to meet your many needs</p>
+               </div>
+               <div class="grid md:grid-cols-3 gap-6">
+                  <!-- Department Image -->
+                  <div class="h-96 bg-cover bg-center rounded-lg shadow-lg" style="background-image: url('images/dept-1.jpg');" role="img" aria-label="Department building photo"></div>
+                  
+                  <!-- Department Columns -->
+                  <div class="md:col-span-2 grid sm:grid-cols-3 gap-6">
+                  <!-- Card -->
+                  <div class="bg-gray-50 p-4 text-center rounded-lg shadow hover:shadow-md transition duration-300 animate-slide-up">
+                     <div class="flex justify-center mb-2">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 9.75h4.5v4.5h-4.5z" />
+                        </svg>
+                     </div>
+                     <h3 class="font-semibold text-lg text-gray-900 mb-1"><a href="#">Neurology</a></h3>
+                     <p class="text-gray-600 text-sm">Far far away, behind the word mountains</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 text-center rounded-lg shadow hover:shadow-md transition duration-300 animate-slide-up delay-100">
+                     <div class="flex justify-center mb-2">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10" stroke-width="2" />
+                        </svg>
+                     </div>
+                     <h3 class="font-semibold text-lg text-gray-900 mb-1"><a href="#">Surgical</a></h3>
+                     <p class="text-gray-600 text-sm">Far far away, behind the word mountains</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 text-center rounded-lg shadow hover:shadow-md transition duration-300 animate-slide-up delay-200">
+                     <div class="flex justify-center mb-2">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                     <h3 class="font-semibold text-lg text-gray-900 mb-1"><a href="#">Dental</a></h3>
+                     <p class="text-gray-600 text-sm">Far far away, behind the word mountains</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 text-center rounded-lg shadow hover:shadow-md transition duration-300 animate-slide-up delay-300">
+                     <div class="flex justify-center mb-2">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                     <h3 class="font-semibold text-lg text-gray-900 mb-1"><a href="#">Ophthalmology</a></h3>
+                     <p class="text-gray-600 text-sm">Far far away, behind the word mountains</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 text-center rounded-lg shadow hover:shadow-md transition duration-300 animate-slide-up delay-400">
+                     <div class="flex justify-center mb-2">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                     <h3 class="font-semibold text-lg text-gray-900 mb-1"><a href="#">Cardiology</a></h3>
+                     <p class="text-gray-600 text-sm">Far far away, behind the word mountains</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 text-center rounded-lg shadow hover:shadow-md transition duration-300 animate-slide-up delay-500">
+                     <div class="flex justify-center mb-2">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10" stroke-width="2" />
+                        </svg>
+                     </div>
+                     <h3 class="font-semibold text-lg text-gray-900 mb-1"><a href="#">Traumatology</a></h3>
+                     <p class="text-gray-600 text-sm">Far far away, behind the word mountains</p>
+                  </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <!-- Doctors Section -->
+         <section id="doctors" class="bg-gray-100 py-16">
+            <div class="max-w-7xl mx-auto px-4">
+               <div class="text-center mb-12">
+                  <h2 class="text-3xl font-bold text-gray-900 mb-2">Our Qualified Doctors</h2>
+                  <p class="text-gray-600">Find the right type of doctor to meet your needs today!</p>
+               </div>
+               
+               <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <!-- Doctor Card -->
+                  <div class="bg-white rounded-lg shadow overflow-hidden text-center p-4 transition hover:shadow-lg">
+                     <img src="images/doc-1.jpg" alt="Dr. Lloyd Wilson" class="w-full h-56 object-cover rounded-md" />
+                     <div class="pt-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-1">Dr. Lloyd Wilson</h3>
+                        <span class="text-sm text-purple-600">Neurologist</span>
+                        <p class="text-gray-600 text-sm mt-2">Ambitious workaholic, but a simple person.</p>
+                        <div class="flex justify-center gap-4 mt-4">
+                           <a href="#" aria-label="Twitter" class="hover:text-purple-600">
+                           <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M22 4.01c-.77.34-1.6.58-2.47.69a4.3 4.3 0 001.88-2.37 8.67 8.67 0 01-2.72 1.04 4.26 4.26 0 00-7.26 3.89A12.1 12.1 0 013 3.11a4.25 4.25 0 001.32 5.67 4.18 4.18 0 01-1.93-.53v.05a4.27 4.27 0 003.42 4.18 4.24 4.24 0 01-1.93.07 4.26 4.26 0 003.98 2.96A8.53 8.53 0 012 19.54a12.07 12.07 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19-.01-.37-.02-.56A8.68 8.68 0 0022 4.01z" />
+                           </svg>
+                           </a>
+                           <a href="#" aria-label="Facebook" class="hover:text-purple-600">
+                           <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M22 12a10 10 0 10-11.5 9.87v-7H8v-3h2.5V9.5A3.5 3.5 0 0114 6h3v3h-2a1 1 0 00-1 1V12h3l-.5 3h-2.5v7A10 10 0 0022 12z" />
+                           </svg>
+                           </a>
+                        </div>
+                        <a href="#" class="mt-4 inline-block bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium px-4 py-2 rounded transition">
+                           Book now
+                        </a>
+                     </div>
+                  </div>
+
+                  <!-- Doctor Card -->
+                  <div class="bg-white rounded-lg shadow overflow-hidden text-center p-4 transition hover:shadow-lg">
+                     <img src="images/doc-2.jpg" alt="Dr. Lloyd Wilson" class="w-full h-56 object-cover rounded-md" />
+                     <div class="pt-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-1">Dr. Liana Moreno</h3>
+                        <span class="text-sm text-purple-600">Cardiologist</span>
+                        <p class="text-gray-600 text-sm mt-2">Ambitious workaholic, but a simple person.</p>
+                        <div class="flex justify-center gap-4 mt-4">
+                           <a href="#" aria-label="Twitter" class="hover:text-purple-600">
+                           <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M22 4.01c-.77.34-1.6.58-2.47.69a4.3 4.3 0 001.88-2.37 8.67 8.67 0 01-2.72 1.04 4.26 4.26 0 00-7.26 3.89A12.1 12.1 0 013 3.11a4.25 4.25 0 001.32 5.67 4.18 4.18 0 01-1.93-.53v.05a4.27 4.27 0 003.42 4.18 4.24 4.24 0 01-1.93.07 4.26 4.26 0 003.98 2.96A8.53 8.53 0 012 19.54a12.07 12.07 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19-.01-.37-.02-.56A8.68 8.68 0 0022 4.01z" />
+                           </svg>
+                           </a>
+                           <a href="#" aria-label="Facebook" class="hover:text-purple-600">
+                           <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M22 12a10 10 0 10-11.5 9.87v-7H8v-3h2.5V9.5A3.5 3.5 0 0114 6h3v3h-2a1 1 0 00-1 1V12h3l-.5 3h-2.5v7A10 10 0 0022 12z" />
+                           </svg>
+                           </a>
+                        </div>
+                        <a href="#" class="mt-4 inline-block bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium px-4 py-2 rounded transition">
+                           Book now
+                        </a>
+                     </div>
+                  </div>
+
+                  <!-- Doctor Card -->
+                  <div class="bg-white rounded-lg shadow overflow-hidden text-center p-4 transition hover:shadow-lg">
+                     <img src="images/doc-3.jpg" alt="Dr. Lloyd Wilson" class="w-full h-56 object-cover rounded-md" />
+                     <div class="pt-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-1">Dr. Jamir Cortes</h3>
+                        <span class="text-sm text-purple-600">Dentist</span>
+                        <p class="text-gray-600 text-sm mt-2">Ambitious workaholic, but a simple person.</p>
+                        <div class="flex justify-center gap-4 mt-4">
+                           <a href="#" aria-label="Twitter" class="hover:text-purple-600">
+                           <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M22 4.01c-.77.34-1.6.58-2.47.69a4.3 4.3 0 001.88-2.37 8.67 8.67 0 01-2.72 1.04 4.26 4.26 0 00-7.26 3.89A12.1 12.1 0 013 3.11a4.25 4.25 0 001.32 5.67 4.18 4.18 0 01-1.93-.53v.05a4.27 4.27 0 003.42 4.18 4.24 4.24 0 01-1.93.07 4.26 4.26 0 003.98 2.96A8.53 8.53 0 012 19.54a12.07 12.07 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19-.01-.37-.02-.56A8.68 8.68 0 0022 4.01z" />
+                           </svg>
+                           </a>
+                           <a href="#" aria-label="Facebook" class="hover:text-purple-600">
+                           <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M22 12a10 10 0 10-11.5 9.87v-7H8v-3h2.5V9.5A3.5 3.5 0 0114 6h3v3h-2a1 1 0 00-1 1V12h3l-.5 3h-2.5v7A10 10 0 0022 12z" />
+                           </svg>
+                           </a>
+                        </div>
+                        <a href="#" class="mt-4 inline-block bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium px-4 py-2 rounded transition">
+                           Book now
+                        </a>
+                     </div>
+                  </div>
+
+                  <!-- Doctor Card -->
+                  <div class="bg-white rounded-lg shadow overflow-hidden text-center p-4 transition hover:shadow-lg">
+                     <img src="images/doc-4.jpg" alt="Dr. Lloyd Wilson" class="w-full h-56 object-cover rounded-md" />
+                     <div class="pt-4">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-1">Dr. Malaya Hubbard</h3>
+                        <span class="text-sm text-purple-600">Pediatrician</span>
+                        <p class="text-gray-600 text-sm mt-2">Ambitious workaholic, but a simple person.</p>
+                        <div class="flex justify-center gap-4 mt-4">
+                           <a href="#" aria-label="Twitter" class="hover:text-purple-600">
+                           <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M22 4.01c-.77.34-1.6.58-2.47.69a4.3 4.3 0 001.88-2.37 8.67 8.67 0 01-2.72 1.04 4.26 4.26 0 00-7.26 3.89A12.1 12.1 0 013 3.11a4.25 4.25 0 001.32 5.67 4.18 4.18 0 01-1.93-.53v.05a4.27 4.27 0 003.42 4.18 4.24 4.24 0 01-1.93.07 4.26 4.26 0 003.98 2.96A8.53 8.53 0 012 19.54a12.07 12.07 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19-.01-.37-.02-.56A8.68 8.68 0 0022 4.01z" />
+                           </svg>
+                           </a>
+                           <a href="#" aria-label="Facebook" class="hover:text-purple-600">
+                           <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M22 12a10 10 0 10-11.5 9.87v-7H8v-3h2.5V9.5A3.5 3.5 0 0114 6h3v3h-2a1 1 0 00-1 1V12h3l-.5 3h-2.5v7A10 10 0 0022 12z" />
+                           </svg>
+                           </a>
+                        </div>
+                        <a href="#" class="mt-4 inline-block bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium px-4 py-2 rounded transition">
+                           Book now
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <!-- Fun Facts / Counters Section -->
+         <section class="relative bg-cover bg-center py-20 text-white" style="background-image: url('images/bg_3.jpg');" aria-label="Statistics background">
+            <div class="absolute inset-0 bg-black opacity-70"></div>
+            <div class="relative max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center z-10">
+               <!-- Heading -->
+               <div>
+                  <span class="text-purple-300 uppercase tracking-wide">Fun Facts</span>
+                  <h2 class="text-3xl font-bold mt-2 mb-6">Over 5,100 patients trust us</h2>
+                  <a href="#consultForm" class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded transition focus:outline-none focus:ring-4 focus:ring-purple-400">Make an appointment</a>
+               </div>
+               
+               <!-- Counters -->
+               <div class="grid grid-cols-2 gap-6">
+                  <div class="text-center">
+                  <p class="text-4xl font-extrabold counter" data-target="30">0</p>
+                  <p class="mt-2 text-sm uppercase tracking-wider">Years of Experience</p>
+                  </div>
+                  <div class="text-center">
+                  <p class="text-4xl font-extrabold counter" data-target="4500">0</p>
+                  <p class="mt-2 text-sm uppercase tracking-wider">Happy Patients</p>
+                  </div>
+                  <div class="text-center">
+                  <p class="text-4xl font-extrabold counter" data-target="84">0</p>
+                  <p class="mt-2 text-sm uppercase tracking-wider">Doctors</p>
+                  </div>
+                  <div class="text-center">
+                  <p class="text-4xl font-extrabold counter" data-target="300">0</p>
+                  <p class="mt-2 text-sm uppercase tracking-wider">Staff Members</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <!-- Blog Section -->
+         <section id="blog" class="bg-gray-50 py-20">
+            <div class="max-w-7xl mx-auto px-4">
+               <div class="text-center mb-12">
+                  <h2 class="text-3xl font-bold text-gray-900 mb-2">Get Every Single Update</h2>
+                  <p class="text-gray-600">Check out our blog posts, updated once a month</p>
+               </div>
+               
+               <div class="grid md:grid-cols-3 gap-6">
+                  <!-- Blog Card 1 -->
+                  <article class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition">
+                     <a href="#">
+                        <img src="images/image_1.jpg" alt="Blog preview image" class="w-full h-56 object-cover">
+                     </a>
+                     <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2 flex justify-between">
+                           <span>June 9, 2019</span>
+                           <span>Admin</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">
+                           <a href="#">Scary Thing That You Don't Get Enough Sleep</a>
+                        </h3>
+                        <p class="text-gray-600 mb-4 text-sm">Far far away, behind the word mountains, live the blind texts.</p>
+                        <a href="#" class="inline-block bg-purple-600 hover:bg-purple-700 text-white text-sm px-4 py-2 rounded transition">Read more</a>
+                     </div>
+                  </article>
+                  
+                  <!-- Blog Card 1 -->
+                  <article class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition">
+                     <a href="#">
+                        <img src="images/image_2.jpg" alt="Blog preview image" class="w-full h-56 object-cover">
+                     </a>
+                     <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2 flex justify-between">
+                           <span>June 15, 2019</span>
+                           <span>CEO</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">
+                           <a href="#">How We Have Improved Patient Care Markers Over The Past Quarter</a>
+                        </h3>
+                        <p class="text-gray-600 mb-4 text-sm">Learn more about how we have improved our patients lives today!</p>
+                        <a href="#" class="inline-block bg-purple-600 hover:bg-purple-700 text-white text-sm px-4 py-2 rounded transition">Read more</a>
+                     </div>
+                  </article>
+                  
+                  <!-- Blog Card 3 -->
+                  <article class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition">
+                     <a href="#">
+                        <img src="images/image_3.jpg" alt="Blog preview image" class="w-full h-56 object-cover">
+                     </a>
+                     <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2 flex justify-between">
+                           <span>June 21, 2019</span>
+                           <span>Dr. June</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">
+                           <a href="#">How to Mitigate Risk of Kidney Disease In Just a Few Simple Steps</a>
+                        </h3>
+                        <p class="text-gray-600 mb-4 text-sm">You wouldn't believe the findings of this new study. Learn more today!</p>
+                        <a href="#" class="relative bg-purple-600 hover:bg-purple-700 text-white text-sm px-4 py-2 rounded transition">Read more</a>
+                     </div>
+                  </article>
+               </div>
+            </div>
+         </section>
+         
+         <!-- Testimonials Section -->
+         <section id="testimonials" class="relative bg-cover bg-center py-20 text-white" style="background-image: url('images/bg_3.jpg');" aria-label="Testimonials section">
+            <div class="absolute inset-0 bg-black opacity-70"></div>
+            <div class="relative max-w-5xl mx-auto px-4 text-center z-10">
+               <h2 class="text-3xl font-bold mb-10">Our Patients Say</h2>
+               
+               <div class="relative">
+                  <!-- Testimonial Wrapper -->
+                  <div id="testimonial-container" class="transition-all duration-700">
+                  <!-- Single Testimonial -->
+                  <div class="testimonial-slide">
+                     <div class="flex justify-center mb-6">
+                        <img src="images/person_1.jpg" alt="Testimonial author" class="w-24 h-24 rounded-full object-cover border-4 border-purple-500 shadow-lg" />
+                     </div>
+                     <blockquote class="text-lg italic mb-4">“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, live the blind texts.”</blockquote>
+                     <p class="font-bold">Jeff Freshman</p>
+                     <p class="text-sm text-purple-300">Patient</p>
+                  </div>
+                  </div>
+                  
+                  <!-- Controls -->
+                  <div class="mt-8 flex justify-center space-x-4">
+                  <button onclick="changeTestimonial(-1)" aria-label="Previous testimonial" class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center">
+                     <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                     </svg>
+                  </button>
+                  <button onclick="changeTestimonial(1)" aria-label="Next testimonial" class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center">
+                     <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                     </svg>
+                  </button>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <!-- Contact Section -->
+         <section id="contact" class="bg-white py-20">
+            <div class="max-w-7xl mx-auto px-4">
+               <div class="text-center mb-12">
+                  <h2 class="text-3xl font-bold text-gray-900 mb-2">Contact Us</h2>
+                  <p class="text-gray-600">We'd love to hear from you</p>
+               </div>
+               
+               <!-- Contact Info Boxes -->
+               <div class="grid md:grid-cols-4 gap-6 mb-12 text-center">
+                  <div class="bg-gray-50 p-6 rounded shadow">
+                  <div class="text-purple-600 mb-2">
+                     <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 12.414 17.657 8.172M6 12h12" />
+                     </svg>
+                  </div>
+                  <h3 class="font-semibold text-lg">Address</h3>
+                  <p class="text-sm text-gray-600">198 West 21th Street, Suite 721 New York NY 10016</p>
+                  </div>
+                  <div class="bg-gray-50 p-6 rounded shadow">
+                  <div class="text-purple-600 mb-2">
+                     <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h2l3 9 4-8 4 8 3-9h2" />
+                     </svg>
+                  </div>
+                  <h3 class="font-semibold text-lg">Phone</h3>
+                  <p><a href="tel:+1235235598" class="text-sm text-purple-600 hover:underline">+1235 2355 98</a></p>
+                  </div>
+                  <div class="bg-gray-50 p-6 rounded shadow">
+                  <div class="text-purple-600 mb-2">
+                     <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 12H8m0 0V8m0 4v4" />
+                     </svg>
+                  </div>
+                  <h3 class="font-semibold text-lg">Email</h3>
+                  <p><a href="mailto:info@yoursite.com" class="text-sm text-purple-600 hover:underline">info@yoursite.com</a></p>
+                  </div>
+                  <div class="bg-gray-50 p-6 rounded shadow">
+                  <div class="text-purple-600 mb-2">
+                     <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                     </svg>
+                  </div>
+                  <h3 class="font-semibold text-lg">Website</h3>
+                  <p><a href="#" class="text-sm text-purple-600 hover:underline">yoursite.com</a></p>
+                  </div>
+               </div>
+               
+               <!-- Contact Form + Map -->
+               <div class="grid md:grid-cols-2 gap-10">
+                  <!-- PRODUCTION: Make sure this form is correctly hooked up using JS and everything -->
+                  <!-- Contact Form -->
+                  <form id="contactForm" class="bg-gray-50 p-8 rounded shadow space-y-4" novalidate>
+                     <h3 class="text-2xl font-bold mb-2">Send Us A Message</h3>
+                     <div aria-hidden="true">
+                        <h1 class="italic mb-2">Fields marked <span class="text-red-500">*</span> are required</h1>
+                     </div>
+                     <!-- Name Inputs -->
+                     <div class="grid grid-cols-2 gap-4 mb-4">
+                        <!-- First Name -->
+                        <div>
+                           <fieldset>
+                              <legend class="sr-only">First Name</legend>
+                              <h1 class="font-medium mb-2" aria-hidden="true">First Name <span class="text-red-500">*</span></h1>
+                              <label for="firstName" class="sr-only">First Name</label>
+                              <input type="text" id="firstName" name="firstName" placeholder="John" 
+                                       required aria-required="true"
+                                       class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                       aria-label="First Name">
+                           </fieldset>
+                        </div>
+                        <!-- Last Name -->
+                        <div>
+                           <fieldset>
+                              <legend class="sr-only">Last Name</legend>
+                              <h1 class="font-medium mb-2" aria-hidden="true">Last Name <span class="text-red-500">*</span></h1>
+                              <label for="lastName" class="sr-only">Last Name</label>
+                              <input type="text" id="lastName" name="lastName" placeholder="Doe" 
+                                       required aria-required="true"
+                                       class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                       aria-label="Last Name">
+                           </fieldset>
+                        </div>
+                     </div>
+                     <!-- Email -->
+                     <div>
+                        <label for="email" class="sr-only">Your Email</label>
+                        <h1 class="font-medium mb-2" aria-hidden="true">Email <span class="text-red-500">*</span></h1>
+                        <input type="email" id="email" name="email" placeholder="youremail@email.com" required class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-500">
+                     </div>
+                     <!-- Subject -->
+                     <div>
+                        <label for="subject" class="sr-only">Subject</label>
+                        <h1 class="font-medium mb-2" aria-hidden="true">Subject <span class="text-red-500">*</span></h1>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-500">
+                     </div>
+                     <!-- Message -->
+                     <div>
+                        <label for="message" class="sr-only">Message</label>
+                        <h1 class="font-medium mb-2" aria-hidden="true">Message<span class="text-red-500">*</span></h1>
+                        <textarea id="message" name="message" rows="5" placeholder="Message" required class="resize-none w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                     </div>
+                     <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded transition w-full">Send Message</button>
+                  </form>
+                  
+                  <!-- PRODUCTION: Make sure this map displays the right location -->
+                  <!-- Accessible Map Embed -->
+                  <div class="rounded overflow-hidden shadow">
+                     <iframe title="Medical Office Location"
+                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0860601227063!2d-122.4209076846813!3d37.77928097975814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808d01dbd7bb%3A0xfabf8f623c63a7a3!2sMarket%20St%2C%20San%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+                              width="100%" height="100%" style="min-height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                              class="w-full h-full border-0">
+                     </iframe>
+                  </div>
+               </div>
+            </div>
+         </section>
+         
+         <!-- Footer -->
+         <footer class="bg-gray-900 text-gray-300 py-12">
+            <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-5 gap-8 text-sm">
+               <!-- Brand -->
+               <div class="md:col-span-1">
+                  <h3 class="text-xl font-bold text-white mb-3">Medical Office</h3>
+                  <p>Far far away, behind the word mountains.</p>
+                  <div class="flex space-x-4 mt-4">
+                  <a href="#" aria-label="Twitter" class="hover:text-white">
+                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="..."/></svg>
+                  </a>
+                  <a href="#" aria-label="Facebook" class="hover:text-white">
+                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="..."/></svg>
+                  </a>
+                  <a href="#" aria-label="Instagram" class="hover:text-white">
+                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="..."/></svg>
+                  </a>
+                  </div>
+               </div>
+               
+               <!-- Departments -->
+               <div>
+                  <h4 class="text-white font-semibold mb-2">Departments</h4>
+                  <ul class="space-y-1">
+                  <li><a href="#departments" class="hover:underline">Neurology</a></li>
+                  <li><a href="#departments" class="hover:underline">Opthalmology</a></li>
+                  <li><a href="#departments" class="hover:underline">Nuclear Magnetic</a></li>
+                  <li><a href="#departments" class="hover:underline">Surgical</a></li>
+                  <li><a href="#departments" class="hover:underline">Cardiology</a></li>
+                  <li><a href="#departments" class="hover:underline">Dental</a></li>
+                  </ul>
+               </div>
+               
+               <!-- Links -->
+               <div>
+                  <h4 class="text-white font-semibold mb-2">Links</h4>
+                  <ul class="space-y-1">
+                  <li><a href="#home" class="hover:underline">Home</a></li>
+                  <li><a href="#services" class="hover:underline">About</a></li>
+                  <li><a href="#departments" class="hover:underline">Departments</a></li>
+                  <li><a href="#doctors" class="hover:underline">Doctors</a></li>
+                  <li><a href="#blog" class="hover:underline">Blog</a></li>
+                  <li><a href="#contact" class="hover:underline">Contact</a></li>
+                  </ul>
+               </div>
+               
+               <!-- Services -->
+               <div>
+                  <h4 class="text-white font-semibold mb-2">Services</h4>
+                  <ul class="space-y-1">
+                  <li><a href="#services" class="hover:underline">Emergency</a></li>
+                  <li><a href="#services" class="hover:underline">Qualified Doctors</a></li>
+                  <li><a href="#services" class="hover:underline">Checkups</a></li>
+                  <li><a href="#services" class="hover:underline">24/7 Care</a></li>
+                  </ul>
+               </div>
+               
+               <!-- PRODUCTION: Make sure these are corrected -->
+               <!-- Contact -->
+               <div>
+                  <h4 class="text-white font-semibold mb-2">Have Questions?</h4>
+                  <ul class="space-y-1">
+                  <li><span class="text-white">203 Fake St, SF, CA</span></li>
+                  <li><a href="tel:+239239210" class="hover:underline">+2 392 3929 210</a></li>
+                  <li><a href="mailto:info@yourdomain.com" class="hover:underline">info@yourdomain.com</a></li>
+                  </ul>
+               </div>
+            </div>
+            
+            <div class="text-center text-gray-200 mt-12 text-xs">
+               © <span id="year"></span> Medical Office. All rights reserved.
+            </div>
+         </footer>
+      </main>
+      
+      <!-- Scripts -->
+      <script>
+         // START - Mobile Nav Menu
+         function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const isHidden = mobileMenu.classList.contains('hidden');
+            
+            if (isHidden) {
+               mobileMenu.classList.remove('hidden');
+               setTimeout(() => {
+                  mobileMenu.classList.remove('translate-y-0', 'opacity-0');
+               }, 10);
+            } else {
+               mobileMenu.classList.add('translate-y-0', 'opacity-0');
+               setTimeout(() => {
+                  mobileMenu.classList.add('hidden');
+               }, 200);
+            }
+         }
+         
+         // Close mobile menu when clicking on a link
+         document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+               toggleMobileMenu();
+            });
+         });
+         // STOP  - Mobile Nav Menu
+         
+         // START - Toast code
+         function showToast(message, element = '', type = 'error') { // Shows the toast notification
+            // Remove existing toast
+            const existingToast = document.querySelector('.toast-notification');
+            if (existingToast) existingToast.remove();
+            
+            const toast = document.createElement('div');
+            toast.className = `toast-notification fixed top-20 right-4 z-50 px-6 py-4 rounded-lg shadow-lg transform transition-all duration-300 translate-x-full ${
+               type === 'error' ? 'bg-red-500 text-white' : 'bg-green-500 text-white'
+            }`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            // Animate in
+            setTimeout(() => toast.classList.remove('translate-x-full'), 100);
+            
+            // Scroll to element if provided
+            if (element) {
+               let targetElement;
+               
+               // Handle different element input types
+               if (typeof element === 'string') {
+                     // If it's a string, treat it as a selector (ID, class, or other)
+                     if (element.startsWith('#') || element.startsWith('.') || element.includes('[')) {
+                        targetElement = document.querySelector(element);
+                     } else {
+                        // If no selector prefix, assume it's an ID
+                        targetElement = document.getElementById(element);
+                     }
+               } else if (element instanceof HTMLElement) {
+                     // If it's already a DOM element
+                     targetElement = element;
+               }
+               
+               // Scroll to the element if found
+               if (targetElement) {
+                     // Small delay to let toast animation start
+                     setTimeout(() => {
+                        targetElement.scrollIntoView({ 
+                           behavior: 'smooth', 
+                           block: 'center',
+                           inline: 'nearest'
+                        });
+                        
+                        // Optional: Focus the element if it's focusable
+                        if (targetElement.focus && (
+                           targetElement.tagName === 'INPUT' || 
+                           targetElement.tagName === 'TEXTAREA' || 
+                           targetElement.tagName === 'SELECT' ||
+                           targetElement.tabIndex >= 0
+                        )) {
+                           targetElement.focus();
+                        }
+                     }, 200);
+               }
+            }
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+               toast.classList.add('translate-x-full');
+               setTimeout(() => toast.remove(), 300);
+            }, 5000);
+         }
+         // STOP  - Toast code
+         
+         // START - Free consultation form
+         document.getElementById('consultForm').addEventListener('submit', function (e) {
+            const form = e.target;
+            
+            const emailField = form.querySelector('input[type="email"]');
+            const phoneField = form.querySelector('input[type="tel"]');
+            
+            const email = emailField?.value.trim();
+            const phone = phoneField?.value.trim();
+            
+            // Regex patterns
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneRegex = /^\+?[0-9\s\-().]{7,20}$/; // Supports +, -, (), space, min 7 digits
+            
+            // Native browser validation first
+            if (!form.checkValidity()) {
+               e.preventDefault();
+               showToast('Please fill in all required fields.', 'consultForm', 'error');
+               return;
+            }
+            
+            // Email format
+            if (email && !emailRegex.test(email)) {
+               e.preventDefault();
+               emailField.focus();
+               showToast('Please enter a valid email address.', 'consultForm', 'error');
+               return;
+            }
+            
+            // Phone format
+            if (phone && !phoneRegex.test(phone)) {
+               e.preventDefault();
+               phoneField.focus();
+               showToast('Please enter a valid phone number.', 'consultForm', 'error');
+               return;
+            }
+         });
+         
+         function toggleDropdown() { // Toggles open/close for the dropdown menu
+            const menu = document.getElementById('dropdown-menu');
+            const arrow = document.getElementById('dropdown-arrow');
+            const button = menu.previousElementSibling;
+            
+            const isOpen = !menu.classList.contains('opacity-0');
+            
+            if (isOpen) {
+               menu.classList.add('opacity-0', 'invisible', 'scale-y-95');
+               arrow.style.transform = 'rotate(0deg)';
+               button.setAttribute('aria-expanded', 'false');
+            } else {
+               menu.classList.remove('opacity-0', 'invisible', 'scale-y-95');
+               arrow.style.transform = 'rotate(180deg)';
+               button.setAttribute('aria-expanded', 'true');
+            }
+         }
+         
+         function updateSelection() { // Updates the value(s) the user has selected
+            const checkboxes = document.querySelectorAll('input[name="service"]');
+            const selectedText = document.getElementById('selected-text');
+            const selected = Array.from(checkboxes).filter(cb => cb.checked);
+            
+            if (selected.length === 0) {
+               selectedText.textContent = 'Select Your Services';
+               selectedText.className = 'text-gray-500';
+            } else if (selected.length === 1) {
+               selectedText.textContent = selected[0].value;
+               selectedText.className = 'text-gray-900';
+            } else {
+               selectedText.textContent = `${selected.length} services selected`;
+               selectedText.className = 'text-gray-900';
+            }
+         }
+         
+         document.addEventListener('click', function(event) { // Close dropdown when clicking outside
+            const dropdown = document.getElementById('dropdown-menu');
+            const button = dropdown.previousElementSibling;
+            
+            if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+               dropdown.classList.add('opacity-0', 'invisible', 'scale-y-95');
+               document.getElementById('dropdown-arrow').style.transform = 'rotate(0deg)';
+               button.setAttribute('aria-expanded', 'false');
+            }
+         });
+         
+         document.addEventListener('keydown', function(event) { // Handle keyboard navigation
+            if (event.key === 'Escape') {
+               const dropdown = document.getElementById('dropdown-menu');
+               const button = dropdown.previousElementSibling;
+               dropdown.classList.add('opacity-0', 'invisible', 'scale-y-95');
+               document.getElementById('dropdown-arrow').style.transform = 'rotate(0deg)';
+               button.setAttribute('aria-expanded', 'false');
+               button.focus();
+            }
+         });
+         // STOP - Free consultation form
+         
+         // START - Testimonials code
+         const testimonials = [
+            {
+               quote: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, live the blind texts.",
+               name: "Jeff Freshman",
+               role: "Patient",
+               image: "images/person_1.jpg"
+            },
+            {
+               quote: "The doctors were kind and professional. I couldn’t have asked for better service.",
+               name: "Sarah Jenkins",
+               role: "Patient",
+               image: "images/person_2.jpg"
+            },
+            {
+               quote: "A+ treatment from Medical Office. Friendly staff and clean facilities.",
+               name: "Michael Cole",
+               role: "Patient",
+               image: "images/person_3.jpg"
+            }
+         ];
+         
+         let currentIndex = 0;
+         const container = document.getElementById("testimonial-container");
+         
+         function changeTestimonial(direction) {
+            currentIndex = (currentIndex + direction + testimonials.length) % testimonials.length;
+            const t = testimonials[currentIndex];
+
+            container.innerHTML = `
+               <div class="testimonial-slide">
+                  <div class="flex justify-center mb-6">
+                     <img src="${t.image}" alt="Testimonial author" class="w-24 h-24 rounded-full object-cover border-4 border-purple-500 shadow-lg" />
+                  </div>
+                  <blockquote class="text-lg italic mb-4">“${t.quote}”</blockquote>
+                  <p class="font-bold">${t.name}</p>
+                  <p class="text-sm text-purple-300">${t.role}</p>
+               </div>`;
+         }
+         // STOP  - Testimonials code
+         
+         // START - Counter code
+         const counters = document.querySelectorAll('.counter');
+         const speed = 200;
+         
+         const animateCounters = () => {
+            counters.forEach(counter => {
+               const updateCount = () => {
+               const target = +counter.getAttribute('data-target');
+               const count = +counter.innerText;
+               const increment = target / speed;
+
+               if (count < target) {
+                  counter.innerText = Math.ceil(count + increment);
+                  requestAnimationFrame(updateCount);
+               } else {
+                  counter.innerText = target;
+               }
+               };
+               updateCount();
+            });
+         };
+         
+         const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+               if (entry.isIntersecting) {
+               animateCounters();
+               observer.disconnect(); // Run once
+               }
+            });
+         }, { threshold: 0.5 });
+         
+         counters.forEach(counter => observer.observe(counter));
+         // STOP  - Counter Code
+         
+         // START - Contact Form Validation
+         document.getElementById('contactForm').addEventListener('submit', function (e) {
+            const form = e.target;
+            const emailField = form.querySelector('input[type="email"]');
+            const email = emailField?.value.trim();
+            
+            // Simple email regex for format checking
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            // Custom checks
+            if (!form.checkValidity()) {
+               e.preventDefault();
+               showToast('Please fill in all required fields.', 'contactForm', 'error');
+            } else if (!emailRegex.test(email)) {
+               e.preventDefault();
+               emailField.focus();
+               showToast('Please enter a valid email address.', 'contactForm', 'error');
+            }
+         });
+         // STOP  - Contact Form Validation
+         
+         // START - Footer Year Fetching
+         document.getElementById('year').textContent = new Date().getFullYear();
+         // STOP - Footer Year Fetching
+      </script>      
+   </body>
+</html>
