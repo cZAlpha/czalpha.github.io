@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
    <head>
+      <!-- META DATA -->
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Telepathy Networks - Voice and Data Solutions</title>
+      <meta name="author" content="Telepathy Networks" />
+      <meta name="description" 
+            content="We provide dependable IT services for your small business 
+                     because your staff needs it just as much as the big firms!" 
+      />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href="https://www.telepathynetworks.com/" />
+      <meta property="og:title" content="Telepathy Networks - Voice and Data Solutions" />
+      <meta property="og:description" content="Reliable IT services tailored to small businesses. VoIP, Web Dev, Cloud Storage & more." />
+      <meta property="og:image" content="https://www.telepathynetworks.com/og-image.jpg" />
+      <meta property="og:url" content="https://www.telepathynetworks.com/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Telepathy Networks" />
+      <!-- SCRIPTS -->
       <script src="https://cdn.tailwindcss.com"></script>
+      <!-- Load the reCAPTCHA API -->
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
    </head>
    
    <body class="bg-gray-900 text-white">
@@ -414,7 +431,7 @@
                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2 sr-only">Message</label>
                            <textarea 
                               required id="message" name="message" rows="4"
-                              class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-colors resize-vertical"
+                              class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-colors resize-none"
                               placeholder="Tell us about your IT needs and how we can help your business grow..."
                            ></textarea>
                         </fieldset>
@@ -424,9 +441,11 @@
                            <legend class="sr-only">Newsletter Signup</legend>
                            <div class="flex items-center justify-center space-x-3">
                               <input 
-                                 type="checkbox" id="newsletter" name="newsletter"
-                                 class="w-5 h-5 bg-gray-700 border border-gray-600 rounded focus:ring-2 focus:ring-purple-600 text-purple-600"
-                              >
+                                 type="checkbox" 
+                                 id="newsletter" 
+                                 name="newsletter"
+                                 class="w-5 h-5 rounded border border-gray-700 bg-gray-500 checked:bg-purple-600 checked:border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-600 appearance-none cursor-pointer"
+                              />
                               <label for="newsletter" class="text-xs italic text-gray-300">
                                  I would like to receive updates about Telepathy Networks services and IT tips
                               </label>
@@ -434,15 +453,19 @@
                         </fieldset>
                         
                         <!-- PRODUCTION: Remove this and replace with actual recaptcha -->
-                        <!-- Recaptcha Placeholder -->
-                        <div class="flex items-center justify-center">
-                           <div class="flex gap-x-4 items-center justify-center bg-gray-200 px-8 py-4 rounded-md">
-                              <!-- Screen reader-only label -->
-                              <label for="recaptcha-button" class="sr-only text-black">Click to verify you're human</label>
-                              <button name="recaptcha-button" id="recaptcha-button" aria-label="Verify that you are human" class="p-3 rounded-md bg-gray-400"></button>
-                              <p class="text-gray-700">I am a human</p>
-                           </div>
-                        </div>
+                        <!-- Hidden label for screen readers for reCAPTCHA -->
+                     <label id="recaptcha-label" class="sr-only">
+                        Verify that you are a human and not a robot
+                     </label>
+                     <!-- Accessible reCAPTCHA -->
+                     <div class="flex justify-center">
+                        <div 
+                           class="g-recaptcha" 
+                           data-sitekey="YOUR_SITE_KEY" 
+                           aria-labelledby="recaptcha-label"
+                           role="group"
+                        ></div>
+                     </div>
                         
                         <!-- Submit Button -->
                         <button 
