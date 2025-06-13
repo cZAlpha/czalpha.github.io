@@ -32,9 +32,11 @@
       <meta name="twitter:image" content="https://www.medicalclinic.com/images/twitter-card.jpg" />
       
       <!-- Favicon -->
-      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
       <!-- Tailwind Import -->
       <script src="https://cdn.tailwindcss.com"></script>
+      <!-- Load the reCAPTCHA API -->
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       
       <!-- Animation classes -->
       <style>
@@ -414,6 +416,21 @@
                            <textarea id="message" name="message" rows="3" placeholder="Message" class="resize-none w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
                            </textarea>
                         </fieldset>
+                     </div>
+                     
+                     <!-- PRODUCTION: Remove this and replace with actual recaptcha -->
+                     <!-- Hidden label for screen readers for reCAPTCHA -->
+                     <label id="recaptcha-label" class="sr-only">
+                        Verify that you are a human and not a robot
+                     </label>
+                     <!-- Accessible reCAPTCHA -->
+                     <div class="flex justify-center">
+                        <div 
+                           class="g-recaptcha" 
+                           data-sitekey="YOUR_SITE_KEY" 
+                           aria-labelledby="recaptcha-label"
+                           role="group"
+                        ></div>
                      </div>
                      
                      <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg transition" aria-label="Request appointment">
